@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <script src="../../../resources/js/base.js"></script>
+  <script src="../../../resources/js/main-action.js"></script>
+  <script src="../../../resources/js/util.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../magazine/magazine.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../voice/voice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../community/community.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../schedule/schedule.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box" id="login">
+            
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">            
+            <button type="button" class="search-button" id="search-button-base1">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <!-- <label for="search" class="form-label txt-hidden">검색</label> -->
+              <span class="form-label txt-hidden">검색</span>
+              <input type="text" id="searchKeyword1" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box" id="login-box">
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box" id="loginMobile">
+            
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <!-- <label for="search" class="form-label txt-hidden">검색</label> -->
+              <span class="form-label txt-hidden">검색</span>
+              <input type="text" id="searchKeyword2" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button" id="search-button-base2">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list" id="mobile-menu">
+          </ul>
+          <div class="add-btn-box" id="mobile-menu-footer">
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="main-section-wrap trend-community-box main-section-space">
+        <div class="section-inner article-aside-inner">
+          <div class="article-content-view-box" id="mains-highlight"> 
+          </div>
+          <aside class="aside-content-box">
+            <div class="section-title-box">
+              <div class="title">
+                <h2>지금 많이 보는 글</h2>
+              </div>
+              <div class="date-text" id="mains-communities-date"></div>
+            </div>
+            <div class="number-list-box" id="mains-communities-list">
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- // trend-community-box -->
+      <section class="main-section-wrap trend-article-box">
+        <div class="section-inner article-aside-inner">
+          <div class="article-content-column-box">
+            <div class="section-title-box">
+              <div class="title">
+                <h2>추천! 캠퍼스 에디터 기사</h2>
+              </div>
+            </div>
+            <div class="article-info-box-wrap" id="mains-voice">
+            </div>
+          </div>
+          <aside class="aside-content-box">
+            <!-- pc용 schedule -->
+            <div class="pc-show">
+              <div class="section-title-box">
+                <div class="date-title" id="schedule-date-pc">
+                </div>
+              </div>
+              <div class="schedule-view-box">
+                <div class="schedule-box">
+                  <div class="day today">오늘</div>
+                  <div class="cover-box" id='schedule-today-pc'>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-view-box">
+                <div class="schedule-box">
+                  <div class="day">내일</div>
+                  <div class="cover-box" id='schedule-1d-pc'>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-view-box">
+                <div class="schedule-box">
+                  <div class="day">모레</div>
+                  <div class="cover-box" id='schedule-2d-pc'>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- mobile 용 schedule 슬라이드 -->
+            <div class="mobile-show" id="schedule-mobile">
+              <div class="section-title-box">
+                <div class="date-title" id="schedule-date-mobile"></div>
+              </div>
+              <div class="swiper-container schedule-slider-box">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="schedule-view-box">
+                      <div class="schedule-box">
+                        <div class="day today">오늘</div>
+                        <div class="cover-box" id="schedule-today-mobile">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="schedule-view-box">
+                      <div class="schedule-box">
+                        <div class="day">내일</div>
+                        <div class="cover-box" id="schedule-1d-mobile">   
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="schedule-view-box">
+                      <div class="schedule-box">
+                        <div class="day">모레</div>
+                        <div class="cover-box" id="schedule-2d-mobile"> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- // trend-article-box -->
+      <section class="main-section-wrap webzine-article-box">
+        <div class="section-inner">
+          <div class="content-box-cover">
+            <div class="section-title-box">
+              <div class="sub-title">
+                <h2>대학생이 만든 매거진</h2>
+              </div>
+              <div class="title" id="mains-story-title"></div>
+            </div>
+            <div class="webzine-image-box" id="mains-story-thumb">
+            </div>
+            <div class="webzine-slide-box-wrap">
+              <div class="swiper-container webzine-slide-box">
+                <div class="swiper-wrapper" id="mains-story-content">
+                  
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // webzine-article-box -->
+      <section class="main-section-wrap issue-article-box">
+        <div class="section-inner">
+          <div class="section-title-box">
+            <div class="title">
+              <h2>최신 기사</h2>
+            </div>
+          </div>
+          <div class="article-content-box" id="news">
+          </div>
+          <div class="btn-wrap" id="news-paging"> 
+          </div>
+        </div>
+      </section>
+      <!-- // issue-article-box -->
+
+
+      <section class="main-section-wrap banner-content-box">
+        <div class="section-inner">
+          <h2 class="txt-hidden">광고 배너 영역</h2>
+          <div class="banner-box" id="banners">
+          </div>
+        </div>
+      </section>
+
+
+      <!-- //banner-section-box -->
+
+      <section class="main-section-wrap issue-video-box main-section-space-end">
+        <div class="section-inner">
+          <div class="section-title-box">
+            <div class="title">
+              <h2>많이 본 대학내일 영상</h2>
+            </div>
+          </div>
+          <div class="video-content-box">
+            <div class="drag-scroll-box-wrap">
+              <div class="drag-scroll-box" id="mains-youtube">
+              </div>
+            </div>
+            <button type="button" class="prev-btn">이전</button>
+            <button type="button" class="next-btn">다음</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 제보하기위젯 -->
+
+    <!-- close 클래스 추가 시 숨김 -->
+    <div class="floating-box floating-box-widget" id="floating-report">
+      <div class="widget-header">
+        <div class="selector-cover checkbox square">
+          <label class="label">
+            <input type="checkbox" id="checkbox-floating-report" />
+            <span class="selector-text">
+          <span class="selector"></span>
+            일주일 동안 보지 않기
+            </span>
+          </label>
+        </div>
+        <button type="button" class="close-btn" onclick="floatingReportClose()">닫기</button>
+      </div>
+      <div class="widget-body" id="report">        
+        <button type="button" class="cover-btn" onclick="goRegisterBase('report')">
+          <span class="image-box">
+            <img src="../../../resources/images/write/widget-cover.png" alt="widget"/>
+          </span>
+          <span class="text-box">
+            <span class="title"><i class="icon-box icon-arrow-round-right"></i><span class="underline-text">대학내일에 알려주기</span></span>
+            <span class="text">
+              흥미로운 캠퍼스 소식을 알려주시면<br />사례금을 드려요!
+            </span>
+          </span>
+        </button>      
+      </div>
+    </div>
+
+
+    <!-- // 제보하기위젯 -->
+
+     <!-- 표지모델신청위젯 -->
+    <!-- close 클래스 추가 시 숨김 -->
+    <!-- <div class="floating-box floating-box-widget" id="floating-proposal">
+  <div class="widget-header">
+    <div class="selector-cover checkbox square">
+      <label class="label">
+        <input type="checkbox"  id="checkbox-floating-proposal"/>
+        <span class="selector-text">
+          <span class="selector"></span>
+          일주일 동안 보지 않기
+        </span>
+      </label>
+    </div>
+    <button type="button" class="close-btn" onclick="floatingProposalClose()">닫기</button>
+  </div>
+  <div class="widget-body"  id="proposal">
+    <button type="button" class="cover-btn" onclick="goRegisterBase('proposal')">
+      <div class="image-box">
+        <img src="../../../resources/images/write/guide-char-camera.png" />
+      </div>
+      <div class="text-box">
+        <div class="title"><i class="icon-box icon-arrow-round-right"></i><span class="underline-text">대학내일 표지모델</span></div>
+        <div class="text">
+          오직 대학생만 지원 가능!<br />
+          인생샷을 남겨 보세요.
+        </div>
+      </div>
+    </button>
+  </div>
+</div> -->
+
+
+    <!-- // 표지모델신청위젯 -->
+
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../notice/list.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/register.html" class="nav-box-btn" id="qna-base2">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+            <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+            <div class="logo-foundation-box">
+              <span> 본 서비스는 </span>
+              <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+              <span>의 지원을 받아 개발되었습니다.</span>
+            </div>
+          </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../privacy/privacy.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/terms.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+
+  <script>
+    var $scrItem = $('.scroll-item');
+    var scrIWidth = 0;
+    var itemIndex = 0;
+    function muCenter(target) {
+      var box = $('.drag-scroll-box-wrap');
+      var boxItem = box.find('.scroll-item');
+      var boxHarf = box.width() / 2;
+      var pos;
+      var listWidth = 0;
+      var targetLeft = 0;
+      var gapWidth = Number($('.scroll-item').css('margin-right').replace('px', ''));
+      var gapLeft = Number($('.drag-scroll-box-wrap').css('padding-left').replace('px', ''));
+
+      boxItem.each(function() {
+        listWidth += $(this).outerWidth() + gapWidth + gapLeft;
+      });
+
+      for (var i = 0; i < target.index(); i++) targetLeft += boxItem.eq(i).outerWidth(); // 선택요소 까지 길이
+
+      var selectTargetPos = targetLeft + target.outerWidth() / 2;
+      if (selectTargetPos <= boxHarf) {
+        // 처음으로
+        // left
+        pos = 0;
+      } else if (listWidth - selectTargetPos <= boxHarf) {
+        // 끝 부분
+        //right : target 절반 이후 영역이 boxHarf 보다 작을경우 right 정렬
+        pos = listWidth - box.width();
+      } else {
+        pos = selectTargetPos - boxHarf + gapWidth + gapLeft; // 중앙정렬
+        // pos = selectTargetPos - boxHarf; // 중앙정렬
+      }
+
+      setTimeout(function() {
+        box.animate({
+            scrollLeft: pos,
+          },
+          200
+        );
+      }, 100);
+    }
+
+    // 영상 재생, 멈춤
+    function videoControlBtn(target, index) {
+      stopVideo();
+      unMute(target);
+      playVideo(target);
+      nextVideoPlayer(index);
+      muCenter(target);
+    }
+    
+    // 유튜브 초기 실행 함수 - 제거 X
+    function onYouTubeIframeAPIReady() {
+      $scrItem.each(function() {
+        const $this = $(this);
+        const videoId = $this.data('video-id');
+        const player = new YT.Player($this.find('.player')[0], {
+          videoId: videoId,
+          playerVars: {
+            autoplay: 0,
+            loop: 0,
+            playsinline: 1,
+            modestbranding: 0,
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            mute: 1,
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onStateChange,
+          },
+        });
+        // 각 비디오 요소의 플레이어 및 재생 상태 저장
+        $this.data({
+          player: player,
+          isPlaying: false,
+        });
+      });
+    }
+
+    function onPlayerReady(event) {
+      let checkPause = false;
+
+      $('.drag-scroll-box-wrap').css({
+        opacity: 1,
+        visibility: 'visible',
+      });
+
+      // prev 버튼 숨기기
+      $('.issue-video-box .prev-btn').addClass('hide');
+
+      $(window)
+        .on('scroll', function() {
+          var _winH = $(window).outerHeight();
+          var _sct = $(window).scrollTop();
+          var _offset = $('.drag-scroll-box-wrap').offset().top + $('.scroll-item').outerHeight() / 1.2;
+
+          if (_sct + _winH > _offset + $('.drag-scroll-box-wrap').outerHeight() / 2 !== true) {
+            $scrItem.each(function(i) {
+              const $this = $(this);
+              const player = $this.data('player');
+              const isPlaying = $this.data('isPlaying');
+              if (_sct + _winH >= _offset && !isPlaying && $this.hasClass('on')) {
+                // 영상으로 스크롤 됐을때
+
+                // 로딩 안됐을경우 리턴
+                if (player.videoTitle === '') return;
+                player.mute();
+                playVideo($this);
+                const playerState = player.getPlayerState();
+                if (playerState == YT.PlayerState.ENDED) {
+                  // 영상이 끝났을경우 다시 재생
+                  playVideo($this);
+                }
+                itemIndex = $this.index();
+                $this.data('isPlaying', true);
+              } else if (_sct + _winH < _offset && isPlaying) {
+                // 스크롤 벗어났을때
+
+                // 일시정지
+                pauseVideo($this);
+                $this.data('isPlaying', false);
+              }
+            });
+          } else {
+            $scrItem.each(function(i) {
+              const $this = $(this);
+              const player = $this.data('player');
+              const isPlaying = $this.data('isPlaying');
+
+              pauseVideo($this);
+              $this.data('isPlaying', false);
+            });
+          }
+        })
+        .scroll();
+    }
+
+    function onStateChange(event) {
+      // 종료되면 다음 영상으로 넘기기
+      if (event.data === YT.PlayerState.ENDED) {
+        if (itemIndex === $scrItem.length - 1) {
+          // 마지막 영상일경우 처음으로
+          nextVideoPlayer(0);
+          itemIndex = 0;
+        } else {
+          // 다음 영상 재생
+          nextVideoPlayer(itemIndex + 1);
+          itemIndex++;
+        }
+      }
+
+      if ($('.video-content-box .scroll-item').first().hasClass('on')) {
+        $('.issue-video-box .prev-btn').addClass('hide');
+        $('.issue-video-box .next-btn').removeClass('hide');
+      }
+      if ($('.video-content-box .scroll-item').last().hasClass('on')) {
+        $('.issue-video-box .next-btn').addClass('hide');
+        $('.issue-video-box .prev-btn').removeClass('hide');
+      }
+    }
+
+    // 다음 영상 재생
+    function nextVideoPlayer(index) {
+      $scrItem.removeClass('on');
+      $scrItem.eq(index).addClass('on');
+      muCenter($scrItem.eq(index));
+      var player = $scrItem.eq(index).data('player');
+      player.mute();
+      playVideo($scrItem.eq(index));
+    }
+
+    // 모든 영상정지
+    function stopVideo() {
+      $scrItem.each(function() {
+        var $this = $(this);
+        var player = $this.data('player');
+        player.stopVideo();
+      });
+    }
+
+    // 영상 정지
+    function pauseVideo(el) {
+      var player = el.data('player');
+      $('.scroll-item').find('.masking').css({
+        opacity: 1,
+      });
+      player.pauseVideo();
+    }
+
+    // 영상 플레이
+    function playVideo(el) {
+      var player = el.data('player');
+      $('.scroll-item').find('.masking').css({
+        opacity: 1,
+      });
+      el.find('.masking').css({
+        opacity: 0,
+      });
+      player.playVideo();
+    }
+
+    // 영상 음소거
+    function unMute(el) {
+      var player = el.data('player');
+      player.unMute();
+    }
+
+    // 모바일 쇼츠비디오 가로 스크롤 재생
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false; // mobile
+      var windowWidth = $(window).width();
+      var mobileWidth = 560;
+      // 모바일에서만 작동
+      if (isMobile && windowWidth <= mobileWidth) {
+        mobileShortsScroll();
+      }
+      // 가로 스크롤 재생
+      function mobileShortsScroll() {
+        var widthValue = $('.video-content-box').width();
+        var gapContent = widthValue - $('.scroll-item').outerWidth();
+        // 스크롤 끝나는 시점 감지하기
+        $.fn.scrollStopped = function (callback) {
+          var that = this,
+            $this = $(that);
+          $this.scroll(function (ev) {
+            clearTimeout($this.data('scrollTimeout'));
+            $this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
+          });
+        };
+        $('.drag-scroll-box-wrap').scrollStopped(function (ev) {
+          $scrItem.each(function (i, el) {
+            var player = $(el).data('player');
+            if (!$(el).hasClass('on')) {
+              if ($(el).offset().left > 0 && gapContent >= $(el).offset().left) {
+                itemIndex = $(el).index();
+                stopVideo();
+                player.mute();
+                playVideo($(el));
+                $scrItem.removeClass('on');
+                $(el).addClass('on');
+              }
+            } else {
+              if ($(el).offset().left < 0 && gapContent >= $(el).offset().left) {
+                stopVideo();
+                $('.scroll-item').find('.masking').css({
+                  opacity: 1,
+                });
+                $scrItem.removeClass('on');
+              }
+            }
+          });
+        });
+      }
+
+
+    $(document).ready(function () {
+        // document 로드 후 재실행
+        window.floatingBoxHandler();
+        window.sliderUpdate();
+    });
+  </script>
+<div class="layer-popup full-scroll info-content-popup notice-popup" id="infoTextPopup">
+  <div class="popup-container medium">
+    <div class="popup-header">
+      <div class="popup-title txt-hidden">
+        <strong>알림</strong>
+      </div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-inner">
+        <div class="info-content-box" >
+          <div class="text-box" id = "infoTextPopupTitle">
+            <strong>최대 30자까지 표시되는 팝업 제목 입니다.</strong>
+          </div>
+          <div class="sub-text-box" id="infoTextPopupMessage">
+            팝업 문구가 표시됩니다. 최대 글자 수 제한은 없어요.<br />
+          줄바꿈이 반영된 문구로 노출됩니다.<br /><br />
+          팝업 문구가 표시됩니다. 최대 글자 수 제한은 없어요.<br />
+          줄바꿈이 반영된 문구로 노출됩니다.<br />
+          팝업 문구가 표시됩니다. 최대 글자 수 제한은 없어요.
+          </div>
+          <div class="today-control-box">
+            <div class="selector-cover checkbox square">
+              <label class="label">
+                <input type="checkbox" id="popup-text-check" />
+                <span class="selector-text">
+                <span class="selector"></span>
+                일주일 동안 보지 않기
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-footer">
+      <div class="btn-area" id="infoTextPopupButton">
+        <button type="button" class="btn btn-ok popup-close">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="layer-popup full-scroll info-content-popup notice-popup" id="imageTextPopup">
+  <div class="popup-container medium">
+    <div class="popup-header">
+      <div class="popup-title txt-hidden">
+        <strong>알림</strong>
+      </div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-inner">
+        <div class="info-content-box">
+          <div class="popup-title-box" id="imageTextPopupMessage">
+            <strong>최대 30자까지 표시되는 팝업 제목 입니다.</strong>
+          </div>
+          <div class="image-box" id="imageTextPopupImg">
+            <img src="../../../resources/images/_temp/popup-image.png" alt="" />
+          </div>
+        </div>
+        <div class="today-control-box">
+          <div class="selector-cover checkbox square">
+            <label class="label">
+              <input type="checkbox"  id="popup-image-check" />
+              <span class="selector-text">
+              <span class="selector"></span>
+              일주일 동안 보지 않기
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-footer">
+      <div class="btn-area" id="imageTextPopupButton">
+        <button type="button" class="btn btn-ok popup-close">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

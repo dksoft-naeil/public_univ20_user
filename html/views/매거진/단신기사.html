@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../매거진/매거진.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../20svoice/20svoice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../커뮤니티/커뮤니티.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../캘린더/캘린더.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box">
+            <div class="menu-box-item">
+              <a href="../마이페이지/마이페이지.html">마이페이지</a>
+            </div>
+            <!-- 로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button">로그아웃</button>
+            </div>
+            <!-- //로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button" class="dark-mode-btn">
+                <i class="icon-box icon-moon"></i>
+                <i class="icon-box icon-sun"></i>
+                다크/라이트 모드
+              </button>
+            </div>
+            <div class="menu-box-item">
+              <button type="button" class="search-control-btn">
+                <i class="icon-box icon-search-black"></i>
+                <i class="icon-box icon-search-white"></i>
+                검색
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box">
+            <div class="login-box-item">
+              <button type="button" class="mobile-menu-btn">
+                <span class="profile-box">
+                <!-- 프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <!-- <div class="image image-thumb"> -->
+                <span class="image">
+                <!-- <img src="../../../resources/images/" alt="프로필 이미지" /> -->
+                </span>
+                <!-- //프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                </span>
+              </button>
+            </div>
+            <div class="menu-box">
+              <div class="menu-box-item">
+                <a href="../20svoice/글쓰기.html" class="menu-box-btn"><i class="icon-box header-icon-pencil"></i>글쓰기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../제보하기/제보하기.html" class="menu-box-btn"><i class="icon-box header-icon-volume"></i>대학내일에<br />
+                알려주기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../표지모델신청/표지모델신청.html" class="menu-box-btn"><i class="icon-box header-icon-camera"></i>표지모델 신청</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../마이페이지/마이페이지.html" class="menu-box-btn"><i class="icon-box header-icon-user"></i>마이페이지</a>
+              </div>
+              <div class="menu-box-item menu-logout">
+                <button type="button" class="menu-box-btn"><i class="icon-box header-icon-logout"></i>로그아웃</button>
+              </div>
+            </div>
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box">
+              <div class="user-info">
+                <span class="nickname">닉네임은최대열두자임다요</span>님을 위한<br />
+              라이프 매거진 UNIV20
+              </div>
+              <div class="user-menu">
+                <div class="user-menu-left">
+                  <button type="button" class="btn logout-btn">로그아웃</button>
+                  <a href="../마이페이지/마이페이지.html" class="btn">마이페이지</a>
+                </div>
+                <div class="user-menu-right">
+                  <button type="button" class="dark-mode-btn">
+                    <i class="icon-box icon-moon"></i>
+                    <i class="icon-box icon-sun"></i>
+                    다크/라이트 모드
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list">
+            <li class="all-menu-item">
+              <a href="../20svoice/글쓰기.html" class="all-menu-btn">글쓰기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../제보하기/제보하기.html" class="all-menu-btn">대학내일에 알려주기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../표지모델신청/표지모델신청.html" class="all-menu-btn">표지모델 신청</a>
+            </li>
+            <li class="all-menu-item">
+              <button type="button" class="all-menu-btn sub-menu-box-btn">매거진</button>
+              <div class="sub-menu-box">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 전체</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 캠퍼스</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 라이프스타일</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 커리어</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="all-menu-item">
+              <a href="../20svoice/20svoice.html" class="all-menu-btn">글 쓰는 20대</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../커뮤니티/커뮤니티.html" class="all-menu-btn">커뮤니티</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../캘린더/캘린더.html" class="all-menu-btn">캘린더</a>
+            </li>
+          </ul>
+          <div class="add-btn-box">
+            <a href="../공지사항/faq.html" class="add-btn">자주 묻는 질문</a>
+            <a href="../공지사항/문의신고하기.html" class="add-btn">문의/신고하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap article-content-area">
+        <div class="section-inner article-aside-inner">
+          <aside class="aside-content-box article-aside-content-box">
+            <div class="article-detail-info-box">
+              <div class="profile-box">
+                <div class="image">
+                  <!-- 프로필 사진 등록시 image-thumb 추가  -->
+                  <!-- <span class="image-thumb">
+                        <img src="../../../resources/images/" alt="프로필 이미지" />
+                      </span> -->
+                </div>
+                <div class="info">
+                  <div class="nickname"><span class="name">김내일</span> 에디터</div>
+                  <div class="address">kimnaeil@univ.me</div>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="flow">
+                  <span>매거진</span>
+                  <i class="icon-box icon-arrow-flow-right">></i>
+                  <span>캠퍼스</span>
+                </div>
+                <div class="date">
+                  <span class="label">작성일</span>
+                  <span class="text">2024.10.31</span>
+                </div>
+                <!-- <div class="views">
+                      <span class="label">조회수</span>
+                      <span class="text">99,999</span>
+                    </div>
+                    <div class="likes">
+                      <span class="label">좋아요</span>
+                      <span class="text">123,456</span>
+                    </div> -->
+              </div>
+            </div>
+          </aside>
+          <!-- //aside-content-box -->
+          <article class="article-report-content-box">
+            <div class="article-detail-info-box">
+              <div class="flow">
+                <span>매거진</span>
+                <i class="icon-box icon-arrow-flow-right">></i>
+                <span>캠퍼스</span>
+              </div>
+              <div class="article-report-title">관리자에서 직접 등록할 수 있는 기사 타이틀입니다. 최대 50자 까지 등록 가능합니다.</div>
+              <div class="article-report-summary">관리자에서 직접 등록할 수 있는 기사 요약 내용 입니다.</div>
+              <div class="profile-box">
+                <div class="image">
+                  <!-- 프로필 사진 등록시 image-thumb 추가  -->
+                  <!-- <span class="image-thumb">
+                        <img src="../../../resources/images/" alt="프로필 이미지" />
+                      </span> -->
+                </div>
+                <div class="info">
+                  <div class="nickname"><span class="name">김내일</span> 에디터</div>
+                  <div class="address">kimnaeil@univ.me</div>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="date">
+                  <span class="label">작성일</span>
+                  <span class="text">2024.10.31</span>
+                </div>
+                <!-- <div class="views">
+                    <span class="label">조회수</span>
+                    <span class="text">99,999</span>
+                  </div>
+                  <div class="likes">
+                    <span class="label">좋아요</span>
+                    <span class="text">123,456</span>
+                  </div> -->
+              </div>
+            </div>
+            <!-- //article-detail-info-box -->
+            <div class="article-report-content editor-content-box">
+              <!-- 이미지 캡션글 -->
+              <div class="image-caption-box">
+                <div class="image-box">
+                  <img src="../../../resources/images/_temp/temp-caption-thumbnail-image01.png" alt="" />
+                  <span class="desc">[이미지 캡션글] 이미지 캡션글입니다. 최대 글자수 제한은 없습니다.</span>
+                </div>
+              </div>
+              <!-- //이미지 캡션글 -->
+              <br /><br />
+
+              <!-- 질문 답변 텍스트 -->
+              <div>
+                <h3>매 차수 선착순 60명, 완벽한 디지털 디톡스 체험</h3>
+                강원도 양양의 낙산사에서 양양 서피비치와 업무협약을 맺고 ‘서핑 템플스테이’를 개최한다. 해당 프로그램은 7월부터 8월까지 매주 수-금, 금-일로 나뉘어 총 12회에 걸쳐 열린다.<br /><br />
+
+                  초·중·고·대학생 및 일반인이 대상이며 프로그램은 파도 명상, 모닝 요가, 소리 명상, 서핑 체험 등 다채롭게 준비되었다.<br /><br />
+
+                  조기 퇴소는 불가능하고 정해진 일정을 모두 소화해야 하며 2박 3일간 스마트폰을 반납하기 때문에 완벽한 디지털 디톡스를 경험할 수 있다.<br /><br />
+
+                  색다른 여름 방학을 계획 중인 대학생이라면 회차 별로 선착순 60명이니 빠르게 예약하자. 예약은 낙산사 템플스테이 홈페이지에서 가능하다.
+              </div>
+              <!-- //질문 답변 텍스트 -->
+            </div>
+            <!-- //article-report-content -->
+
+            <!-- 태그 박스 -->
+            <div class="tag-box">
+              <span>#태그명최대열자입니다</span>
+              <span>#태그명최대열자</span>
+              <span class="fc-red">#애드벌토리얼</span>
+            </div>
+            <!-- //태그 박스 -->
+
+            <!-- 광고 배너 영역 -->
+
+            <div class="banner-content-box">
+              <div class="banner-box">
+                <a href="javascript:void(0);" target="_blank" class="banner-link"></a>
+                <div class="banner">
+                  <img src="../../../resources/images/banner/banner-image01.png" class="pc-show" alt="광고 배너" />
+                  <img src="../../../resources/images/banner/banner-image01-mo.png" class="mobile-show" alt="광고 배너" />
+                </div>
+              </div>
+            </div>
+
+
+            <!-- //banner-content-box -->
+            <!-- //광고 배너 영역 -->
+          </article>
+          <!-- //article-report-content-box -->
+        </div>
+      </section>
+      <!-- //sub-section-wrap -->
+      <div class="add-content-box-wrap">
+        <div class="section-inner">
+
+          <div class="comment-content-box-wrap">
+            <div class="comment-content-box-header">댓글 3개</div>
+            <div class="comment-content-box-body">
+              <div class="comment-list-box">
+                <div class="comment-list-box-item">
+                  <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                  <div class="profile-image">
+                    강
+                    <img src="../../../resources/images/_temp/file-cover.png" alt="" />
+                  </div>
+                  <div class="comment-box">
+                    <div class="info-box">
+                      <div class="name">강동동</div>
+                      <div class="date">2024.10.31 23:59</div>
+                      <div class="like-box">
+                        <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                        <button type="button" class="active-btn like-btn">
+                          <i class="icon-box icon-like">좋아요</i>
+                        </button>
+                        <span class="number">123</span>
+                      </div>
+                    </div>
+                    <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다.</div>
+                  </div>
+                </div>
+                <div class="comment-list-box-item">
+                  <div class="profile-image">이</div>
+                  <div class="comment-box">
+                    <div class="info-box">
+                      <div class="name">이동동</div>
+                      <div class="date">2024.10.31 23:59</div>
+                      <div class="like-box">
+                        <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                        <button type="button" class="active-btn like-btn check">
+                          <i class="icon-box icon-like">좋아요</i>
+                        </button>
+                        <span class="number">123</span>
+                      </div>
+                    </div>
+                    <div class="comment">회원들이 작성한 일정에 대한 의견입니다.</div>
+                  </div>
+                </div>
+                <!-- 유저 작성 시 comment-list-box-item-user 클래스 추가 -->
+                <div class="comment-list-box-item comment-list-box-item-user">
+                  <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                  <div class="profile-image">대</div>
+                  <div class="comment-box">
+                    <div class="info-box">
+                      <div class="name">대학내일</div>
+                      <div class="date">2024.10.31 23:59</div>
+                      <div class="like-box">
+                        <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                        <button type="button" class="active-btn like-btn">
+                          <i class="icon-box icon-like">좋아요</i>
+                        </button>
+                        <span class="number">123</span>
+                      </div>
+                    </div>
+                    <div class="comment">내가 작성한 일정에 대한 의견입니다. 내가 작성한 일정에 대한 의견입니다.</div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button type="button" class="add-btn"><i class="icon-box icon-arrow-black-down">화살표</i><span class="underline">더보기</span></button>
+                </div>
+              </div>
+              <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+              <div class="comment-input-box comment-input-box-active">
+                <div class="textarea-box">
+                  <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                  <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                </div>
+                <button type="button" class="btn">댓글 쓰기</button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- //comment-content-box-wrap -->
+          <div class="add-recommend-article-box">
+            <div class="section-title-box">
+              <div class="title">비슷한 기사 더 보기</div>
+            </div>
+            <div class="article-content-half-box-list">
+              <div class="article-info-box">
+                <a href="javascript:void(0);" class="article-info-box-btn">
+                  <div class="image-box">
+                    <img src="../../../resources/images/_temp/temp-medium-thumbnail-image01.png" alt="썸네일" />
+                  </div>
+                  <div class="text-box">
+                    <div class="subject">등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                    <div class="text">등록된 기사 전문이 최대 30자 표시되는 영역입니다.</div>
+                    <div class="info">
+                      <div class="writer"><span class="name">박대학</span> 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="article-info-box">
+                <a href="javascript:void(0);" class="article-info-box-btn">
+                  <div class="image-box">
+                    <img src="../../../resources/images/_temp/temp-medium-thumbnail-image02.png" alt="썸네일" />
+                  </div>
+                  <div class="text-box">
+                    <div class="subject">등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                    <div class="text">등록된 기사 전문이 최대 30자 표시되는 영역입니다.</div>
+                    <div class="info">
+                      <div class="writer"><span class="name">김내일</span> 캠퍼스 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="article-info-box">
+                <a href="javascript:void(0);" class="article-info-box-btn">
+                  <div class="image-box">
+                    <img src="../../../resources/images/_temp/temp-medium-thumbnail-image07.png" alt="썸네일" />
+                  </div>
+                  <div class="text-box">
+                    <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                    <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                    <div class="info">
+                      <div class="writer"><span class="name">박대학</span> 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="article-info-box">
+                <a href="javascript:void(0);" class="article-info-box-btn">
+                  <div class="image-box">
+                    <img src="../../../resources/images/_temp/temp-medium-thumbnail-image09.png" alt="썸네일" />
+                  </div>
+                  <div class="text-box">
+                    <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                    <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                    <div class="info">
+                      <div class="writer"><span class="name">김내일</span> 캠퍼스 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn medium border full">더보기</button>
+            </div>
+          </div>
+          <!-- //add-recommend-article-box -->
+        </div>
+      </div>
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../공지사항/목록.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/문의신고하기.html" class="nav-box-btn">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+                <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+                <div class="logo-foundation-box">
+                  <span> 본 서비스는 </span>
+                  <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+                  <span>의 지원을 받아 개발되었습니다.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/개인정보처리방침.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/이용약관.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+
+    <div class="floating-toolbar">
+      <a href="javascript:void(0);" class="list-go-btn">
+        <i class="icon-box icon-list-line">목록으로</i>
+      </a>
+      <div class="floating-toolbar-item-wrap">
+        <!-- 
+      like-btn, save-btn - active-btn 클래스 추가 시 클릭 효과 적용
+    -->
+        <div class="floating-toolbar-item">
+          <button class="floating-toolbar-btn active-btn like-btn"><i class="icon-box icon-like"></i>좋아요</button>
+        </div>
+        <div class="floating-toolbar-item">
+          <!-- 로그인 시 active-btn 클래스 추가 -->
+          <button class="floating-toolbar-btn active-btn save-btn"><i class="icon-box icon-bookmark"></i>저장하기</button>
+        </div>
+        <div class="floating-toolbar-item">
+          <button class="floating-toolbar-btn share-btn"><i class="icon-box icon-share"></i>공유하기</button>
+          <div class="sns-share-box">
+            <div class="sns-share-box-item">
+              <button type="button" class="sns-share-box-btn kakao">카카오톡</button>
+            </div>
+            <div class="sns-share-box-item">
+              <button type="button" class="sns-share-box-btn x">X</button>
+            </div>
+            <div class="sns-share-box-item sns-share-box-item-copy">
+              <button type="button" class="sns-share-box-btn share">URL복사</button>
+              <div class="share-text">
+                <span>링크가 복사되었습니다.</span>
+              </div>
+            </div>
+            <div class="sns-share-box-item">
+              <button type="button" class="sns-share-box-btn close">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="top-go-btn"><i class="icon-box icon-top-arrow">최상단으로</i></button>
+    </div>
+
+    <!-- //floating-toolbar -->
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      var swiperSlide = new Swiper('.slider-caption', {
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      var swiperSlide = new Swiper('.slider-scroll', {
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 24,
+
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    });
+  </script>
+</body>
+
+</html>

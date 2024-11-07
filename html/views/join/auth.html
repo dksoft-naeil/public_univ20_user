@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <script src="../../../resources/js/univ.account.js"></script>  <script src="../../../resources/js/base.js"></script>
+  <script src="../../../resources/js/join-action.js"></script>
+  <script src="../../../resources/js/util.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../magazine/magazine.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../voice/voice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../community/community.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../schedule/schedule.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box" id="login">            
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">            
+            <button type="button" class="search-button" id="search-button-base1">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword1" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box" id="login-box">
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box" id="loginMobile">
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword2" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button" id="search-button-base2">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list" id="mobile-menu">
+          </ul>
+          <div class="add-btn-box" id="mobile-menu-footer">
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap sign-up-content-area">
+        <div class="section-inner">
+          <div class="sub-section-title">
+            <h2>대학내일 통합회원 가입</h2>
+          </div>
+          <div class="article-aside-inner">
+            <aside class="aside-content-box">
+              <div class="sign-up-flow-box">
+                <div class="sign-up-flow-box-item active"><i class="icon-box icon-sign-check"></i>회원 인증</div>
+                <div class="arrow"><i class="icon-box icon-arrow-down-gray">화살표</i></div>
+                <div class="sign-up-flow-box-item"><i class="icon-box icon-pen-plus"></i>정보 입력</div>
+                <div class="arrow"><i class="icon-box icon-arrow-down-gray">화살표</i></div>
+                <div class="sign-up-flow-box-item"><i class="icon-box icon-box-check"></i>가입 완료</div>
+              </div>
+            </aside>
+            <!-- //aside-content-box -->
+            <div class="article-write-box-wrap">
+              <form action="">
+                <div class="article-write-box article-subject-show">
+                  <div class="subject"><strong>개인정보 제공 및 활용 동의(필수)</strong></div>
+                  <div class="privacy-cover">
+                    <div class="text-box">
+                      대학내일 UNIV20은 (이하 "회사"라 합니다)는 최초 회원 가입 또는 서비스 이용 시 이용자로부터 아래와 같은 개인 정보를 수집하고 있습니다. 이용자는 본 개인정보 수집·이용 동의서에 따른 동의 시, '필요한 최소한의 정보 외에 개인정보' 수집·이용에 동의하지 아니할 권리가 있습니다. 개인정보 취급 및 처리에 대한 상세한 사항은 사이트 하단에 공개한 '개인정보 처리방침'을 참조하십시오. 다만,
+                      본 동의서 내용과 상충되는 부분은 본 동의서의 내용이 우선합니다.<br />
+                        1. 수집하는 개인정보의 항목 및 이용목적<br />
+                        1) 수집항목 및 목적<br />
+                        □ 회원가입, 비밀번호 찾기등 본인인증을 위한 이메일 전송 시 : 이메일 (필수) <br />
+                        □ 회원가입시(만14세 이상만 가입가능) : 이메일아이디, 이름, 생년월일 (필수) <br />
+                        □ 회원가입, 보상을 위한 개인정보 수집 : 연락처 (선택) <br />
+                        2) 개인정보의 보유 및 이용기간 회원의 개인정보는 원칙적으로 회원 탈퇴 시 지체 없이 파기합니다. <br /><br />
+                        ※ 귀하께서는 필수항목 수집·이용에 대한 동의를 거부하실 수 있으나, 이는 서비스 제공에 필수적으로 수집해야 하는 정보이므로, 동의를 거부하실 경우 회원 가입, 유무료 콘텐츠 다운로드 등 회원 기반 서비스 등을 하실 수 없습니다.
+                    </div>
+                    <div class="selector-cover-box">
+                      <div class="selector-cover checkbox square line">
+                        <label class="label">
+                          <input type="checkbox"  id="checkbox" />
+                          <span class="selector-text">
+                              <span class="selector"></span>
+                          개인정보 제공 및 활용에 동의합니다.
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 개인정보 제공 및 활용 동의(필수) -->
+                <div class="article-write-box article-subject-show">
+                  <div class="subject"><strong>이메일로 가입하기</strong></div>
+                  <div class="input-cover">
+                    <label for="id" class="form-label">아이디(이메일)</label>
+                    <input type="text" id="id" name="id" title="아이디(이메일)" class="form-input" autocomplete="off" />
+                    <div class="form-guide-text font warning" id="warning"></div>
+                  </div>
+                </div>
+                <!-- 이메일로 가입하기 -->
+                <div class="sign-up-btn-wrap">
+                  <button type="button" class="btn medium bg-black full" onclick="postCodeGenerate()">가입하기</button>
+                </div>
+                <!-- //sign-up-btn-wrap -->
+                <div class="form-guide-text-wrap">
+                  <div class="form-guide-text font black underline">※ 실제 메일 수신용으로 사용하는 이메일로 가입하는 것을 권장합니다.</div>
+                  <div class="form-guide-text font">※ 아이디와 다른 메일로 정보 수신을 희망하시는 경우 가입 후 마이페이지에서 메일 정보를 수정해 주세요.</div>
+                </div>
+                <!-- //form-guide-text-wrap -->
+                <div class="article-write-box article-write-box-social article-subject-show">
+                  <div class="subject"><strong>소셜 로그인 방식으로 간편 가입하기</strong></div>
+                  <div class="social-content-box box-direction-row">
+                    <button type="button" class="btn icon-btn medium full naver-btn" onclick="authSNS('NAVER')"><i class="icon-box icon-naver"></i>네이버 로그인</button>
+                    <button type="button" class="btn icon-btn medium full kakao-btn" onclick="authSNS('KAKAO')"><i class="icon-box icon-kakao"></i>카카오 로그인</button>
+                  </div>
+                </div>
+                <!-- //article-write-box-social -->
+              </form>
+            </div>
+            <!-- //article-write-box-wrap -->
+          </div>
+        </div>
+      </section>
+      <!-- //write-box-area -->
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../notice/list.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/register.html" class="nav-box-btn" id="qna-base2">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+            <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+            <div class="logo-foundation-box">
+              <span> 본 서비스는 </span>
+              <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+              <span>의 지원을 받아 개발되었습니다.</span>
+            </div>
+          </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../privacy/privacy.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/terms.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>  
+  <div class="layer-popup full-scroll info-content-popup" id="alertPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box" id="alertMessage">
+              <strong>
+                제목입니다.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area">
+          <button type="button" class="btn btn-ok popup-close">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="mailInfoAlertPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box" id="mailInfoAlertMessage">
+              <strong>
+              111****@univ.me(으)로<br />
+              인증 메일이 발송되었습니다.
+            </strong>
+            </div>
+            <div class="sub-text-box">메일 속 링크를 클릭하면 회원가입을 진행할 수 있습니다.</div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area">
+          <button type="button" class="btn btn-ok popup-close">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

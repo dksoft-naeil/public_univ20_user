@@ -1,0 +1,3685 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../매거진/매거진.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../20svoice/20svoice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../커뮤니티/커뮤니티.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../캘린더/캘린더.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box">
+            <div class="menu-box-item">
+              <a href="../마이페이지/마이페이지.html">마이페이지</a>
+            </div>
+            <!-- 로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button">로그아웃</button>
+            </div>
+            <!-- //로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button" class="dark-mode-btn">
+                <i class="icon-box icon-moon"></i>
+                <i class="icon-box icon-sun"></i>
+                다크/라이트 모드
+              </button>
+            </div>
+            <div class="menu-box-item">
+              <button type="button" class="search-control-btn">
+                <i class="icon-box icon-search-black"></i>
+                <i class="icon-box icon-search-white"></i>
+                검색
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box">
+            <div class="login-box-item">
+              <button type="button" class="mobile-menu-btn">
+                <span class="profile-box">
+                <!-- 프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <!-- <div class="image image-thumb"> -->
+                <span class="image">
+                <!-- <img src="../../../resources/images/" alt="프로필 이미지" /> -->
+                </span>
+                <!-- //프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                </span>
+              </button>
+            </div>
+            <div class="menu-box">
+              <div class="menu-box-item">
+                <a href="../20svoice/글쓰기.html" class="menu-box-btn"><i class="icon-box header-icon-pencil"></i>글쓰기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../제보하기/제보하기.html" class="menu-box-btn"><i class="icon-box header-icon-volume"></i>대학내일에<br />
+                알려주기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../표지모델신청/표지모델신청.html" class="menu-box-btn"><i class="icon-box header-icon-camera"></i>표지모델 신청</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../마이페이지/마이페이지.html" class="menu-box-btn"><i class="icon-box header-icon-user"></i>마이페이지</a>
+              </div>
+              <div class="menu-box-item menu-logout">
+                <button type="button" class="menu-box-btn"><i class="icon-box header-icon-logout"></i>로그아웃</button>
+              </div>
+            </div>
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box">
+              <div class="user-info">
+                <span class="nickname">닉네임은최대열두자임다요</span>님을 위한<br />
+              라이프 매거진 UNIV20
+              </div>
+              <div class="user-menu">
+                <div class="user-menu-left">
+                  <button type="button" class="btn logout-btn">로그아웃</button>
+                  <a href="../마이페이지/마이페이지.html" class="btn">마이페이지</a>
+                </div>
+                <div class="user-menu-right">
+                  <button type="button" class="dark-mode-btn">
+                    <i class="icon-box icon-moon"></i>
+                    <i class="icon-box icon-sun"></i>
+                    다크/라이트 모드
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list">
+            <li class="all-menu-item">
+              <a href="../20svoice/글쓰기.html" class="all-menu-btn">글쓰기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../제보하기/제보하기.html" class="all-menu-btn">대학내일에 알려주기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../표지모델신청/표지모델신청.html" class="all-menu-btn">표지모델 신청</a>
+            </li>
+            <li class="all-menu-item">
+              <button type="button" class="all-menu-btn sub-menu-box-btn">매거진</button>
+              <div class="sub-menu-box">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 전체</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 캠퍼스</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 라이프스타일</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 커리어</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="all-menu-item">
+              <a href="../20svoice/20svoice.html" class="all-menu-btn">글 쓰는 20대</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../커뮤니티/커뮤니티.html" class="all-menu-btn">커뮤니티</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../캘린더/캘린더.html" class="all-menu-btn">캘린더</a>
+            </li>
+          </ul>
+          <div class="add-btn-box">
+            <a href="../공지사항/faq.html" class="add-btn">자주 묻는 질문</a>
+            <a href="../공지사항/문의신고하기.html" class="add-btn">문의/신고하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap mypage-content-box-area">
+        <h2 class="txt-hidden">마이페이지</h2>
+        <div class="user-info-content-box-wrap">
+          <div class="section-inner">
+            <div class="user-info-content-box">
+              <div class="user-detail-info-box">
+                <div class="profile-box user-profile-box">
+                  <div class="image">
+                    <!-- 프로필 사진 등록시 image-thumb 추가 -->
+                    <!-- <span class="image-thumb">
+                        <img src="../../../resources/images/logo.png" alt="프로필 이미지" />
+                      </span> -->
+                  </div>
+                  <div class="info">
+                    <div class="nickname">닉네임은최대열두자임다요</div>
+                    <div class="state-box">
+                      <!-- 대학교 인증 시 check 클래스 추가 -->
+                      <!-- <div class="member-state check"> -->
+                      <div class="member-state">
+                        <i class="icon-box icon-check"></i>
+                        <!-- <span>대학교 인증 회원</span> -->
+                        <span>대학교 미인증 회원</span>
+                      </div>
+                      <div class="edit-info">
+                        <a href="javascript:void(0);" class="edit-btn">
+                          <i class="icon-box icon-edit"></i>
+                          <span>내 정보 수정</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //user-profile-box -->
+                <div class="user-check-state-box">
+                  <div class="user-check-state-box-item">
+                    <div class="mark-box like">
+                      <i class="icon-box"></i>
+                    </div>
+                    <div class="text-box">
+                      <div class="text">좋아요 누른 글</div>
+                      <div class="number">99,999</div>
+                    </div>
+                  </div>
+                  <div class="user-check-state-box-item">
+                    <div class="mark-box bookmark">
+                      <i class="icon-box"></i>
+                    </div>
+                    <div class="text-box">
+                      <div class="text">저장한 글</div>
+                      <div class="number">999</div>
+                    </div>
+                  </div>
+                  <div class="user-check-state-box-item">
+                    <div class="mark-box schedule">
+                      <i class="icon-box"></i>
+                    </div>
+                    <div class="text-box">
+                      <div class="text">내 일정</div>
+                      <div class="number">99</div>
+                    </div>
+                  </div>
+                  <div class="user-check-state-box-item">
+                    <div class="mark-box alarm">
+                      <i class="icon-box"></i>
+                    </div>
+                    <div class="text-box">
+                      <div class="text">
+                        <button type="button" class="alarm-btn" onclick="layerPopup.openPopup('userInfoAlertPopup')">
+                          <span class="underline-text">알림</span>
+                          <!-- 새롭게 도착한 알림 메시지를 레이어 팝업을 통해 확인하지 않았다면 "N" 아이콘 노출 -->
+                          <i class="icon-new">N</i>
+                        </button>
+                      </div>
+                      <div class="number">9,999</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //user-check-state-box -->
+                <div class="user-write-point-box">
+                  <div class="point-box">
+                    <div class="mark-box">
+                      <div class="icon-box icon-coin"></div>
+                    </div>
+                    <div class="text-box">
+                      <div class="text">
+                        나의 포인트
+                        <!-- 지급 신청 -->
+                        <button type="button" class="btn small bg-wh round point-btn" onclick="layerPopup.openPopup('pointInfoAlertPopup', true)"><i class="icon-box icon-wallet"></i>입금 신청</button>
+                        <!-- 입금 대기 중 -->
+                        <!-- <button type="button" class="btn small bg-wh round point-btn" disabled><i class="icon-box icon-wallet"></i>입금 대기 중</button> -->
+                      </div>
+                      <div class="point">999,999,999P</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //user-write-point-box -->
+              </div>
+              <!-- //user-detail-info-box -->
+              <div class="mission-board-box">
+                <div class="title">이달의 미션</div>
+                <div class="swiper-container mission-board-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="mission-board-box-item">
+                        <div class="label">기본</div>
+                        <!-- 미션 클리어 시 clear 클래스 추가 -->
+                        <div class="mission-icon clear">
+                          <div class="no-clear">기본 미션 미달성</div>
+                          <div class="clear">기본 미션 달성</div>
+                        </div>
+                        <div class="text-box">
+                          <div class="title">글 쓰는 20대</div>
+                          <div class="mission">글쓰기 2회</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="mission-board-box-item">
+                        <div class="label">기본</div>
+                        <!-- 미션 클리어 시 clear 클래스 추가 -->
+                        <div class="mission-icon">
+                          <div class="no-clear">기본 미션 미달성</div>
+                          <div class="clear">기본 미션 달성</div>
+                        </div>
+                        <div class="text-box">
+                          <div class="title">커뮤니티</div>
+                          <div class="mission">글쓰기 10회</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="mission-board-box-item">
+                        <div class="label">기본</div>
+                        <!-- 미션 클리어 시 clear 클래스 추가 -->
+                        <div class="mission-icon">
+                          <div class="no-clear">기본 미션 미달성</div>
+                          <div class="clear">기본 미션 달성</div>
+                        </div>
+                        <div class="text-box">
+                          <div class="title">알려주기</div>
+                          <div class="mission">이슈 제보 3회</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="mission-board-box-item mission-board-box-item01">
+                        <div class="label">도전</div>
+                        <!-- 미션 클리어 시 clear 클래스 추가 -->
+                        <div class="mission-icon challenge clear">
+                          <div class="no-clear">도션 미션 미달성</div>
+                          <div class="clear">도전 미션 달성</div>
+                        </div>
+                        <div class="text-box">
+                          <div class="title">캠퍼스 에디터</div>
+                          <div class="mission">
+                            글 쓰는 20대<br class="mobile-show" />
+                              기사 발행 1회
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="mission-board-box-item mission-board-box-item01">
+                        <div class="label">도전</div>
+                        <!-- 미션 클리어 시 clear 클래스 추가 -->
+                        <div class="mission-icon challenge">
+                          <div class="no-clear">도션 미션 미달성</div>
+                          <div class="clear">도전 미션 달성</div>
+                        </div>
+                        <div class="text-box">
+                          <div class="title">크롤러</div>
+                          <div class="mission">
+                            제보 내용<br class="mobile-show" />
+                              기사 발행 1회
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-text-box">
+                  <p class="mark-text-box">
+                    <i class="mark icon-box icon-caution"></i>미션을 1개 이상 달성하면, 캐릿 1개월 구독권을 드립니다.<br />
+                      (미션 상품은 변경될 수 있습니다.)
+                  </p>
+                  <p class="mark-text-box"><i class="mark icon-box icon-caution"></i>이달의 미션은 매월 1일에 초기화됩니다.</p>
+                </div>
+              </div>
+              <!-- //mission-board-box -->
+            </div>
+          </div>
+        </div>
+        <!-- //user-info-content-box-wrap -->
+        <div class="mypage-content-box-wrap">
+          <div class="content-tab-menu-box-wrap">
+            <div class="content-tab-menu-box section-inner">
+              <ul class="content-tab-menu-box-list">
+                <li class="content-tab-menu-box-item ui-tab-item active">
+                  <a href="#magazine" class="content-tab-menu-box-btn">
+                    <span>매거진</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#twentyVoice" class="content-tab-menu-box-btn">
+                    <span>글 쓰는 20대</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#webZine" class="content-tab-menu-box-btn">
+                    <span>나만의 매거진</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#Community" class="content-tab-menu-box-btn">
+                    <span>커뮤니티</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#Calender" class="content-tab-menu-box-btn">
+                    <span>캘린더</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#Report" class="content-tab-menu-box-btn">
+                    <span>대학내일에 알려주기</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#inquiryReport" class="content-tab-menu-box-btn">
+                    <span>문의/신고하기</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- //content-tab-menu-box-wrap -->
+          <div class="banner-content-box-wrap section-inner">
+
+            <div class="banner-content-box">
+              <div class="banner-box">
+                <a href="javascript:void(0);" target="_blank" class="banner-link"></a>
+                <div class="banner">
+                  <img src="../../../resources/images/banner/banner-image01.png" class="pc-show" alt="광고 배너" />
+                  <img src="../../../resources/images/banner/banner-image01-mo.png" class="mobile-show" alt="광고 배너" />
+                </div>
+              </div>
+            </div>
+
+
+            <!-- //banner-content-box -->
+          </div>
+          <!-- //banner-content-box-wrap -->
+          <div class="mypage-content-box">
+            <div class="section-inner">
+              <div id="magazine" class="ui-tab-content">
+                <div class="content-tab-menu-box content-tab-menu-box-number">
+                  <ul class="content-tab-menu-box-list">
+                    <li class="content-tab-menu-box-item ui-tab-item active">
+                      <a href="#magazineFavorite" class="content-tab-menu-box-btn">
+                        <span>좋아요 누른 글</span>
+                        <span class="number">(99,999)</span>
+                      </a>
+                    </li>
+                    <li class="content-tab-menu-box-item ui-tab-item">
+                      <a href="#magazineBookmark" class="content-tab-menu-box-btn">
+                        <span>저장한 글</span>
+                        <span class="number">(100)</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //content-tab-menu-box -->
+                <div class="article-view-content-box-wrap">
+                  <div id="magazineFavorite" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">캠퍼스</option>
+                          <option value="옵션2">라이프스타일</option>
+                          <option value="옵션3">커리어</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-like-cancle"></i>좋아요 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box">
+                      <div class="article-info-box">
+                        <a href="../매거진/기획기사.html" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image07.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="../매거진/단신기사.html" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image08.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image09.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image10.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image11.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image12.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image01.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image02.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image03.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image04.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image05.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image06.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //article-content-box -->
+                    <div class="pagination-box">
+                      <div class="pagination pc-show">
+                        <button type="button" class="controller prev">이전으로</button>
+                        <button type="button" class="paging current">1</button>
+                        <button type="button" class="paging">2</button>
+                        <button type="button" class="paging">3</button>
+                        <button type="button" class="paging-more">...</button>
+                        <button type="button" class="controller next">다음으로</button>
+                      </div>
+                      <div class="btn-wrap half mobile-show">
+                        <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+                        <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+                      </div>
+                    </div>
+
+                    <!-- //pagination-box -->
+                    <!-- 콘텐츠가 0개 일 경우 노출 문구 -->
+                    <div class="empty-info-text-box">
+                      <a href="../매거진/매거진.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          재미있게 읽은 글에<br />
+                            ‘좋아요’를 눌러 주세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                    <!-- //콘텐츠가 0개 일 경우 노출 문구 -->
+                  </div>
+                  <!-- //좋아요 누른 글 -->
+                  <div id="magazineBookmark" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">캠퍼스</option>
+                          <option value="옵션2">라이프스타일</option>
+                          <option value="옵션3">커리어</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-bookmark-cancle"></i>저장 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box">
+                      <div class="article-info-box">
+                        <a href="../매거진/기획기사.html" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image07.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //article-content-box -->
+                    <!-- 콘텐츠가 0개 일 경우 노출 문구 -->
+                    <div class="empty-info-text-box">
+                      <a href="../매거진/매거진.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          관심 있는 글을 저장하고<br />
+                            나중에 다시 꺼내 보세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                    <!-- //콘텐츠가 0개 일 경우 노출 문구 -->
+                  </div>
+                  <!-- //저장한 글 -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //매거진 -->
+              <div id="twentyVoice" class="ui-tab-content">
+                <div class="content-tab-menu-box content-tab-menu-box-number">
+                  <ul class="content-tab-menu-box-list">
+                    <li class="content-tab-menu-box-item ui-tab-item active">
+                      <a href="#twentyVoiceWriting" class="content-tab-menu-box-btn">
+                        <span>내가 쓴 글</span>
+                        <span class="number">(6)</span>
+                      </a>
+                    </li>
+                    <li class="content-tab-menu-box-item ui-tab-item">
+                      <a href="#twentyVoiceFavorite" class="content-tab-menu-box-btn">
+                        <span>좋아요 누른 글</span>
+                        <span class="number">(100)</span>
+                      </a>
+                    </li>
+                    <li class="content-tab-menu-box-item ui-tab-item">
+                      <a href="#twentyVoiceBookmark" class="content-tab-menu-box-btn">
+                        <span>저장한 글</span>
+                        <span class="number">(13)</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //content-tab-menu-box -->
+                <div class="article-view-content-box-wrap">
+                  <div id="twentyVoiceWriting" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">캠퍼스</option>
+                          <option value="옵션2">라이프스타일</option>
+                          <option value="옵션3">커리어</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <a href="../20svoice/글쓰기.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-pen"></i>글쓰기</a>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box">
+                      <!-- 첨삭 or 발행 완료 state-label에 black 클래스 추가 -->
+                      <div class="article-info-box">
+                        <a href="../매거진/기획기사.html" class="article-info-box-btn">
+                          <div class="state-label">작성 완료</div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image07.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="date">2024. 10. 31.</div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="../매거진/단신기사.html" class="article-info-box-btn">
+                          <div class="state-label">임시 저장</div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image08.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="date">2024. 10. 31.</div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="state-label black">수정(첨삭) 중</div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image09.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="date">2024. 10. 31.</div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="state-label black">수정(첨삭) 제안</div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image10.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="date">2024. 10. 31.</div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="state-label black">발행 완료</div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image11.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="date">2024. 10. 31.</div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-info-box">
+                        <a href="javascript:void(0);" class="article-info-box-btn">
+                          <div class="state-label">작성 완료</div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image12.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="date">2024. 10. 31.</div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //article-content-box -->
+                    <!-- 콘텐츠가 0개 일 경우 노출 문구 -->
+                    <div class="empty-info-text-box">
+                      <a href="../20svoice/글쓰기.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          이달의 주제를 확인하고<br />
+                            여러분의 생각을 글로 남겨 보세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //내가 쓴 글 -->
+                  <div id="twentyVoiceFavorite" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">캠퍼스</option>
+                          <option value="옵션2">라이프스타일</option>
+                          <option value="옵션3">커리어</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-like-cancle"></i>좋아요 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box">
+                      <div class="article-info-box">
+                        <a href="../매거진/기획기사.html" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image07.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //article-content-box -->
+                    <div class="empty-info-text-box">
+                      <a href="../20svoice/20svoice.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          재미있게 읽은 글에<br />
+                            ‘좋아요’를 눌러 주세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //좋아요 누른 글 -->
+                  <div id="twentyVoiceBookmark" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">캠퍼스</option>
+                          <option value="옵션2">라이프스타일</option>
+                          <option value="옵션3">커리어</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-bookmark-cancle"></i>저장 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box">
+                      <div class="article-info-box">
+                        <a href="../매거진/기획기사.html" class="article-info-box-btn">
+                          <div class="selector-cover checkbox square solo">
+                            <label class="label">
+                              <input type="checkbox" />
+                              <span class="selector-text">
+                                  <span class="selector"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="image-box">
+                            <img src="../../../resources/images/_temp/temp-medium-thumbnail-image07.png" alt="썸네일" />
+                          </div>
+                          <div class="text-box">
+                            <div class="subject">이미 등록된 기사 타이틀이 표시되는 영역입니다. 최대 50자까지 표시돼요.</div>
+                            <div class="text">이미 등록된 전문이 최대 30자 표시되는 영역</div>
+                            <div class="info">
+                              <div class="writer"><span class="name">박대학</span> 에디터</div>
+                              <div class="date">2024. 10. 31.</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //article-content-box -->
+                    <div class="empty-info-text-box">
+                      <a href="../20svoice/20svoice.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          관심 있는 글을 저장하고<br />
+                            나중에 다시 꺼내 보세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //저장한 글 -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //글 쓰는 20대 -->
+              <div id="webZine" class="ui-tab-content">
+                <div class="webzine-view-content-box-wrap">
+                  <div class="control-content-box">
+                    <div class="select-box-container large solo">
+                      <select name="select" class="form-select">
+                        <option value="">전체기간</option>
+                        <option value="옵션1">2024</option>
+                      </select>
+                    </div>
+                    <div class="control-btn-box">
+                      <a href="../마이페이지/웹진만들기.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-book"></i>매거진 만들기</a>
+                    </div>
+                  </div>
+                  <!-- //control-content-box -->
+                  <div class="webzine-content-box">
+                    <div class="webzine-info-box">
+                      <a href="javascript:void(0);" class="webzine-info-box-link"></a>
+                      <div class="image-box">
+                        <img src="../../../resources/images/_temp/webzine-thumbnail-cover.png" alt="썸네일" />
+                      </div>
+                      <div class="info-content">
+                        <div class="text-box">
+                          <div class="subject">회원이 등록한 웹진 제목이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="text">회원이 등록한 웹진 전문이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="date">2024. 10.</div>
+                        </div>
+                        <div class="btn-box">
+                          <a href="javascript:void(0);" class="btn icon-btn small round bg-wh"><i class="icon-box icon-edit-dark"></i>수정하기</a>
+                          <button type="button" class="btn icon-btn small round bg-wh"><i class="icon-box icon-trash"></i>삭제하기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="webzine-info-box">
+                      <a href="javascript:void(0);" class="webzine-info-box-link"></a>
+                      <div class="image-box">
+                        <img src="../../../resources/images/_temp/webzine-thumbnail-cover.png" alt="썸네일" />
+                      </div>
+                      <div class="info-content">
+                        <!-- 메인 -->
+                        <div class="label-text">메인 웹진</div>
+                        <div class="text-box">
+                          <div class="subject">회원이 등록한 웹진 제목이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="text">회원이 등록한 웹진 전문이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="date">2024. 10.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="webzine-info-box">
+                      <a href="javascript:void(0);" class="webzine-info-box-link"></a>
+                      <div class="image-box">
+                        <img src="../../../resources/images/_temp/webzine-thumbnail-cover.png" alt="썸네일" />
+                      </div>
+                      <div class="info-content">
+                        <div class="text-box">
+                          <div class="subject">회원이 등록한 웹진 제목이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="text">회원이 등록한 웹진 전문이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="date">2024. 10.</div>
+                        </div>
+                        <div class="btn-box">
+                          <a href="javascript:void(0);" class="btn icon-btn small round bg-wh"><i class="icon-box icon-edit-dark"></i>수정하기</a>
+                          <button type="button" class="btn icon-btn small round bg-wh"><i class="icon-box icon-trash"></i>삭제하기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="webzine-info-box">
+                      <a href="javascript:void(0);" class="webzine-info-box-link"></a>
+                      <div class="image-box">
+                        <img src="../../../resources/images/_temp/webzine-thumbnail-cover.png" alt="썸네일" />
+                      </div>
+                      <div class="info-content">
+                        <div class="text-box">
+                          <div class="subject">회원이 등록한 웹진 제목이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="text">회원이 등록한 웹진 전문이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="date">2024. 10.</div>
+                        </div>
+                        <div class="btn-box">
+                          <a href="javascript:void(0);" class="btn icon-btn small round bg-wh"><i class="icon-box icon-edit-dark"></i>수정하기</a>
+                          <button type="button" class="btn icon-btn small round bg-wh"><i class="icon-box icon-trash"></i>삭제하기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="webzine-info-box">
+                      <a href="javascript:void(0);" class="webzine-info-box-link"></a>
+                      <div class="image-box">
+                        <img src="../../../resources/images/_temp/webzine-thumbnail-cover.png" alt="썸네일" />
+                      </div>
+                      <div class="info-content">
+                        <div class="text-box">
+                          <div class="subject">회원이 등록한 웹진 제목이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="text">회원이 등록한 웹진 전문이 표시되는 영역입니다. 최대 30자까지 표시돼요.</div>
+                          <div class="date">2024. 10.</div>
+                        </div>
+                        <div class="btn-box">
+                          <a href="javascript:void(0);" class="btn icon-btn small round bg-wh"><i class="icon-box icon-edit-dark"></i>수정하기</a>
+                          <button type="button" class="btn icon-btn small round bg-wh"><i class="icon-box icon-trash"></i>삭제하기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //webzine-content-box -->
+                  <div class="pagination-box">
+                    <div class="pagination pc-show">
+                      <button type="button" class="controller prev">이전으로</button>
+                      <button type="button" class="paging current">1</button>
+                      <button type="button" class="paging">2</button>
+                      <button type="button" class="paging">3</button>
+                      <button type="button" class="paging-more">...</button>
+                      <button type="button" class="controller next">다음으로</button>
+                    </div>
+                    <div class="btn-wrap half mobile-show">
+                      <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+                      <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+                    </div>
+                  </div>
+
+                  <!-- //pagination-box -->
+                  <div class="empty-info-text-box">
+                    <a href="../20svoice/글쓰기.html" class="empty-link-btn">
+                      <i class="icon-box icon-plus-square">+</i>
+                      <div class="text">직접 작성한 글로<br />나만의 매거진을 만들어 보세요.</div>
+                    </a>
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //나만의 매거진 -->
+              <div id="Community" class="ui-tab-content">
+                <div class="content-tab-menu-box content-tab-menu-box-number">
+                  <ul class="content-tab-menu-box-list">
+                    <li class="content-tab-menu-box-item ui-tab-item active">
+                      <a href="#communityWriting" class="content-tab-menu-box-btn">
+                        <span>내가 쓴 글</span>
+                        <span class="number">(6)</span>
+                      </a>
+                    </li>
+                    <li class="content-tab-menu-box-item ui-tab-item">
+                      <a href="#communityFavorite" class="content-tab-menu-box-btn">
+                        <span>좋아요 누른 글</span>
+                        <span class="number">(100)</span>
+                      </a>
+                    </li>
+                    <li class="content-tab-menu-box-item ui-tab-item">
+                      <a href="#communityBookmark" class="content-tab-menu-box-btn">
+                        <span>저장한 글</span>
+                        <span class="number">(13)</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //content-tab-menu-box -->
+                <div class="article-view-content-box-wrap">
+                  <div id="communityWriting" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <!-- 우리 학교 - 대학교 미인증 회원에게는 미노출 -->
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">일상</option>
+                          <option value="옵션2">연애</option>
+                          <option value="옵션3">진로</option>
+                          <option value="옵션4">우리 학교</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <a href="../20svoice/글쓰기.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-pen"></i>글쓰기</a>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="mypage-data-table-content-box data-table-content-box data-table-all">
+                      <!-- pc -->
+                      <div class="data-table-box pc-show">
+                        <div class="txt-hidden">커뮤니티 내가 쓴 글</div>
+                        <div class="data-table-box-standard">
+                          <div class="number">번호</div>
+                          <div class="category">카테고리</div>
+                          <div class="topic">제목</div>
+                          <div class="like">좋아요</div>
+                          <div class="read">읽음</div>
+                          <div class="date">게시일</div>
+                        </div>
+                        <ul class="data-table-box-list">
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="number">99,999</div>
+                              <div class="category">우리 학교</div>
+                              <div class="topic image">
+                                <div class="text">
+                                  커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.<span class="info"><i class="icon-box icon-photo">이미지</i> (9,999)</span>
+                                </div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="number">99,999</div>
+                              <div class="category">우리 학교</div>
+                              <div class="topic image">
+                                <div class="text">제목이 표시되는 영역입니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="number">99,999</div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="number">99,999</div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="number">99,999</div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <!-- mobile -->
+                      <div class="data-table-box mobile-show">
+                        <ul class="data-table-box-list">
+                          <!-- 
+                                공지 글 a 태그에 notice 클래스 추가, 
+                                제목에 이미지포함이라면 아래 추가
+                                <span class="info"><i class="icon-box icon-photo">이미지</i> 9,999</span> 추가
+                            -->
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link notice">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">연애</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">[공지] 관리자에서 등록한 공지 제목이 표시되...</div>
+                                <span class="info"><i class="icon-box icon-photo">이미지</i> (999)</span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link notice">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">우리 학교</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">[공지] 관리자에서 등록한 공지 제목</div>
+                                <span class="info">(99,999)</span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">우리 학교</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">커뮤니티 제목 글자 수는 오십자까지 표시됩니다.</div>
+                                <span class="info"><i class="icon-box icon-photo">이미지</i></span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <div class="pagination-box">
+                        <div class="pagination pc-show">
+                          <button type="button" class="controller prev">이전으로</button>
+                          <button type="button" class="paging current">1</button>
+                          <button type="button" class="paging">2</button>
+                          <button type="button" class="paging">3</button>
+                          <button type="button" class="paging-more">...</button>
+                          <button type="button" class="controller next">다음으로</button>
+                        </div>
+                        <div class="btn-wrap half mobile-show">
+                          <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+                          <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- //pagination-box -->
+                    </div>
+                    <!-- //data-table-content-box -->
+                    <div class="empty-info-text-box">
+                      <a href="../커뮤니티/등록.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          이용자들과 나누고 싶은 이야기를<br />
+                            자유롭게 써주세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //내가 쓴 글 -->
+                  <div id="communityFavorite" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <!-- 우리 학교 - 대학교 미인증 회원에게는 미노출 -->
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">일상</option>
+                          <option value="옵션2">연애</option>
+                          <option value="옵션3">진로</option>
+                          <option value="옵션4">우리 학교</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-like-cancle"></i>좋아요 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="mypage-data-table-content-box data-table-content-box data-table-all">
+                      <!-- pc -->
+                      <div class="data-table-box pc-show">
+                        <div class="txt-hidden">커뮤니티 좋아요 누른 글</div>
+                        <div class="data-table-box-standard">
+                          <div class="data-check-box">
+                            <div class="selector-cover checkbox square solo">
+                              <label class="label">
+                                <input type="checkbox" />
+                                <span class="selector-text">
+                                    <span class="selector"></span>
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="category">카테고리</div>
+                          <div class="topic">제목</div>
+                          <div class="like">좋아요</div>
+                          <div class="read">읽음</div>
+                          <div class="date">게시일</div>
+                        </div>
+                        <ul class="data-table-box-list">
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">우리 학교</div>
+                              <div class="topic image">
+                                <div class="text">
+                                  커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.<span class="info"><i class="icon-box icon-photo">이미지</i> (9,999)</span>
+                                </div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">우리 학교</div>
+                              <div class="topic image">
+                                <div class="text">제목이 표시되는 영역입니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <!-- mobile -->
+                      <div class="data-table-box data-table-box-check mobile-show">
+                        <ul class="data-table-box-list">
+                          <!-- 
+                                공지 글 a 태그에 notice 클래스 추가, 
+                                제목에 이미지포함이라면 아래 추가
+                                <span class="info"><i class="icon-box icon-photo">이미지</i> 9,999</span> 추가
+                            -->
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link notice">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">연애</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">[공지] 관리자에서 등록한 공지 제목이 표시되...</div>
+                                <span class="info"><i class="icon-box icon-photo">이미지</i> (999)</span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link notice">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">연애</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">[공지] 관리자에서 등록한 공지 제목</div>
+                                <span class="info">(99,999)</span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">연애</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">커뮤니티 제목 글자 수는 오십자까지 표시됩니다.</div>
+                                <span class="info"><i class="icon-box icon-photo">이미지</i></span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <div class="pagination-box">
+                        <div class="pagination pc-show">
+                          <button type="button" class="controller prev">이전으로</button>
+                          <button type="button" class="paging current">1</button>
+                          <button type="button" class="paging">2</button>
+                          <button type="button" class="paging">3</button>
+                          <button type="button" class="paging-more">...</button>
+                          <button type="button" class="controller next">다음으로</button>
+                        </div>
+                        <div class="btn-wrap half mobile-show">
+                          <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+                          <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- //pagination-box -->
+                    </div>
+                    <!-- //data-table-content-box -->
+                    <div class="empty-info-text-box">
+                      <a href="../커뮤니티/목록전체.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          재미있게 읽은 글에<br />
+                            ‘좋아요’를 눌러 주세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //좋아요 누른 글 -->
+                  <div id="communityBookmark" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="옵션1">2024</option>
+                        </select>
+                        <!-- 우리 학교 - 대학교 미인증 회원에게는 미노출 -->
+                        <select name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="옵션1">일상</option>
+                          <option value="옵션2">연애</option>
+                          <option value="옵션3">진로</option>
+                          <option value="옵션4">우리 학교</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-bookmark-cancle"></i>저장 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="mypage-data-table-content-box data-table-content-box data-table-all">
+                      <!-- pc -->
+                      <div class="data-table-box pc-show">
+                        <div class="txt-hidden">커뮤니티 저장한 글</div>
+                        <div class="data-table-box-standard">
+                          <div class="data-check-box">
+                            <div class="selector-cover checkbox square solo">
+                              <label class="label">
+                                <input type="checkbox" />
+                                <span class="selector-text">
+                                    <span class="selector"></span>
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="category">카테고리</div>
+                          <div class="topic">제목</div>
+                          <div class="like">좋아요</div>
+                          <div class="read">읽음</div>
+                          <div class="date">게시일</div>
+                        </div>
+                        <ul class="data-table-box-list">
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">우리 학교</div>
+                              <div class="topic image">
+                                <div class="text">
+                                  커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.<span class="info"><i class="icon-box icon-photo">이미지</i> (9,999)</span>
+                                </div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">우리 학교</div>
+                              <div class="topic image">
+                                <div class="text">제목이 표시되는 영역입니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="category">일상</div>
+                              <div class="topic image">
+                                <div class="text">커뮤니티 제목 글자 수는 최대 오십자까지 이 곳에 표시됩니다.</div>
+                              </div>
+                              <div class="like">99,999</div>
+                              <div class="read">99,999</div>
+                              <div class="date">2024.10.31 23:59</div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <!-- mobile -->
+                      <div class="data-table-box data-table-box-check mobile-show">
+                        <ul class="data-table-box-list">
+                          <!-- 
+                                공지 글 a 태그에 notice 클래스 추가, 
+                                제목에 이미지포함이라면 아래 추가
+                                <span class="info"><i class="icon-box icon-photo">이미지</i> 9,999</span> 추가
+                            -->
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link notice">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">연애</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">[공지] 관리자에서 등록한 공지 제목이 표시되...</div>
+                                <span class="info"><i class="icon-box icon-photo">이미지</i> (999)</span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link notice">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">연애</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">[공지] 관리자에서 등록한 공지 제목</div>
+                                <span class="info">(99,999)</span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="data-table-box-item">
+                            <a href="javascript:void(0);" class="data-table-box-link">
+                              <div class="category-box">
+                                <span class="label">카테고리</span>
+                                <span class="text">연애</span>
+                              </div>
+                              <div class="title-box image">
+                                <div class="title">커뮤니티 제목 글자 수는 오십자까지 표시됩니다.</div>
+                                <span class="info"><i class="icon-box icon-photo">이미지</i></span>
+                              </div>
+                              <div class="info-box">
+                                <div class="read">
+                                  <span class="label">읽음</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="like">
+                                  <span class="label">좋아요</span>
+                                  <span class="number">9,999</span>
+                                </div>
+                                <div class="date">
+                                  <span class="label">게시일</span>
+                                  <span class="number">2024.10.31 23:59</span>
+                                </div>
+                              </div>
+                              <div class="data-check-box">
+                                <div class="selector-cover checkbox square solo">
+                                  <label class="label">
+                                    <input type="checkbox" />
+                                    <span class="selector-text">
+                                        <span class="selector"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <div class="pagination-box">
+                        <div class="pagination pc-show">
+                          <button type="button" class="controller prev">이전으로</button>
+                          <button type="button" class="paging current">1</button>
+                          <button type="button" class="paging">2</button>
+                          <button type="button" class="paging">3</button>
+                          <button type="button" class="paging-more">...</button>
+                          <button type="button" class="controller next">다음으로</button>
+                        </div>
+                        <div class="btn-wrap half mobile-show">
+                          <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+                          <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- //pagination-box -->
+                    </div>
+                    <!-- //data-table-content-box -->
+                    <div class="empty-info-text-box">
+                      <a href="../커뮤니티/목록전체.html" class="empty-link-btn">
+                        <i class="icon-box icon-plus-square">+</i>
+                        <div class="text">
+                          관심 있는 글을 저장하고<br />
+                            나중에 다시 꺼내 보세요.
+                        </div>
+                      </a>
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //저장한 글 -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //커뮤니티 -->
+              <div id="Calender" class="ui-tab-content">
+                <div class="calender-box-content">
+                  <div class="monthly-box">
+                    <div id="calendar"></div>
+                  </div>
+                  <!-- //monthly-box -->
+                  <div class="control-btn-box">
+                    <a href="../캘린더/일정등록.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-calendar"></i>일정 등록</a>
+                  </div>
+                  <div class="daily-box show">
+                    <div class="daily-content-box twenty">
+                      <div class="daily-content-box-date">06.24(월)</div>
+                      <!-- 등록 완료 캘린더 - black 클래스 추가 -->
+                      <div class="content-box">
+                        <div class="label-text">캘린더 등록 신청 중</div>
+                        <div class="thumbnail-image">
+                          <img src="../../../resources/images/_temp/temp-calender-thumbnail-image01.png" alt="썸네일 이미지" />
+                        </div>
+                        <div class="title">
+                          일정 제목입니다.<br />
+                            제목은 최대 30자까지 작성 가능합니다.
+                        </div>
+                        <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                        <div class="text-box">상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다.</div>
+
+                        <div class="comment-content-box accordion-container accordion-list" data-speed="200">
+                          <div class="comment-content-box-header accordion-header"><i class="icon-box icon-arrow-round">화살표</i><span class="underline">여러분의 생각은 어때요?</span></div>
+                          <div class="comment-content-box-body accordion-body">
+                            <!-- <div class="comment-list-box">
+        <div class="comment-list-box-item"></div>
+      </div> -->
+                            <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+                            <div class="comment-input-box comment-input-box-active">
+                              <div class="textarea-box">
+                                <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                                <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                              </div>
+                              <button type="button" class="btn">댓글 쓰기</button>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <!-- //comment-content-box -->
+                        <div class="edit-btn-box">
+                          <a href="javascript:void(0);" class="btn icon-btn small round bg-wh"><i class="icon-box icon-edit-dark"></i>수정</a>
+                          <button type="button" class="btn icon-btn small round bg-wh"><i class="icon-box icon-trash"></i>삭제</button>
+                        </div>
+                        <!-- //edit-btn-box -->
+                      </div>
+                      <div class="content-box">
+                        <div class="label-text black">캘린더 등록 완료</div>
+                        <div class="title">일정 제목입니다. 제목은 최대 30자까지 작성 가능합니다.</div>
+                        <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                        <div class="text-box">상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다.</div>
+
+                        <div class="comment-content-box accordion-container accordion-list" data-speed="200">
+                          <div class="comment-content-box-header accordion-header"><i class="icon-box icon-arrow-round">화살표</i><span class="underline">여러분의 생각은 어때요?</span></div>
+                          <div class="comment-content-box-body accordion-body">
+                            <!-- <div class="comment-list-box">
+        <div class="comment-list-box-item"></div>
+      </div> -->
+                            <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+                            <div class="comment-input-box comment-input-box-active">
+                              <div class="textarea-box">
+                                <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                                <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                              </div>
+                              <button type="button" class="btn">댓글 쓰기</button>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <!-- //comment-content-box -->
+                      </div>
+                    </div>
+                    <!-- 공유하자 -->
+                    <div class="daily-content-box twenty">
+                      <div class="daily-content-box-date">06.27(목)</div>
+                      <div class="content-box">
+                        <div class="label-text">캘린더 등록 신청 중</div>
+                        <div class="thumbnail-image">
+                          <img src="../../../resources/images/_temp/temp-calender-thumbnail-image01.png" alt="썸네일 이미지" />
+                        </div>
+                        <div class="title">일정 제목입니다. 제목은 최대 30자까지 작성 가능합니다.</div>
+                        <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                        <div class="text-box">상세 내용입니다.</div>
+
+                        <div class="comment-content-box accordion-container accordion-list" data-speed="200">
+                          <div class="comment-content-box-header accordion-header"><i class="icon-box icon-arrow-round">화살표</i><span class="underline">3명의 댓글이 있습니다.</span></div>
+                          <div class="comment-content-box-body accordion-body">
+                            <div class="comment-list-box">
+                              <div class="comment-list-box-item">
+                                <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                                <div class="profile-image">강</div>
+                                <div class="comment-box">
+                                  <div class="info-box">
+                                    <div class="name">강동동</div>
+                                    <div class="date">2024.10.31 23:59</div>
+                                    <div class="like-box">
+                                      <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                      <button type="button" class="active-btn like-btn">
+                                        <i class="icon-box icon-like">좋아요</i>
+                                      </button>
+                                      <span class="number">123</span>
+                                    </div>
+                                  </div>
+                                  <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 작성한 일정에 대한 의견입니다.</div>
+                                </div>
+                              </div>
+                              <div class="comment-list-box-item">
+                                <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                                <div class="profile-image">이</div>
+                                <div class="comment-box">
+                                  <div class="info-box">
+                                    <div class="name">이동동</div>
+                                    <div class="date">2024.10.31 23:59</div>
+                                    <div class="like-box">
+                                      <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                      <button type="button" class="active-btn like-btn check">
+                                        <i class="icon-box icon-like">좋아요</i>
+                                      </button>
+                                      <span class="number">123</span>
+                                    </div>
+                                  </div>
+                                  <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 작성한 일정에 대한 의견입니다.</div>
+                                </div>
+                              </div>
+                              <!-- 유저 작성 시 comment-list-box-item-user 클래스 추가 -->
+                              <div class="comment-list-box-item comment-list-box-item-user">
+                                <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                                <div class="profile-image">대</div>
+                                <div class="comment-box">
+                                  <div class="info-box">
+                                    <div class="name">대학내일</div>
+                                    <div class="date">2024.10.31 23:59</div>
+                                    <div class="like-box">
+                                      <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                      <button type="button" class="active-btn like-btn">
+                                        <i class="icon-box icon-like">좋아요</i>
+                                      </button>
+                                      <span class="number">123</span>
+                                    </div>
+                                  </div>
+                                  <div class="comment">내가 작성한 일정에 대한 의견입니다. 내가 작성한 일정에 대한 의견입니다.</div>
+                                </div>
+                              </div>
+                              <div class="btn-wrap">
+                                <button type="button" class="add-btn"><i class="icon-box icon-arrow-black-down">화살표</i><span class="underline">더보기</span></button>
+                              </div>
+                            </div>
+                            <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+                            <div class="comment-input-box comment-input-box-active">
+                              <div class="textarea-box">
+                                <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                                <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                              </div>
+                              <button type="button" class="btn">댓글 쓰기</button>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <!-- //comment-content-box -->
+                        <div class="edit-btn-box">
+                          <a href="javascript:void(0);" class="btn icon-btn small round bg-wh"><i class="icon-box icon-edit-dark"></i>수정</a>
+                          <button type="button" class="btn icon-btn small round bg-wh"><i class="icon-box icon-trash"></i>삭제</button>
+                        </div>
+                        <!-- //edit-btn-box -->
+                      </div>
+                      <div class="content-box">
+                        <div class="label-text black">캘린더 등록 완료</div>
+                        <div class="title">일정 제목입니다. 제목은 최대 30자까지 작성 가능합니다.</div>
+                        <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                        <div class="text-box">상세 내용입니다.</div>
+                        <!-- [미게시일 경우 표기] -->
+                        <div class="info-text-box">
+                          <i class="icon-box icon-exclamation-circle">!</i>
+                          <div class="text">해당 일정은 관리자에 의해 전체 게시가 거절되었습니다. (거절사유 : 동일일정 있음)</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 공유하자 -->
+                    <div class="btn-wrap mobile-show">
+                      <button type="button" class="btn medium bg-g4">더보기</button>
+                    </div>
+                  </div>
+                  <!-- //daily-box -->
+                  <div class="empty-info-text-box">
+                    <a href="../캘린더/일정등록.html" class="empty-link-btn">
+                      <i class="icon-box icon-plus-square">+</i>
+                      <div class="text">공유하고 싶은 일정을 등록해 주세요.</div>
+                    </a>
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //calender-box-content -->
+              </div>
+              <!-- //캘린더 -->
+              <div id="Report" class="ui-tab-content">
+                <div class="article-content-box-report-wrap">
+                  <div class="control-content-box">
+                    <div class="select-box-container large solo">
+                      <select name="select" class="form-select">
+                        <option value="">전체기간</option>
+                        <option value="옵션1">2024</option>
+                      </select>
+                    </div>
+                    <div class="control-btn-box">
+                      <a href="../제보하기/제보하기.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-sound"></i>알려주기</a>
+                    </div>
+                  </div>
+                  <!-- //control-content-box -->
+                  <div class="article-content-box-report">
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="label-text">기사 발행</div>
+                        <div class="title">제보 제목이 표시되는 영역입니다. 여기 제목은 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">제보 제목이 표시되는 영역입니다. 여기 제목은 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">제보 제목이 표시되는 영역입니다. 여기 제목은 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">제보 제목이 표시되는 영역입니다. 여기 제목은 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">제보 제목이 표시되는 영역입니다. 여기 제목은 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="label-text">기사 발행</div>
+                        <div class="title">제보 제목이 표시되는 영역입니다. 여기 제목은 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- //article-content-box-report -->
+                  <div class="pagination-box">
+                    <div class="pagination pc-show">
+                      <button type="button" class="controller prev">이전으로</button>
+                      <button type="button" class="paging current">1</button>
+                      <button type="button" class="paging">2</button>
+                      <button type="button" class="paging">3</button>
+                      <button type="button" class="paging-more">...</button>
+                      <button type="button" class="controller next">다음으로</button>
+                    </div>
+                    <div class="btn-wrap half mobile-show">
+                      <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+                      <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+                    </div>
+                  </div>
+
+                  <!-- //pagination-box -->
+                  <div class="empty-info-text-box">
+                    <a href="../제보하기/제보하기.html" class="empty-link-btn">
+                      <i class="icon-box icon-plus-square">+</i>
+                      <div class="text">
+                        대학내일에 소개하고 싶은 소식을 알려주시면<br />
+                          사례금을 드려요!
+                      </div>
+                    </a>
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //article-content-box-report-wrap -->
+              </div>
+              <!-- //대학내일에 알려주기 -->
+              <div id="inquiryReport" class="ui-tab-content">
+                <div class="article-content-box-report-wrap">
+                  <div class="control-content-box">
+                    <div class="select-box-container large solo">
+                      <select name="select" class="form-select">
+                        <option value="">전체기간</option>
+                        <option value="옵션1">2024</option>
+                      </select>
+                    </div>
+                    <div class="control-btn-box">
+                      <a href="../공지사항/문의신고하기.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-headphones"></i>문의/신고하기</a>
+                    </div>
+                  </div>
+                  <!-- //control-content-box -->
+                  <div class="article-content-box-report">
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="label-text">답변 완료</div>
+                        <div class="title">문의신고 제목이 표시되는 영역 입니다. 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">문의신고 제목이 표시되는 영역 입니다. 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">문의신고 제목이 표시되는 영역 입니다. 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">문의신고 제목이 표시되는 영역 입니다. 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="title">문의신고 제목이 표시되는 영역 입니다. 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                    <div class="article-content-box-report-item">
+                      <a href="javascript:void(0);" class="article-content-box-report-link">
+                        <div class="label-text">답변 완료</div>
+                        <div class="title">문의신고 제목이 표시되는 영역 입니다. 말줄임표 없이 최대 오십자까지 표시돼요.</div>
+                        <div class="date">2024. 10. 31. 23:59</div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- //article-content-box-report -->
+                  <div class="pagination-box">
+                    <div class="pagination pc-show">
+                      <button type="button" class="controller prev">이전으로</button>
+                      <button type="button" class="paging current">1</button>
+                      <button type="button" class="paging">2</button>
+                      <button type="button" class="paging">3</button>
+                      <button type="button" class="paging-more">...</button>
+                      <button type="button" class="controller next">다음으로</button>
+                    </div>
+                    <div class="btn-wrap half mobile-show">
+                      <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+                      <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+                    </div>
+                  </div>
+
+                  <!-- //pagination-box -->
+                  <div class="empty-info-text-box">
+                    <a href="../공지사항/문의신고하기.html" class="empty-link-btn">
+                      <i class="icon-box icon-plus-square">+</i>
+                      <div class="text">
+                        대학내일에 궁금한 내용은<br />
+                          언제든지 문의해 주세요.
+                      </div>
+                    </a>
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //article-content-box-report-wrap -->
+              </div>
+              <!-- //문의/신고하기 -->
+            </div>
+          </div>
+        </div>
+        <!-- //mypage-content-box -->
+      </section>
+      <!-- //sub-section-wrap -->
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../공지사항/목록.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/문의신고하기.html" class="nav-box-btn">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+                <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+                <div class="logo-foundation-box">
+                  <span> 본 서비스는 </span>
+                  <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+                  <span>의 지원을 받아 개발되었습니다.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/개인정보처리방침.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/이용약관.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+
+  <!-- 마이페이지 -->
+  <!-- 마이페이지 알림 메시지 팝업 -->
+  <div class="layer-popup full-scroll user-info-alert-popup" id="userInfoAlertPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title">
+          <strong>알림 메시지</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <!-- 
+            첨삭 멘토링, 첨삭 의견 추가 - 펜 아이콘 ( alert-icon-pencil-plus )
+            기사 발행, 매거진 시리즈 선정 - 기사 아이콘 ( alert-icon-article )
+          -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-pencil-plus">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[글 쓰는 20대]</strong> 닉네임은최대열두자임다요님의 글에 대학내일이 수정(첨삭)을 제안했어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 첨삭 멘토링 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-pencil-plus">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[글 쓰는 20대]</strong> 닉네임은최대열두자임다요님의 글에 새로운 수정(첨삭) 의견이 추가되었어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 첨삭 의견 추가 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-article">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[글 쓰는 20대]</strong> 닉네임은최대열두자임다요님의 글이 기사로 발행되었어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 기사 발행 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-article">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[대학생이 만든 매거진]</strong> 닉네임은최대열두자임다요님의 매거진이 주목할 시리즈로 선정되었어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 매거진 시리즈 선정 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-article">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[제보하기]</strong> 닉네임은최대열두자임다요님이 알려주신 소식이 대학내일 매거진 기사로 발행되었어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 매거진 기사 발행 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-camera">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[표지모델]</strong> 닉네임은최대열두자임다요님의 신청 결과가 발표되었어요. 개인 이메일 또는 연락처에서 확인해 주세요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 표지모델 신청 결과 발표 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-calendar">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[캘린더]</strong> 닉네임은최대열두자임다요님의 일정이 캘린더에 등록되었어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 캘린더 등록 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-gift">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[미션 달성 선물]</strong> 닉네임은최대열두자임요님에게 캐릿 구독권이 지급되었어요. 구독권은 개인 이메일에서 확인해 주세요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 미션 달성 선물 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-coins">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[포인트]</strong> 닉네임은최대열두자임다요님의 포인트가 현금으로 입금되었어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 포인트 입금 완료 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-headphones">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[문의/신고]</strong> 내일님의 문의/신고 글에 답변이 도착했어요.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 문의/신고 글 답변 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-bell">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[안내]</strong> 닉네임은최대열두자임다요님의 글이 대학내일 정책에 의해 삭제 되었습니다.</div>
+                <div class="info-text">
+                  * 삭제 사유 : 유사 글 반복적 게시<br />
+                * 삭제 조치를 반복적으로 받게 될 경우 차후 사전 공지 없이 계정이 영구 정지될 수 있습니다.
+                </div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 안내 -->
+            <div class="info-content-box-item">
+              <div class="mark-icon">
+                <i class="icon-box alert-icon-bell">아이콘</i>
+              </div>
+              <div class="info-box">
+                <div class="text"><strong>[공지]</strong> 관리자에서 설정된 알람 메시지가 노출됩니다. 최대 오십자까지 말줄임표 없이 보여집니다.</div>
+                <div class="row-box">
+                  <div class="date">2024. 10. 31. 23:59</div>
+                  <button type="button" class="btn icon-btn underline-text delete-btn"><i class="icon-box alert-icon-trash"></i>삭제</button>
+                </div>
+              </div>
+            </div>
+            <!-- 공지 -->
+          </div>
+          <!-- //info-content-box -->
+          <div class="pagination-box">
+            <div class="pagination pc-show">
+              <button type="button" class="controller prev">이전으로</button>
+              <button type="button" class="paging current">1</button>
+              <button type="button" class="paging">2</button>
+              <button type="button" class="paging">3</button>
+              <button type="button" class="paging-more">...</button>
+              <button type="button" class="controller next">다음으로</button>
+            </div>
+            <div class="btn-wrap half mobile-show">
+              <button type="button" class="btn medium bg-g4 prev-btn"><i class="icon-box icon-arrow-prev"></i> 이전 페이지</button>
+              <button type="button" class="btn medium bg-g4 next-btn">다음 페이지 <i class="icon-box icon-arrow-next"></i></button>
+            </div>
+          </div>
+          <!-- //pagination-box -->
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area">
+          <button type="button" class="btn btn-ok popup-close">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 마이페이지 포인트 신청 안내 팝업 -->
+  <div class="layer-popup full-scroll info-content-popup" id="pointInfoAlertPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              포인트를 현금으로 바꾸시겠어요?<br />
+            1 포인트는 현금 1원으로 계산됩니다.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half">
+          <button type="button" class="btn btn-close popup-close">취소</button>
+          <button type="button" class="btn btn-ok">완료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    $(document).ready(function() {
+      // document 로드 후 재실행
+      // 비동기 실행후 재실행 할 경우
+      // 슬라이드 업데이트
+      window.sliderUpdate();
+    });
+  </script>
+
+
+  <script>
+    // fullcalendar 라이브러리 참고 - https://fullcalendar.io/docs/getting-started
+    $(document).ready(function() {
+      let windowWidth = $(window).width();
+      let checkValue = false;
+      let mobileWidth = 960;
+
+      // FullCalendar
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        schedulerLicenseKey: '0282912382-fcs-1701247693',
+
+        headerToolbar: {
+          left: 'prev',
+          center: 'title',
+          right: 'next',
+        },
+
+        // 보여지는 고정 월, 날짜
+        // initialDate: '2024-01-01',
+        editable: false, // 기존에 입력 되어 있는 event를 드래그로 움직일 수 있도록 해주는 설정
+        selectable: false, // 달력 날짜를 드래그 해서 여러 날짜를 지정할 수 있다.
+        businessHours: false,
+        navLinks: false, // 달력 내부의 날짜 (숫자) 클릭 가능하게
+        dayMaxEvents: 3, //더보기 표기 갯수
+        // aspectRatio: 1.18, //비율 유지 가로 세로 비율
+        // weekNumbers: true, //달력 가장 왼쪽으로 오늘이 몇번째 주인지를 숫자로 보여준다.
+
+        initialView: 'dayGridMonth',
+        locale: 'ko', // 한글 여부
+        fixedWeekCount: false, //height fix 풀기
+        contentHeight: 'auto',
+        windowResizeDelay: 10,
+        // contentHeight: 680,
+
+        // 일정 El 커스텀
+        eventContent: function(obj) {
+          var item = document.createElement('div');
+          item.className = 'fc-schedule-content ' + obj.event.extendedProps.schedulePick;
+          item.innerHTML = "<div class='schedule-info'><div class='schedule-title'>" + obj.event.extendedProps.scheduleTitle + '</div></div>';
+          var arrayOfDomNodes = [item];
+          return {
+            domNodes: arrayOfDomNodes
+          };
+        },
+
+        // 일정 일 텍스트 제거
+        dayCellContent: function(info) {
+          var number = document.createElement('a');
+          number.classList.add('fc-daygrid-day-number');
+          number.innerHTML = info.dayNumberText.replace('일', '');
+          if (info.view.type === 'dayGridMonth') {
+            return {
+              html: number.outerHTML,
+            };
+          }
+          return {
+            domNodes: [],
+          };
+        },
+
+        // 더 보기 +
+        moreLinkContent: function(obj) {
+          var objNumber = obj.num + 1;
+          //더보기 표기
+          return '+' + objNumber;
+        },
+
+        // 더 보기 버튼 생성시
+        moreLinkDidMount: function(obj) {
+          moreLinkHideEvent();
+        },
+
+        // 더 보기 클릭시
+        moreLinkClick: function() {
+          calendar.setOption(moreLinkClickEvent());
+          return 'function';
+          // 모바일은 click 불가
+        },
+
+        // 일정 클릭시 발생하는 이벤트
+        eventClick: function(obj) {
+          const label = $('.calendar-info-box .label');
+          const title = $('.calendar-info-box .title');
+          const text = $('.calendar-info-box .text');
+          const date = $('.calendar-info-box .date');
+          let iconName;
+          let labelName;
+          let startDate, endDate;
+
+          if (windowWidth <= mobileWidth) {
+            // Mobile
+            alert('모바일에서 일정 바 클릭');
+          } else {
+            // PC
+            // 시간 불필요 요소 제거
+            var start = obj.event.startStr;
+            var end = obj.event.endStr;
+            startDate = start.replaceAll('-', '.').replace('T', ' ').replace('+09:00', '');
+            endDate = end.replaceAll('-', '.').replace('T', ' ').replace('+09:00', '');
+
+            if (startDate.split(':').length - 1 > 0) {
+              startDate = startDate.substring(startDate.lastIndexOf(':'), 2);
+              endDate = endDate.substring(endDate.lastIndexOf(':'), 2);
+            }
+
+            if (obj.event.extendedProps.schedulePick == 'univ') {
+              iconName = 'icon-univ';
+              labelName = '놀자';
+            } else if (obj.event.extendedProps.schedulePick == 'twenty') {
+              iconName = 'icon-smile';
+              labelName = '놀자';
+            } else if (obj.event.extendedProps.schedulePick == 'account') {
+              iconName = 'icon-check';
+              labelName = obj.event.extendedProps.accountName;
+            } else if (obj.event.extendedProps.schedulePick == 'promotion') {
+              iconName = 'icon-promotion';
+              labelName = 'Promotion';
+            }
+
+            // calendarInfoBoxView
+            calendarInfoBoxView();
+
+            label.attr('class', 'label');
+            label.addClass(obj.event.extendedProps.schedulePick);
+            label.html('<i class="icon-box ' + iconName + '"></i>' + labelName);
+            title.text(obj.event.extendedProps.scheduleTitle);
+            text.text(obj.event.extendedProps.scheduleInfoText);
+
+            if (startDate == '' || endDate == '') {
+              if (!startDate == '') {
+                date.text(startDate);
+              } else {
+                date.text(endDate);
+              }
+            } else {
+              date.text(startDate + ' ~ ' + endDate);
+            }
+          }
+        },
+
+        events: [{
+            // 놀자
+            schedulePick: 'univ',
+            scheduleTitle: '일정 제목 일정 제목 일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-01-01',
+          },
+          {
+            // 놀자
+            schedulePick: 'univ',
+            scheduleTitle: '일정 제목 일정 제목 일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-01-01',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-01',
+          },
+          {
+            // 신청하자
+            accountName: '삼성전자',
+            schedulePick: 'account',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#D2F0FF',
+            start: '2024-01-01',
+          },
+          {
+            // 놀자
+            schedulePick: 'univ',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-01-02',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 신청하자
+            accountName: '삼성전자',
+            schedulePick: 'account',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#D2F0FF',
+            start: '2024-01-04',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-08T19:00',
+            end: '2024-01-11T19:00',
+          },
+          {
+            // 광고
+            schedulePick: 'promotion',
+            scheduleTitle: '광고 일정 제목',
+            scheduleInfoText: '광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.',
+            backgroundColor: '#F3EEFE',
+            start: '2024-01-19T19:00',
+            end: '2024-01-21T19:00',
+          },
+        ],
+
+        // render 호출 후
+        eventDidMount: function() {
+          moreLinkRenderEvent();
+          moreLinkHideEvent();
+        },
+
+        // windowResize
+        windowResize: function() {
+          windowWidth = $(window).width();
+
+          if (windowWidth <= mobileWidth && checkValue == false) {
+            // Mobile
+            moreLinkRenderEvent();
+            moreLinkHideEvent();
+            checkValue = true;
+          } else {
+            // PC
+            moreLinkRenderEvent();
+            moreLinkHideEvent();
+            checkValue = false;
+          }
+        },
+
+        eventAdd: function(obj) {
+          // 이벤트가 추가되면 발생하는 이벤트
+          console.log(obj);
+        },
+        eventChange: function(obj) {
+          // 이벤트가 수정되면 발생하는 이벤트
+          console.log(obj);
+        },
+        eventRemove: function(obj) {
+          // 이벤트가 삭제되면 발생하는 이벤트
+          console.log(obj);
+        },
+
+        // date 영역 클릭 시
+        dateClick: function(info) {
+          // 모바일
+          if (windowWidth <= mobileWidth) {
+            // $('.fc-day').removeClass('fc-day-cover');
+            // $(info.dayEl).addClass('fc-day-cover');
+            alert('모바일에서 일정 클릭');
+          }
+        },
+      });
+      calendar.render();
+
+      // calendarInfoBoxView
+      function calendarInfoBoxView() {
+        $('.calendar-info-box .info-text').addClass('hide');
+        $('.calendar-info-box .view-box').addClass('show');
+      }
+
+      // moreLinkRenderEvent
+      function moreLinkRenderEvent() {
+        // more 표시 개수
+        if ($(window).width() <= mobileWidth) {
+          // Mobile
+          calendar.setOption('dayMaxEvents', 4);
+        } else {
+          // PC
+          calendar.setOption('dayMaxEvents', 3);
+        }
+        // 아래 부분 제거
+        // calendar.render();
+      }
+
+      // moreLinkHideEvent
+      function moreLinkHideEvent() {
+        $('.fc-daygrid-event-harness').removeClass('hide');
+
+        setTimeout(() => {
+          $('.fc-daygrid-more-link').each(function(i, el) {
+            $(el)
+              .closest('.fc-daygrid-day-events')
+              .find('.fc-daygrid-event-harness')
+              .not('.fc-daygrid-event-harness-abs')
+              .eq(calendar.currentData.calendarOptions.dayMaxEvents - 1)
+              .addClass('hide');
+            $(el)
+              .closest('.fc-daygrid-day-events')
+              .find('.fc-daygrid-event-harness.fc-daygrid-event-harness-abs')
+              .eq(calendar.currentData.calendarOptions.dayMaxEvents - 1)
+              .addClass('hide');
+          });
+        }, 100);
+      }
+
+      // moreLinkClickEvent 더보기 클릭시 이벤트
+      function moreLinkClickEvent() {
+        // PC
+        if ($(window).width() > mobileWidth) {
+          $('.tab-box-btn.daily').click();
+        }
+      }
+
+      // 탭 메뉴 먼슬리 캘린더 보이기
+      function monthlyViewEvent() {
+        $('.calender-box-title h2').text('먼슬리 캘린더');
+        $('.calender-box-content .monthly-box').addClass('show');
+        $('.calender-box-content .daily-box').removeClass('show');
+        calendar.render();
+      }
+
+      // 탭 메뉴 데일리 캘린더 보이기
+      function dailyViewEvent() {
+        $('.calender-box-title h2').text('데일리 캘린더');
+        $('.calender-box-content .daily-box').addClass('show');
+        $('.calender-box-content .monthly-box').removeClass('show');
+        calendar.render();
+      }
+
+      // 탭 메뉴
+      $('.celender-info-box-tab .tab-box-btn').on('click', function() {
+        $('.tab-box-btn').parent('.tab-box').removeClass('active');
+        $(this).parent('.tab-box').addClass('active');
+
+        // monthly, daily show
+        if ($(this).hasClass('monthly')) {
+          monthlyViewEvent();
+        } else {
+          dailyViewEvent();
+        }
+      });
+    });
+  </script>
+
+  <!-- calenderScript -->
+</body>
+
+</html>

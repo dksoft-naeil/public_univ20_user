@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../매거진/매거진.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../20svoice/20svoice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../커뮤니티/커뮤니티.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../캘린더/캘린더.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box">
+            <div class="menu-box-item">
+              <a href="../마이페이지/마이페이지.html">마이페이지</a>
+            </div>
+            <!-- 로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button">로그아웃</button>
+            </div>
+            <!-- //로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button" class="dark-mode-btn">
+                <i class="icon-box icon-moon"></i>
+                <i class="icon-box icon-sun"></i>
+                다크/라이트 모드
+              </button>
+            </div>
+            <div class="menu-box-item">
+              <button type="button" class="search-control-btn">
+                <i class="icon-box icon-search-black"></i>
+                <i class="icon-box icon-search-white"></i>
+                검색
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box">
+            <div class="login-box-item">
+              <button type="button" class="mobile-menu-btn">
+                <span class="profile-box">
+                <!-- 프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <!-- <div class="image image-thumb"> -->
+                <span class="image">
+                <!-- <img src="../../../resources/images/" alt="프로필 이미지" /> -->
+                </span>
+                <!-- //프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                </span>
+              </button>
+            </div>
+            <div class="menu-box">
+              <div class="menu-box-item">
+                <a href="../20svoice/글쓰기.html" class="menu-box-btn"><i class="icon-box header-icon-pencil"></i>글쓰기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../제보하기/제보하기.html" class="menu-box-btn"><i class="icon-box header-icon-volume"></i>대학내일에<br />
+                알려주기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../표지모델신청/표지모델신청.html" class="menu-box-btn"><i class="icon-box header-icon-camera"></i>표지모델 신청</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../마이페이지/마이페이지.html" class="menu-box-btn"><i class="icon-box header-icon-user"></i>마이페이지</a>
+              </div>
+              <div class="menu-box-item menu-logout">
+                <button type="button" class="menu-box-btn"><i class="icon-box header-icon-logout"></i>로그아웃</button>
+              </div>
+            </div>
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box">
+              <div class="user-info">
+                <span class="nickname">닉네임은최대열두자임다요</span>님을 위한<br />
+              라이프 매거진 UNIV20
+              </div>
+              <div class="user-menu">
+                <div class="user-menu-left">
+                  <button type="button" class="btn logout-btn">로그아웃</button>
+                  <a href="../마이페이지/마이페이지.html" class="btn">마이페이지</a>
+                </div>
+                <div class="user-menu-right">
+                  <button type="button" class="dark-mode-btn">
+                    <i class="icon-box icon-moon"></i>
+                    <i class="icon-box icon-sun"></i>
+                    다크/라이트 모드
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list">
+            <li class="all-menu-item">
+              <a href="../20svoice/글쓰기.html" class="all-menu-btn">글쓰기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../제보하기/제보하기.html" class="all-menu-btn">대학내일에 알려주기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../표지모델신청/표지모델신청.html" class="all-menu-btn">표지모델 신청</a>
+            </li>
+            <li class="all-menu-item">
+              <button type="button" class="all-menu-btn sub-menu-box-btn">매거진</button>
+              <div class="sub-menu-box">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 전체</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 캠퍼스</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 라이프스타일</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 커리어</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="all-menu-item">
+              <a href="../20svoice/20svoice.html" class="all-menu-btn">글 쓰는 20대</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../커뮤니티/커뮤니티.html" class="all-menu-btn">커뮤니티</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../캘린더/캘린더.html" class="all-menu-btn">캘린더</a>
+            </li>
+          </ul>
+          <div class="add-btn-box">
+            <a href="../공지사항/faq.html" class="add-btn">자주 묻는 질문</a>
+            <a href="../공지사항/문의신고하기.html" class="add-btn">문의/신고하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap calender-box-area">
+        <div class="section-inner">
+          <div class="calender-box-title">
+            <h2>월간 캘린더</h2>
+          </div>
+          <!-- //calender-box-title -->
+          <!-- calender-pick-box pc 용 -->
+          <div class="calender-pick-box pc-show">
+            <div class="pick-box pick-box-univ">
+              <div class="info-box">
+                <div class="title">
+                  <i class="icon-box icon-univ"></i>
+                  <span>놀자</span>
+                </div>
+                <div class="text">페스티벌, 팝업스토어, 전시 등</div>
+              </div>
+              <div class="switch-container">
+                <div class="switch-icon">
+                  <input type="checkbox" id="pick-switch01" class="switch-input" />
+                  <label for="pick-switch01" class="switch-label">
+                    <div class="switch-button">
+                      <span class="btn-on-off">on/off 버튼</span>
+                    </div>
+                    <span class="switch-text txt-hidden">놀자</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="pick-box pick-box-twenty">
+              <div class="info-box">
+                <div class="title">
+                  <i class="icon-box icon-smile"></i>
+                  <span>공유하자</span>
+                </div>
+                <div class="text">
+                  대학생이 직접 등록한 일정.<br />
+                    추천하고 싶은 일정을 등록해 보세요.
+                </div>
+              </div>
+              <div class="switch-container">
+                <div class="switch-icon">
+                  <input type="checkbox" id="pick-switch02" class="switch-input" />
+                  <label for="pick-switch02" class="switch-label">
+                    <div class="switch-button">
+                      <span class="btn-on-off">on/off 버튼</span>
+                    </div>
+                    <span class="switch-text txt-hidden">공유하자</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="pick-box pick-box-account">
+              <div class="info-box">
+                <div class="title">
+                  <i class="icon-box icon-check"></i>
+                  <span>신청하자</span>
+                </div>
+                <div class="text">
+                  대외활동, 공모전,<br />
+                    놓치면 안되는 대학생 혜택 등
+                </div>
+              </div>
+              <div class="switch-container">
+                <div class="switch-icon">
+                  <input type="checkbox" id="pick-switch03" class="switch-input" />
+                  <label for="pick-switch03" class="switch-label">
+                    <div class="switch-button">
+                      <span class="btn-on-off">on/off 버튼</span>
+                    </div>
+                    <span class="switch-text txt-hidden">신청하자</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //calender-pick-box -->
+          <div class="calender-box-content">
+            <div class="celender-info-box">
+              <div class="celender-info-box-tab">
+                <div class="tab-box active">
+                  <button type="button" class="tab-box-btn monthly">월간</button>
+                </div>
+                <div class="tab-box">
+                  <button type="button" class="tab-box-btn daily">일간</button>
+                </div>
+              </div>
+              <div class="select-box-container small">
+                <label class="form-label txt-hidden">공식 계정 카테고리</label>
+                <select name="select" class="form-select">
+                  <option value="">전체</option>
+                  <option value="옵션1">삼성전자</option>
+                  <option value="옵션2">아시아나항공</option>
+                </select>
+              </div>
+            </div>
+            <div class="monthly-box show">
+              <div id="calendar"></div>
+              <div class="calendar-info-box">
+                <div class="info-text">
+                  캘린더에서<br />
+                    행사 일정을 선택하시면<br />
+                    해당 일정의 상세 내용을<br />
+                    확인할 수 있습니다.
+                </div>
+                <div class="view-box-wrap">
+                  <div class="view-box">
+                    <div class="title-box">
+                      <div class="label">
+                        <i class="icon-box"></i>
+                        <span></span>
+                      </div>
+                      <div class="title"></div>
+                      <div class="date"></div>
+                    </div>
+                    <div class="text"></div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <a href="../캘린더/일정등록.html" class="btn medium bg-black">일정 등록</a>
+                </div>
+              </div>
+            </div>
+            <!-- //monthly-box -->
+            <!-- calender-pick-box mobile 용 -->
+            <div class="calender-pick-box mobile-show">
+              <div class="pick-box pick-box-univ">
+                <div class="info-box">
+                  <div class="title">
+                    <i class="icon-box icon-univ"></i>
+                    <span>놀자</span>
+                  </div>
+                  <div class="text">페스티벌, 팝업스토어, 전시 등</div>
+                </div>
+                <div class="switch-container">
+                  <div class="switch-icon">
+                    <input type="checkbox" id="pick-mo-switch01" class="switch-input" />
+                    <label for="pick-mo-switch01" class="switch-label">
+                      <div class="switch-button">
+                        <span class="btn-on-off">on/off 버튼</span>
+                      </div>
+                      <span class="switch-text txt-hidden">놀자</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="pick-box pick-box-twenty">
+                <div class="info-box">
+                  <div class="title">
+                    <i class="icon-box icon-smile"></i>
+                    <span>공유하자</span>
+                  </div>
+                  <div class="text">
+                    대학생이 직접 등록한 일정.<br />
+                      추천하고 싶은 일정을 등록해 보세요.
+                  </div>
+                </div>
+                <div class="switch-container">
+                  <div class="switch-icon">
+                    <input type="checkbox" id="pick-mo-switch02" class="switch-input" />
+                    <label for="pick-mo-switch02" class="switch-label">
+                      <div class="switch-button">
+                        <span class="btn-on-off">on/off 버튼</span>
+                      </div>
+                      <span class="switch-text txt-hidden">공유하자</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="pick-box pick-box-account">
+                <div class="info-box">
+                  <div class="title">
+                    <i class="icon-box icon-check"></i>
+                    <span>신청하자</span>
+                  </div>
+                  <div class="text">
+                    대외활동, 공모전,<br />
+                      놓치면 안되는 대학생 혜택 등
+                  </div>
+                </div>
+                <div class="switch-container">
+                  <div class="switch-icon">
+                    <input type="checkbox" id="pick-mo-switch03" class="switch-input" />
+                    <label for="pick-mo-switch03" class="switch-label">
+                      <div class="switch-button">
+                        <span class="btn-on-off">on/off 버튼</span>
+                      </div>
+                      <span class="switch-text txt-hidden">신청하자</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //calender-pick-box -->
+            <div class="daily-box">
+              <div class="daily-content-box univ">
+                <div class="daily-content-box-date">06.29(월)</div>
+                <div class="content-box">
+                  <div class="label">
+                    <i class="icon-box"></i>
+                    <span>놀자</span>
+                  </div>
+                  <div class="thumbnail-image">
+                    <img src="../../../resources/images/_temp/temp-calender-thumbnail-image01.png" alt="썸네일 이미지" />
+                  </div>
+                  <div class="title">일정 제목입니다. 제목은 최대 30자까지 작성 가능합니다.</div>
+                  <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                  <div class="text-box">상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다.</div>
+                  <div class="info-link-btn-box">
+                    <a href="javascript:void(0);" class="info-link-btn"><i class="icon">📍</i> <span class="underline">더 알아보기</span></a>
+                  </div>
+
+                  <div class="comment-content-box accordion-container accordion-list" data-speed="200">
+                    <div class="comment-content-box-header accordion-header"><i class="icon-box icon-arrow-round">화살표</i><span class="underline">여러분의 생각은 어때요?</span></div>
+                    <div class="comment-content-box-body accordion-body">
+                      <!-- <div class="comment-list-box">
+        <div class="comment-list-box-item"></div>
+      </div> -->
+                      <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+                      <div class="comment-input-box comment-input-box-active">
+                        <div class="textarea-box">
+                          <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                          <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                        </div>
+                        <button type="button" class="btn">댓글 쓰기</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- //comment-content-box -->
+                </div>
+              </div>
+              <!-- 놀자 -->
+              <div class="daily-content-box twenty">
+                <div class="daily-content-box-date">06.30(화)</div>
+                <div class="content-box">
+                  <div class="label">
+                    <i class="icon-box"></i>
+                    <span>공유하자</span>
+                  </div>
+                  <div class="title">일정 제목입니다. 제목은 최대 30자까지 작성 가능합니다.</div>
+                  <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                  <div class="text-box">상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다.</div>
+                  <div class="info-link-btn-box">
+                    <a href="javascript:void(0);" class="info-link-btn"><i class="icon">📍</i> <span class="underline">더 알아보기</span></a>
+                  </div>
+
+                  <div class="comment-content-box accordion-container accordion-list" data-speed="200">
+                    <div class="comment-content-box-header accordion-header"><i class="icon-box icon-arrow-round">화살표</i><span class="underline">3명의 댓글이 있습니다.</span></div>
+                    <div class="comment-content-box-body accordion-body">
+                      <div class="comment-list-box">
+                        <div class="comment-list-box-item">
+                          <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                          <div class="profile-image">
+                            강
+                            <!-- <img src="../../../resources/images/" alt="" /> -->
+                          </div>
+                          <div class="comment-box">
+                            <div class="info-box">
+                              <div class="name">강동동</div>
+                              <div class="date">2024.10.31 23:59</div>
+                              <div class="like-box">
+                                <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                <button type="button" class="active-btn like-btn">
+                                  <i class="icon-box icon-like">좋아요</i>
+                                </button>
+                                <span class="number">123</span>
+                              </div>
+                            </div>
+                            <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 작성한 일정에 대한 의견입니다.</div>
+                          </div>
+                        </div>
+                        <div class="comment-list-box-item">
+                          <div class="profile-image">이</div>
+                          <div class="comment-box">
+                            <div class="info-box">
+                              <div class="name">이동동</div>
+                              <div class="date">2024.10.31 23:59</div>
+                              <div class="like-box">
+                                <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                <button type="button" class="active-btn like-btn check">
+                                  <i class="icon-box icon-like">좋아요</i>
+                                </button>
+                                <span class="number">123</span>
+                              </div>
+                            </div>
+                            <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 작성한 일정에 대한 의견입니다.</div>
+                          </div>
+                        </div>
+                        <!-- 유저 작성 시 comment-list-box-item-user 클래스 추가 -->
+                        <div class="comment-list-box-item comment-list-box-item-user">
+                          <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                          <div class="profile-image">대</div>
+                          <div class="comment-box">
+                            <div class="info-box">
+                              <div class="name">대학내일</div>
+                              <div class="date">2024.10.31 23:59</div>
+                              <div class="like-box">
+                                <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                <button type="button" class="active-btn like-btn">
+                                  <i class="icon-box icon-like">좋아요</i>
+                                </button>
+                                <span class="number">123</span>
+                              </div>
+                            </div>
+                            <div class="comment">내가 작성한 일정에 대한 의견입니다. 내가 작성한 일정에 대한 의견입니다.</div>
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="add-btn"><i class="icon-box icon-arrow-black-down">화살표</i><span class="underline">더보기</span></button>
+                        </div>
+                      </div>
+                      <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+                      <div class="comment-input-box comment-input-box-active">
+                        <div class="textarea-box">
+                          <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                          <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                        </div>
+                        <button type="button" class="btn">댓글 쓰기</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- //comment-content-box -->
+                </div>
+              </div>
+              <!-- 공유하자 -->
+              <div class="daily-content-box account">
+                <div class="daily-content-box-date">07.02(목)</div>
+                <div class="content-box">
+                  <div class="label">
+                    <i class="icon-box"></i>
+                    <span>신청하자</span>
+                  </div>
+                  <div class="title">일정 제목입니다. 제목은 최대 30자까지 작성 가능합니다.</div>
+                  <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                  <div class="text-box">상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다. 500자 예시입니다. 상세 내용입니다. 최대 500자까지 작성 가능합니다.</div>
+
+                  <div class="comment-content-box accordion-container accordion-list" data-speed="200">
+                    <div class="comment-content-box-header accordion-header"><i class="icon-box icon-arrow-round">화살표</i><span class="underline">3명의 댓글이 있습니다.</span></div>
+                    <div class="comment-content-box-body accordion-body">
+                      <div class="comment-list-box">
+                        <div class="comment-list-box-item">
+                          <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                          <div class="profile-image">강</div>
+                          <div class="comment-box">
+                            <div class="info-box">
+                              <div class="name">강동동</div>
+                              <div class="date">2024.10.31 23:59</div>
+                              <div class="like-box">
+                                <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                <button type="button" class="active-btn like-btn">
+                                  <i class="icon-box icon-like">좋아요</i>
+                                </button>
+                                <span class="number">123</span>
+                              </div>
+                            </div>
+                            <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 작성한 일정에 대한 의견입니다.</div>
+                          </div>
+                        </div>
+                        <div class="comment-list-box-item">
+                          <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                          <div class="profile-image">이</div>
+                          <div class="comment-box">
+                            <div class="info-box">
+                              <div class="name">이동동</div>
+                              <div class="date">2024.10.31 23:59</div>
+                              <div class="like-box">
+                                <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                <button type="button" class="active-btn like-btn check">
+                                  <i class="icon-box icon-like">좋아요</i>
+                                </button>
+                                <span class="number">123</span>
+                              </div>
+                            </div>
+                            <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다. 작성한 일정에 대한 의견입니다.</div>
+                          </div>
+                        </div>
+                        <!-- 유저 작성 시 comment-list-box-item-user 클래스 추가 -->
+                        <div class="comment-list-box-item comment-list-box-item-user">
+                          <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                          <div class="profile-image">대</div>
+                          <div class="comment-box">
+                            <div class="info-box">
+                              <div class="name">대학내일</div>
+                              <div class="date">2024.10.31 23:59</div>
+                              <div class="like-box">
+                                <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                                <button type="button" class="active-btn like-btn">
+                                  <i class="icon-box icon-like">좋아요</i>
+                                </button>
+                                <span class="number">123</span>
+                              </div>
+                            </div>
+                            <div class="comment">내가 작성한 일정에 대한 의견입니다. 내가 작성한 일정에 대한 의견입니다.</div>
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="add-btn"><i class="icon-box icon-arrow-black-down">화살표</i><span class="underline">더보기</span></button>
+                        </div>
+                      </div>
+                      <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+                      <div class="comment-input-box comment-input-box-active">
+                        <div class="textarea-box">
+                          <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                          <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                        </div>
+                        <button type="button" class="btn">댓글 쓰기</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- //comment-content-box -->
+                </div>
+              </div>
+              <!-- 신청하자 -->
+              <div class="daily-content-box promotion">
+                <div class="daily-content-box-date">07.03(금)</div>
+                <div class="content-box">
+                  <div class="label">
+                    <i class="icon-box"></i>
+                    <span>Promotion</span>
+                  </div>
+                  <div class="thumbnail-image">
+                    <img src="../../../resources/images/_temp/temp-calender-thumbnail-image02.png" alt="썸네일 이미지" />
+                  </div>
+                  <div class="title">일정 제목입니다. 제목은 최대 30자까지 작성 가능합니다.</div>
+                  <div class="date-box"><i class="icon">🗓️</i> 2024.06.29 10:30 ~ 2024.07.01 12:00</div>
+                  <div class="text-box">상세 내용입니다. 최대 500자까지 작성 가능합니다.</div>
+                  <div class="info-link-btn-box">
+                    <a href="javascript:void(0);" class="info-link-btn"><i class="icon">📍</i> <span class="underline">더 알아보기</span></a>
+                  </div>
+
+                  <div class="comment-content-box accordion-container accordion-list" data-speed="200">
+                    <div class="comment-content-box-header accordion-header"><i class="icon-box icon-arrow-round">화살표</i><span class="underline">여러분의 생각은 어때요?</span></div>
+                    <div class="comment-content-box-body accordion-body">
+                      <!-- <div class="comment-list-box">
+        <div class="comment-list-box-item"></div>
+      </div> -->
+                      <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+                      <div class="comment-input-box comment-input-box-active">
+                        <div class="textarea-box">
+                          <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                          <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                        </div>
+                        <button type="button" class="btn">댓글 쓰기</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- //comment-content-box -->
+                </div>
+              </div>
+              <!-- 프로모션 -->
+              <div class="btn-wrap mobile-show">
+                <button type="button" class="btn medium bg-g4">더보기</button>
+              </div>
+            </div>
+            <!-- //daily-box -->
+          </div>
+          <!-- //calender-box-content -->
+        </div>
+      </section>
+      <!-- //calender-box-area -->
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../공지사항/목록.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/문의신고하기.html" class="nav-box-btn">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+                <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+                <div class="logo-foundation-box">
+                  <span> 본 서비스는 </span>
+                  <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+                  <span>의 지원을 받아 개발되었습니다.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/개인정보처리방침.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/이용약관.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+
+
+  <script>
+    // fullcalendar 라이브러리 참고 - https://fullcalendar.io/docs/getting-started
+    $(document).ready(function() {
+      let windowWidth = $(window).width();
+      let checkValue = false;
+      let mobileWidth = 960;
+
+      // FullCalendar
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        schedulerLicenseKey: '0282912382-fcs-1701247693',
+
+        headerToolbar: {
+          left: 'prev',
+          center: 'title',
+          right: 'next',
+        },
+
+        // 보여지는 고정 월, 날짜
+        // initialDate: '2024-01-01',
+        editable: false, // 기존에 입력 되어 있는 event를 드래그로 움직일 수 있도록 해주는 설정
+        selectable: false, // 달력 날짜를 드래그 해서 여러 날짜를 지정할 수 있다.
+        businessHours: false,
+        navLinks: false, // 달력 내부의 날짜 (숫자) 클릭 가능하게
+        dayMaxEvents: 3, //더보기 표기 갯수
+        // aspectRatio: 1.18, //비율 유지 가로 세로 비율
+        // weekNumbers: true, //달력 가장 왼쪽으로 오늘이 몇번째 주인지를 숫자로 보여준다.
+
+        initialView: 'dayGridMonth',
+        locale: 'ko', // 한글 여부
+        fixedWeekCount: false, //height fix 풀기
+        contentHeight: 'auto',
+        windowResizeDelay: 10,
+        // contentHeight: 680,
+
+        // 일정 El 커스텀
+        eventContent: function(obj) {
+          var item = document.createElement('div');
+          item.className = 'fc-schedule-content ' + obj.event.extendedProps.schedulePick;
+          item.innerHTML = "<div class='schedule-info'><div class='schedule-title'>" + obj.event.extendedProps.scheduleTitle + '</div></div>';
+          var arrayOfDomNodes = [item];
+          return {
+            domNodes: arrayOfDomNodes
+          };
+        },
+
+        // 일정 일 텍스트 제거
+        dayCellContent: function(info) {
+          var number = document.createElement('a');
+          number.classList.add('fc-daygrid-day-number');
+          number.innerHTML = info.dayNumberText.replace('일', '');
+          if (info.view.type === 'dayGridMonth') {
+            return {
+              html: number.outerHTML,
+            };
+          }
+          return {
+            domNodes: [],
+          };
+        },
+
+        // 더 보기 +
+        moreLinkContent: function(obj) {
+          var objNumber = obj.num + 1;
+          //더보기 표기
+          return '+' + objNumber;
+        },
+
+        // 더 보기 버튼 생성시
+        moreLinkDidMount: function(obj) {
+          moreLinkHideEvent();
+        },
+
+        // 더 보기 클릭시
+        moreLinkClick: function() {
+          calendar.setOption(moreLinkClickEvent());
+          return 'function';
+          // 모바일은 click 불가
+        },
+
+        // 일정 클릭시 발생하는 이벤트
+        eventClick: function(obj) {
+          const viewBoxWrap = $('.calendar-info-box .view-box-wrap');
+          const label = $('.calendar-info-box .label');
+          const title = $('.calendar-info-box .title');
+          const text = $('.calendar-info-box .text');
+          const date = $('.calendar-info-box .date');
+          let iconName;
+          let labelName;
+          let startDate, endDate;
+
+          if (windowWidth <= mobileWidth) {
+            // Mobile
+            alert('모바일에서 일정 바 클릭');
+          } else {
+            // PC
+            // 시간 불필요 요소 제거
+            var start = obj.event.startStr;
+            var end = obj.event.endStr;
+            startDate = start.replaceAll('-', '.').replace('T', ' ').replace('+09:00', '');
+            endDate = end.replaceAll('-', '.').replace('T', ' ').replace('+09:00', '');
+
+            if (startDate.split(':').length - 1 > 0) {
+              startDate = startDate.substring(startDate.lastIndexOf(':'), 2);
+              endDate = endDate.substring(endDate.lastIndexOf(':'), 2);
+            }
+
+            if (obj.event.extendedProps.schedulePick == 'univ') {
+              iconName = 'icon-univ';
+              labelName = '놀자';
+            } else if (obj.event.extendedProps.schedulePick == 'twenty') {
+              iconName = 'icon-smile';
+              labelName = '공유하자';
+            } else if (obj.event.extendedProps.schedulePick == 'account') {
+              iconName = 'icon-check';
+              labelName = obj.event.extendedProps.accountName;
+            } else if (obj.event.extendedProps.schedulePick == 'promotion') {
+              iconName = 'icon-promotion';
+              labelName = 'Promotion';
+            }
+
+            // calendarInfoBoxView
+            calendarInfoBoxView();
+            viewBoxWrap.attr('class', 'view-box-wrap');
+            viewBoxWrap.addClass(obj.event.extendedProps.schedulePick);
+            label.html('<i class="icon-box ' + iconName + '"></i>' + labelName);
+            title.text(obj.event.extendedProps.scheduleTitle);
+            text.text(obj.event.extendedProps.scheduleInfoText);
+
+            if (startDate == '' || endDate == '') {
+              if (!startDate == '') {
+                date.text(startDate);
+              } else {
+                date.text(endDate);
+              }
+            } else {
+              date.text(startDate + ' ~ ' + endDate);
+            }
+          }
+        },
+
+        events: [{
+            accountName: '2',
+            schedulePick: 'twenty',
+            scheduleTitle: '10월 25일 00시 ~ 10월 31일 22시',
+            scheduleInfoText: '10월 25일 00시 ~ 10월 31일 22시</br>10월 25일 00시 ~ 10월 31일 22시</br>10월 25일 00시 ~ 10월 31일 22시</br>10월 25일 00시 ~ 10월 31일 22시</br></br>입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-24T15:00',
+            end: '2024-10-25T15:00',
+          },
+          {
+            // 놀자
+            schedulePick: 'univ',
+            scheduleTitle: '일정 제목 일정 제목 일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-01',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '댕 s PICK 주말 일정 확정!',
+            scheduleInfoText: '댕 s PICK 주말 일정 확정!</br>댕 s PICK 주말 일정 확정!</br>2024-10-19 12:17 ~ 2024-10-20 12:17',
+            backgroundColor: '#FFD9D9',
+            // start: '2024-01-08T19:00',
+            // end: '2024-01-11T19:00',
+            // start: '2024-10-19T19:00',
+            // end: '2024-10-19T19:00',
+            // start: '2024-10-19T03:17',
+            // end: '2024-10-19T03:17',
+          },
+
+          {
+            accountName: '2',
+            schedulePick: 'twenty',
+            scheduleTitle: '19일 일정',
+            scheduleInfoText: '19일 일정',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-18',
+            end: '2024-10-18',
+            // start: '2024-10-18T15:00',
+            // end: '2024-10-18T15:00',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: 'QA하자',
+            scheduleInfoText: '같이 하자 ',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-18T15:00',
+            end: '2024-10-19T15:00',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: 'LG vs 삼성 5차전 ',
+            scheduleInfoText: '5차전 같이 응원할 분들 ',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-17',
+            end: '2024-10-17',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            scheduleInfoText: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-21',
+            end: '2024-10-21',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            scheduleInfoText: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-21',
+            end: '2024-10-21',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'account',
+            scheduleTitle: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            scheduleInfoText: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            backgroundColor: '#D2F0FF',
+            start: '2024-10-21',
+            end: '2024-10-21',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            scheduleInfoText: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-21',
+            end: '2024-10-21',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'account',
+            scheduleTitle: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            scheduleInfoText: '일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십',
+            backgroundColor: '#D2F0FF',
+            start: '2024-10-21',
+            end: '2024-10-21',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '하루종일 체크함 21~23',
+            scheduleInfoText: '하루종일 체크함 21~23',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-21T00:00',
+            end: '2024-10-23T00:00',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '20픽 테스트 예약게시가 안돼요',
+            scheduleInfoText: '20픽 테스트 예약게시가 안돼요',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-22',
+            end: '2024-10-22',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'account',
+            scheduleTitle: 'test',
+            scheduleInfoText: 'test',
+            backgroundColor: '#D2F0FF',
+            start: '2024-10-22',
+            end: '2024-10-22',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '등록 안되나요?',
+            scheduleInfoText: '등록 안되나요?',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-22',
+            end: '2024-10-22',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '내일대학교 밴드동아리 투모로우 정기공연',
+            scheduleInfoText: '11/2(토) 18:00~21:00</br>정기공연합니다.</br></br>장소 : 0000로 000',
+            backgroundColor: '#E7F8F2',
+            // start: '2024-11-02',
+            // end: '2024-11-02',
+            start: '2024-11-02T15:00',
+            end: '2024-11-02T15:00',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '내일대학교 밴드동아리 투모로우 정기공연',
+            scheduleInfoText: '11/2(토) 18:00~21:00</br>정기공연합니다.</br></br>장소 : 0000로 000',
+            backgroundColor: '#E7F8F2',
+            // start: '2024-11-02',
+            // end: '2024-11-02',
+            start: '2024-11-02T15:00',
+            end: '2024-11-03T15:00',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '내일대학교 밴드동아리 투모로우 정기공연',
+            scheduleInfoText: '11/2(토) 18:00~21:00</br>정기공연합니다.</br></br>장소 : 0000로 000',
+            backgroundColor: '#E7F8F2',
+            // start: '2024-11-02',
+            // end: '2024-11-02',
+            start: '2024-11-02T15:00',
+            end: '2024-11-03T15:00',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '내일대학교 밴드동아리 투모로우 정기공연',
+            scheduleInfoText: '11/2(토) 18:00~21:00</br>정기공연합니다.</br></br>장소 : 0000로 000',
+            backgroundColor: '#E7F8F2',
+            // start: '2024-11-02',
+            // end: '2024-11-02',
+            start: '2024-11-02T15:00',
+            end: '2024-11-03T15:00',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '단짝 캔디 먹는 날',
+            scheduleInfoText: '모여라 친구들아</br>독막로로 와',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-01T15:00',
+            end: '2024-10-02T15:00',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: 'test',
+            scheduleInfoText: 'test',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-23T11:59',
+            end: '2024-10-24T11:59',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '빵먹다 QA하는 떡',
+            scheduleInfoText: '우리 모두 열심히 하자 ',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-23T15:00',
+            end: '2024-10-24T14:59',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '일정등록 수정',
+            scheduleInfoText: '일정등록 수정',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-23T15:00',
+            end: '2024-10-24T14:59',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '시험기간 부적 T 판매',
+            scheduleInfoText: '사세요 보세요세요 보세요</br></br>https://careet.marpple.shop/kr/univ20/',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-23T15:00',
+            end: '2024-10-30T15:00',
+          },
+          // 이 부분 이상함
+          {
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '사인인증 돈까스의 날',
+            scheduleInfoText: '돈까스 먹자라 먹자',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-24T09:00',
+            end: '2024-10-31T15:00',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '사인인증 돈까스의 날',
+            scheduleInfoText: '돈까스 먹자라 먹자',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-24T09:00',
+            end: '2024-10-31T15:00',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '사인인증 돈까스의 날',
+            scheduleInfoText: '돈까스 먹자라 먹자',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-24T09:00',
+            end: '2024-10-31T15:00',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'twenty',
+            scheduleTitle: '사인인증 돈까스의 날',
+            scheduleInfoText: '돈까스 먹자라 먹자',
+            backgroundColor: '#E7F8F2',
+            start: '2024-10-24T09:00',
+            end: '2024-10-31T15:00',
+          },
+          // //이 부분 이상함
+          // 이 부분 이상함
+          {
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-24T15:00',
+            end: '2024-10-26T14:59',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-24T15:00',
+            end: '2024-10-26T14:59',
+          },
+          {
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-25T15:00',
+            end: '2024-10-26T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-18T15:00',
+            end: '2024-10-18T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-18T15:00',
+            end: '2024-10-18T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-01T15:00',
+            end: '2024-10-01T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-01T15:00',
+            end: '2024-10-01T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-03T15:00',
+            end: '2024-10-03T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-03T15:00',
+            end: '2024-10-03T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-03T15:00',
+            end: '2024-10-03T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-03T15:00',
+            end: '2024-10-03T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-03T15:00',
+            end: '2024-10-03T14:59',
+          },
+          {
+            display: 'block',
+            accountName: 'null',
+            schedulePick: 'univ',
+            scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+            scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-10-18T15:00',
+            end: '2024-10-18T14:59',
+          },
+          // {
+          //   accountName: 'null',
+          //   schedulePick: 'univ',
+          //   scheduleTitle: '24.10.24 17:30 예약 게시됩니다.',
+          //   scheduleInfoText: '24.10.24 17:30 예약 게시됩니다.',
+          //   backgroundColor: '#FFD9D9',
+          //   start: '2024-10-25T15:00',
+          //   end: '2024-10-26T14:59',
+          // },
+          // //이 부분 이상함
+          // {
+          //   // 놀자
+          //   schedulePick: 'univ',
+          //   scheduleTitle: '일정 제목 일정 제목 일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#FFD9D9',
+          //   start: '2024-01-01',
+          // },
+          // {
+          //   // 놀자
+          //   schedulePick: 'univ',
+          //   scheduleTitle: '일정 제목 일정 제목 일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#FFD9D9',
+          //   start: '2024-01-01',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-01',
+          // },
+          // {
+          //   // 신청하자
+          //   accountName: '삼성전자',
+          //   schedulePick: 'account',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#D2F0FF',
+          //   start: '2024-01-01',
+          // },
+          // {
+          //   // 놀자
+          //   schedulePick: 'univ',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#FFD9D9',
+          //   start: '2024-01-02',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-03',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-03',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-03',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-03',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-03',
+          // },
+          // {
+          //   // 신청하자
+          //   accountName: '삼성전자',
+          //   schedulePick: 'account',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#D2F0FF',
+          //   start: '2024-01-04',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-08T19:00',
+          //   end: '2024-01-11T19:00',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-08T19:00',
+          //   end: '2024-01-11T19:00',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-08T19:00',
+          //   end: '2024-01-11T19:00',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-08T19:00',
+          //   end: '2024-01-11T19:00',
+          // },
+          // {
+          //   // 공유하자
+          //   schedulePick: 'twenty',
+          //   scheduleTitle: '일정 제목',
+          //   scheduleInfoText: '일정 상세 내용 입니다.',
+          //   backgroundColor: '#E7F8F2',
+          //   start: '2024-01-08T19:00',
+          //   end: '2024-01-11T19:00',
+          // },
+          // {
+          //   // 광고
+          //   schedulePick: 'promotion',
+          //   scheduleTitle: '광고 일정 제목',
+          //   scheduleInfoText: '광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.',
+          //   backgroundColor: '#F3EEFE',
+          //   start: '2024-01-19T19:00',
+          //   end: '2024-01-21T19:00',
+          // },
+        ],
+
+        // render 호출 후
+        eventDidMount: function() {
+          moreLinkRenderEvent();
+          moreLinkHideEvent();
+        },
+
+        // windowResize
+        windowResize: function() {
+          windowWidth = $(window).width();
+
+          if (windowWidth <= mobileWidth && checkValue == false) {
+            // Mobile
+            moreLinkRenderEvent();
+            moreLinkHideEvent();
+            checkValue = true;
+          } else {
+            // PC
+            moreLinkRenderEvent();
+            moreLinkHideEvent();
+            checkValue = false;
+          }
+        },
+
+        eventAdd: function(obj) {
+          // 이벤트가 추가되면 발생하는 이벤트
+          console.log(obj);
+        },
+        eventChange: function(obj) {
+          // 이벤트가 수정되면 발생하는 이벤트
+          console.log(obj);
+        },
+        eventRemove: function(obj) {
+          // 이벤트가 삭제되면 발생하는 이벤트
+          console.log(obj);
+        },
+
+        // date 영역 클릭 시
+        dateClick: function(info) {
+          // 모바일
+          if (windowWidth <= mobileWidth) {
+            // $('.fc-day').removeClass('fc-day-cover');
+            // $(info.dayEl).addClass('fc-day-cover');
+            alert('모바일에서 일정 클릭');
+          }
+        },
+      });
+      calendar.render();
+
+      // calendarInfoBoxView
+      function calendarInfoBoxView() {
+        $('.calendar-info-box .info-text').addClass('hide');
+        $('.calendar-info-box .view-box').addClass('show');
+      }
+
+      // moreLinkRenderEvent
+      function moreLinkRenderEvent() {
+        // more 표시 개수
+        if ($(window).width() <= mobileWidth) {
+          // Mobile
+          calendar.setOption('dayMaxEvents', 4);
+        } else {
+          // PC
+          calendar.setOption('dayMaxEvents', 3);
+        }
+        // 아래 부분 제거
+        // calendar.render();
+      }
+
+      // moreLinkHideEvent
+      function moreLinkHideEvent() {
+        $('.fc-daygrid-event-harness').removeClass('hide');
+
+        setTimeout(() => {
+          $('.fc-daygrid-more-link').each(function(i, el) {
+            $(el)
+              .closest('.fc-daygrid-day-events')
+              .find('.fc-daygrid-event-harness')
+              .not('.fc-daygrid-event-harness-abs')
+              .eq(calendar.currentData.calendarOptions.dayMaxEvents - 1)
+              .addClass('hide');
+            $(el)
+              .closest('.fc-daygrid-day-events')
+              .find('.fc-daygrid-event-harness.fc-daygrid-event-harness-abs')
+              .eq(calendar.currentData.calendarOptions.dayMaxEvents - 1)
+              .addClass('hide');
+          });
+        }, 100);
+      }
+
+      // moreLinkClickEvent 더보기 클릭시 이벤트
+      function moreLinkClickEvent() {
+        // PC
+        if ($(window).width() > mobileWidth) {
+          $('.tab-box-btn.daily').click();
+        }
+      }
+
+      // 탭 메뉴 월간 캘린더 보이기
+      function monthlyViewEvent() {
+        $('.calender-box-title h2').text('월간 캘린더');
+        $('.calender-box-content .monthly-box').addClass('show');
+        $('.calender-box-content .daily-box').removeClass('show');
+        calendar.render();
+      }
+
+      // 탭 메뉴 일간 캘린더 보이기
+      function dailyViewEvent() {
+        $('.calender-box-title h2').text('일간 캘린더');
+        $('.calender-box-content .daily-box').addClass('show');
+        $('.calender-box-content .monthly-box').removeClass('show');
+        calendar.render();
+      }
+
+      // 탭 메뉴
+      $('.celender-info-box-tab .tab-box-btn').on('click', function() {
+        $('.tab-box-btn').parent('.tab-box').removeClass('active');
+        $(this).parent('.tab-box').addClass('active');
+
+        // monthly, daily show
+        if ($(this).hasClass('monthly')) {
+          monthlyViewEvent();
+        } else {
+          dailyViewEvent();
+        }
+      });
+    });
+  </script>
+
+  <!-- calenderScript -->
+
+  <script>
+    $(document).ready(function() {
+      // 신청하자 활성화 시 신청하자 카테고리 보이기
+      $('.pick-box-account .switch-label').on('click', function() {
+        if (!$('.pick-box-account input').is(':checked')) {
+          $('.celender-info-box .select-box-container').addClass('show');
+        } else {
+          $('.celender-info-box .select-box-container').removeClass('show');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

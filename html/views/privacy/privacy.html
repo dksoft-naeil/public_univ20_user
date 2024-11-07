@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <script src="../../../resources/js/base.js"></script>  
+  <script src="../../../resources/js/util.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../magazine/magazine.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../voice/voice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../community/community.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../schedule/schedule.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box" id="login">            
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">            
+            <button type="button" class="search-button" id="search-button-base1">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword1" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box" id="login-box">
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box" id="loginMobile">
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword2" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button" id="search-button-base2">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list" id="mobile-menu">
+          </ul>
+          <div class="add-btn-box" id="mobile-menu-footer">
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap privacy-content-area">
+        <div class="section-inner">
+          <div class="privacy-content-box">
+            <div class="sub-section-title">
+              <h2>개인정보처리방침</h2>
+            </div>
+            <!-- //sub-section-title -->
+            <div class="privacy-select-box input-cover">
+              <div class="form-btn-with-container">
+                <div class="select-box-container large">
+                  <!-- <label class="form-label txt-hidden">이전 날짜 개인정보처리방침</label> -->
+                  <span class="form-label txt-hidden">이전 날짜 개인정보처리방침</span>
+                  <select name="select" class="form-select disable-color">
+                    <option value="">선택</option>
+                    <option value="">2024.12.12</option>
+                  </select>
+                </div>
+                <button type="button" class="btn medium bg-wh fw700">이동</button>
+              </div>
+            </div>
+            <!-- //privacy-select-box -->
+            <div class="policy-content">
+              <dl class="policy-wrap">
+                <dt class="policy-hd-tit">1. 총칙</dt>
+                <dd>
+                  <div class="policy-txt">
+                    “개인정보”란 생존하는 개인에 관한 정보로써 당해 정보에 포함되어 있는 성명, 주민등록번호 등의 사항에 의하여 당해 개인을 식별할 수 있는 정보(당해 정보만으로는 특정 개인을 식별할 수 없더라도 다른 정보와 용이하게 결합하여 식별할 수 있는 것을 포함)를 말합니다.<br />
+                      UNIV20은 본 개인정보처리방침을 univ20 홈페이지(https://univ20.com)의 첫 화면에 공개함으로써 이용자께서 언제나 용이하게 보실 수 있도록 조치하고 있습니다.<br />
+                      UNIV20은 개인정보처리방침의 지속적인 개선을 위하여 개인정보처리방침을 개정하는데 필요한 절차를 정하고 있습니다. 그리고 개인정보처리방침을 개정하는 경우 버전번호 등을 부여하여 개정된 사항을 쉽게 알아볼 수 있도록 하고 있습니다.<br />
+                      본 방침은 2024년 10월 30일부터 시행되며, 이를 개정하는 경우 웹사이트 공지사항(또는 이메일·전화·SMS 등의 방법으로 개별공지)을 통하여 공지하겠습니다.
+                  </div>
+                </dd>
+              </dl>
+              <dl class="policy-wrap">
+                <dt class="policy-hd-tit">2. 수집하는 개인정보의 항목 및 수집방법</dt>
+                <dd>
+                  <div class="policy-txt">
+                    (1) 수집하는 개인정보의 항목 및 목적<br />
+                      UNIV20은 최초 회원 가입 또는 서비스 이용 시 이용자로부터 아래와 같은 개인정보를 수집하고 있습니다.
+                  </div>
+                  <table class="policy-tbl">
+                    <colgroup>
+                      <col width="20%" />
+                      <col width="83.14%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">자세한 내용</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>필수항목</td>
+                        <td>
+                          회원가입, 비밀번호 찾기 등 본인인증을 위한 이메일 전송 시 : 이메일<br />
+                            회원가입 시(만14세 이상만 가입가능) : 이메일 아이디, 이름, 생년월일, 연락처, 수신 가능한 이메일 주소<br />
+                            로젝트 문의 시 : 이름, 연락처, 이메일<br />
+                            트렌드 레터(뉴스레터) 구독 시 : 이메일<br />
+                            이벤트 지원 및 운영 시 : 이름, 핸드폰 번호 (이벤트 지원자 한정)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>선택항목</td>
+                        <td>프로젝트 문의 시 : 소속</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="policy-txt">
+                    ※ UNIV20은 이용자의 사생활을 현저히 침해할 우려가 있는 민감정보(사상·신념, 노동조합·정당의 가입·탈퇴, 정치적 견해, 건강, 성생활 등에 관한 정보 등)는 수집하지 않습니다.<br /><br />
+
+                      (2) 개인정보 수집방법<br />
+                      - 홈페이지 회원가입 / 트렌드 레터(뉴스레터) 구독 / 프로젝트 문의<br />
+                      ※ UNIV20은 이용자께서 UNIV20의 개인정보 수집·이용 동의서 각각의 내용에 대해 "동의" 또는 "동의하지 않음"을 선택할 수 있는 절차를 마련하고 있습니다.
+                  </div>
+                </dd>
+              </dl>
+              <dl class="policy-wrap">
+                <dt class="policy-hd-tit">3. 개인정보의 보유 및 이용기간</dt>
+                <dd>
+                  <div class="policy-txt">
+                    사무국은 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다. 사무국은 위탁계약 체결 시 정보통신망법 제25조 및 개인정보 보호법 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적·관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리·감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를
+                    감독하고 있습니다. 사무국은 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체 없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.
+                  </div>
+                  <table class="policy-tbl">
+                    <colgroup>
+                      <col width="50%" />
+                      <col width="50%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">제공받는자</th>
+                        <th scope="col">업무 내용</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>주식회사 오오비컴퍼니</td>
+                        <td>이벤트 당첨자에게 기프티콘 발송</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </dd>
+              </dl>
+              <dl class="policy-wrap">
+                <dt class="policy-hd-tit">3. 개인정보의 보유 및 이용기간</dt>
+                <dd>
+                  <div class="policy-txt">
+                    원칙적으로, UNIV20은 회원 탈퇴 또는 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.<br />
+                      단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우, UNIV20은 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 이 경우 UNIV20은 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.
+                  </div>
+                  <table class="policy-tbl">
+                    <colgroup>
+                      <col width="50%" />
+                      <col width="50%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">보유 항목</th>
+                        <th scope="col">보유 기간</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>계약 또는 청약철회 등에 관련 기록</td>
+                        <td>5년</td>
+                      </tr>
+                      <tr>
+                        <td>소비자의 불만 또는 분쟁처리에 관한 기록</td>
+                        <td>3년</td>
+                      </tr>
+                      <tr>
+                        <td>광고/마케팅/컨설팅 문의에 관한 기록</td>
+                        <td>2년</td>
+                      </tr>
+                      <tr>
+                        <td>신용정보의 수집/처리 및 이용 등에 관한 기록</td>
+                        <td>3년</td>
+                      </tr>
+                      <tr>
+                        <td>표시/광고에 관한 기록</td>
+                        <td>6개월</td>
+                      </tr>
+                      <tr>
+                        <td>이용자의 인터넷 등 로그기록/ 이용자의 접속지 추적자료</td>
+                        <td>3개월</td>
+                      </tr>
+                      <tr>
+                        <td>그 외의 통신사실 확인 자료</td>
+                        <td>12개월</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </dd>
+              </dl>
+              <dl class="policy-wrap">
+                <dt class="policy-hd-tit">4. 개인정보의 파기 절차 및 파기방법</dt>
+                <dd>
+                  <div class="policy-txt">
+                    개인정보 파기절차 및 방법은 다음과 같습니다.<br /><br />
+
+                      (1) 파기절차<br />
+                      이용자의 개인정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기됩니다. 별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 보유되는 이외의 다른 목적으로 이용되지 않습니다.<br /><br />
+
+                      (2) 파기방법<br />
+                      전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.
+                  </div>
+                </dd>
+              </dl>
+              <dl class="policy-wrap">
+                <dt class="policy-hd-tit">5. 수집한 개인정보의 위탁</dt>
+                <dd>
+                  <div class="policy-txt">
+                    UNIV20은 서비스 이행을 위해 아래와 같이 개인정보 처리 업무를 외부 전문업체에 위탁하여 처리하고 있습니다. 개인정보 처리위탁은 개별 서비스 별로 그 이행을 위해 필요한 경우에 한해 각 위탁업체에 대해 이루어집니다.<br />
+                      개인정보의 처리를 위탁하는 경우에는 개인정보 보호의 안전을 기하기 위하여 개인정보보호 관련 지시엄수, 개인정보에 대한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담, 위탁기간, 처리 종료 후의 개인정보의 반환 또는 파기 등을 명확히 규정하고, 위탁업체가 개인정보를 안전하게 처리하도록 감독합니다. 업체, 위탁하는 업무의 내용이 변경될 경우, 웹사이트 공지사항(또는
+                      서면·이메일·전화·SMS 등의 방법으로 개별공지)을 통하여 알려드리겠습니다.
+                  </div>
+                  <table class="policy-tbl">
+                    <colgroup>
+                      <col width="50%" />
+                      <col width="50%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">수탁 업체의 명칭</th>
+                        <th scope="col">위탁하는 업무의 내용</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>DK소프트</td>
+                        <td>사이트 시스템 운영</td>
+                      </tr>
+                      <tr>
+                        <td>Amazon Web Services Inc.</td>
+                        <td>클라우드 서버 운영 및 관리</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </dd>
+              </dl>
+              <dl class="policy-wrap">
+                <dt class="policy-hd-tit">6. 제3자에게의 개인정보 제공</dt>
+                <dd>
+                  <div class="policy-txt">
+                    UNIV20은 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.<br />
+                      - 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br />
+                      - 유료 서비스 제공에 따른 요금 정산을 위하여 필요한 경우<br />
+                      - 통계작성, 학술연구나 시장조사를 위해 특정 개인을 식별할 수 없는 형태로 가공하여 제공하는 경우<br />
+                      - 이용자들이 사전에 동의한 경우<br />
+                      이상에 기재된 업체는 추후 변동될 수 있습니다. 업체가 변경되거나, 또는 기재된 내용 외에 이용자의 개인정보를 제공하거나 공유하는 경우에는 이에 대한 별도 이용자 동의를 구하는 절차를 거쳐 제공합니다.
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <!-- //policy-content -->
+          </div>
+        </div>
+      </section>
+      <!-- //sub-section-wrap -->
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../notice/list.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/register.html" class="nav-box-btn" id="qna-base2">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+            <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+            <div class="logo-foundation-box">
+              <span> 본 서비스는 </span>
+              <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+              <span>의 지원을 받아 개발되었습니다.</span>
+            </div>
+          </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../privacy/privacy.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/terms.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+</body>
+
+</html>

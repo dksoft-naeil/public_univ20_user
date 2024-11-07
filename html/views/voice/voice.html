@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <script src="../../../resources/js/base.js"></script>
+  <script src="../../../resources/js/voice-action.js"></script>
+  <script src="../../../resources/js/util.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../magazine/magazine.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../voice/voice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../community/community.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../schedule/schedule.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box" id="login">            
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">            
+            <button type="button" class="search-button" id="search-button-base1">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword1" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box" id="login-box">
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box" id="loginMobile">
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword2" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button" id="search-button-base2">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list" id="mobile-menu">
+          </ul>
+          <div class="add-btn-box" id="mobile-menu-footer">
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap article-content-area">
+        <div class="section-inner">
+          <div class="sub-space-cover-box">
+            <div class="sub-section-title-box">
+              <div class="sub-section-title">
+                <h2>글 쓰는 20대</h2>
+              </div>
+              <div class="btn-wrap">
+                <a href="javascript:goRegister()" class="btn icon-btn small round bg-black"><i class="icon-box icon-pen"></i>글쓰기</a>
+                <a href="javascript:goRegisterBase('report')" class="btn icon-btn small round bg-black"><i class="icon-box icon-sound"></i>알려주기</a>
+              </div>
+            </div>
+            <!-- //sub-section-title-box -->
+            <div class="article-content-half-slide-box">
+              <!-- PC -->
+              <div class="article-content-half-box pc-show" id="grid-pc">                
+              </div>
+              <!-- Mobile -->
+              <div class="swiper-container article-half-slider-box mobile-show">
+                <div class="swiper-wrapper" id="grid-mobile">
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <!-- //article-content-half-slide-box -->
+          </div>
+          <!-- //sub-space-cover-box -->
+
+          <div class="banner-content-box">
+            <div class="banner-box" id="banners">              
+            </div>
+          </div>
+
+
+          <!-- //banner-content-box -->
+          <div class="article-content-box-wrap">
+            <div class="article-content-box" id="grid">
+            </div>
+            <div class="pagination-box">
+              <div class="pagination pc-show" id="pagingPc">               
+              </div>
+              <div class="btn-wrap half mobile-show" id="pagingMobile">                
+              </div>
+            </div>
+
+            <!-- //pagination-box -->
+          </div>
+          <!-- //article-content-box-wrap -->
+        </div>
+      </section>
+      <!-- //sub-section-wrap -->
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../notice/list.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/register.html" class="nav-box-btn" id="qna-base2">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+            <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+            <div class="logo-foundation-box">
+              <span> 본 서비스는 </span>
+              <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+              <span>의 지원을 받아 개발되었습니다.</span>
+            </div>
+          </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../privacy/privacy.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/terms.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="loginInfoPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>
+               로그인 후 글을 쓰실 수 있어요.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area">
+          <button type="button" class="btn btn-ok popup-close" onclick="location.href='../login/login.html'">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="loginInfoPopup2">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>
+               대학생 인증 후 글을 쓰실 수 있어요.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area">
+          <button type="button" class="btn btn-ok popup-close" onclick="location.href='../mypage/update-profile.html'">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

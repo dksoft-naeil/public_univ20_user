@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <script src="../../../resources/js/base.js"></script>
+  <script src="../../../resources/js/mypage-action.js"></script>
+  <script src="../../../resources/js/util.js"></script> 
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../magazine/magazine.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../voice/voice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../community/community.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../schedule/schedule.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box" id="login">            
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">            
+            <button type="button" class="search-button" id="search-button-base1">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword1" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../main/main.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box" id="login-box">
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box" id="loginMobile">
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="searchKeyword2" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button" id="search-button-base2">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list" id="mobile-menu">
+          </ul>
+          <div class="add-btn-box" id="mobile-menu-footer">
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap mypage-content-box-area">
+        <h2 class="txt-hidden">마이페이지</h2>
+        <div class="user-info-content-box-wrap">
+          <div class="section-inner">
+            <div class="user-info-content-box">
+              <div class="user-detail-info-box" id="html-me">
+                
+                <!-- //user-write-point-box -->
+              </div>
+              <!-- //user-detail-info-box -->
+              <div class="mission-board-box">
+                <div class="title">이달의 미션</div>
+                <div class="swiper-container mission-board-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="mission-board-box-item" id="mission-voice">
+                      
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="mission-board-box-item" id="community-voice">                      
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="mission-board-box-item" id="report-voice">
+                     
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="mission-board-box-item mission-board-box-item01" id="report-post-voice">
+                      
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="mission-board-box-item mission-board-box-item01" id="report-post-report">
+                      
+                      </div>
+                  </div>                  
+                </div>
+                <div class="info-text-box">
+                  <p class="mark-text-box">
+                    <i class="mark icon-box icon-caution"></i>미션을 1개 이상 달성하면, 캐릿 1개월 구독권을 드립니다.<br />
+                      (미션 상품은 변경될 수 있습니다.)
+                  </p>
+                  <p class="mark-text-box"><i class="mark icon-box icon-caution"></i>이달의 미션은 매월 1일에 초기화됩니다.</p>
+                </div>
+              </div>
+              <!-- //mission-board-box -->
+            </div>
+          </div>
+        </div>
+        <!-- //user-info-content-box-wrap -->
+        <div class="mypage-content-box-wrap">
+          <div class="content-tab-menu-box-wrap">
+            <div class="content-tab-menu-box section-inner">
+              <ul class="content-tab-menu-box-list">
+                <li class="content-tab-menu-box-item ui-tab-item active">
+                  <a href="#magazine" class="content-tab-menu-box-btn">
+                    <span>매거진</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#twentyVoice" class="content-tab-menu-box-btn">
+                    <span>글 쓰는 20대</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#webZine" class="content-tab-menu-box-btn">
+                    <span>나만의 매거진</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#Community" class="content-tab-menu-box-btn">
+                    <span>커뮤니티</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#Calender" class="content-tab-menu-box-btn">
+                    <span>캘린더</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#Report" class="content-tab-menu-box-btn">
+                    <span>대학내일에 알려주기</span>
+                  </a>
+                </li>
+                <li class="content-tab-menu-box-item ui-tab-item">
+                  <a href="#inquiryReport" class="content-tab-menu-box-btn">
+                    <span>문의/신고하기</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- //content-tab-menu-box-wrap -->
+          <div class="banner-content-box-wrap section-inner">
+
+            <div class="banner-content-box">
+              <div class="banner-box" id="banners">              
+              </div>
+            </div>
+
+
+            <!-- //banner-content-box -->
+          </div>
+          <!-- //banner-content-box-wrap -->
+          <div class="mypage-content-box">
+            <div class="section-inner">
+              <div id="magazine" class="ui-tab-content">
+                <div class="content-tab-menu-box content-tab-menu-box-number">
+                  <ul class="content-tab-menu-box-list">  
+                    <li class="content-tab-menu-box-item ui-tab-item active" id="magazine-tab1">
+                    </li>
+                    <li class="content-tab-menu-box-item ui-tab-item" id="magazine-tab2">
+                    </li> 
+                  </ul>
+                </div>
+                <!-- //content-tab-menu-box -->
+                <div class="article-view-content-box-wrap">
+                  <div id="magazineFavorite" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="magazine-date" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>
+                        <select id="magazine-category" name="select" class="form-select"> 
+                          <option value="">전체 카테고리</option>
+                          <option value="0">캠퍼스</option>
+                          <option value="1">라이프스타일</option>
+                          <option value="2">커리어</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box" id="magazine-like-cancel">
+                      
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box" id="magazine-grid">                      
+                    </div>
+                    <!-- //article-content-box -->
+                    <div class="pagination-box" id="pagination-box-magazine">
+                      <div class="pagination pc-show" id="pagingPCMagazine">                        
+                      </div>
+                      <div class="btn-wrap half mobile-show"  id="pagingMobileMagazine">
+                      </div>
+                    </div>
+
+                    <!-- //pagination-box -->
+                    <!-- 콘텐츠가 0개 일 경우 노출 문구 -->
+                    <div class="empty-info-text-box" id="magazineLikeNoData">
+                    </div>
+                    <!-- //empty-info-text-box -->
+                    <!-- //콘텐츠가 0개 일 경우 노출 문구 -->
+                  </div>
+                  <!-- //좋아요 누른 글 -->
+                  <div id="magazineBookmark" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="magazine-date-save" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>
+                        <select id="magazine-category-save" name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="1">캠퍼스</option>
+                          <option value="2">라이프스타일</option>
+                          <option value="3">커리어</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box" id="magazine-save-cancel">
+                        
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box" id="magazine-grid-save">
+                    </div>
+                    <!-- //article-content-box -->
+                    <div class="pagination-box" id="pagination-box-magazine-save">
+                      <div class="pagination pc-show" id="pagingPCMagazineSave">                        
+                      </div>
+                      <div class="btn-wrap half mobile-show"  id="pagingMobileMagazineSave">
+                      </div>
+                    </div>
+                    <!-- 콘텐츠가 0개 일 경우 노출 문구 -->
+                    <div class="empty-info-text-box" id="magazineSaveNoData">                     
+                    </div>
+                    <!-- //empty-info-text-box -->
+                    <!-- //콘텐츠가 0개 일 경우 노출 문구 -->
+                  </div>
+                  <!-- //저장한 글 -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //매거진 -->
+              <div id="twentyVoice" class="ui-tab-content">
+                <div class="content-tab-menu-box content-tab-menu-box-number">
+                  <ul class="content-tab-menu-box-list">
+                    <li class="content-tab-menu-box-item ui-tab-item active" id="voice-tab1"></li>
+                    <li class="content-tab-menu-box-item ui-tab-item" id="voice-tab2"></li>
+                    <li class="content-tab-menu-box-item ui-tab-item" id="voice-tab3"></li>
+                  </ul>
+                </div>
+                <!-- //content-tab-menu-box -->
+                <div class="article-view-content-box-wrap">
+                  <div id="twentyVoiceWriting" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="voice-date" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>
+                        <select id="voice-category" name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="4">임시 저장</option>
+                          <option value="2,5,8">작성 완료</option>
+                          <option value="6">수정(첨삭) 제안</option>
+                          <option value="7,9,10,11">수정(첨삭)중</option>
+                          <option value="3">발행 대기</option>
+                          <option value="0,3">발행 완료</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <a href="javascript:goRegisterBase('voice')" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-pen"></i>글쓰기</a>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box" id="voice-grid">
+                     
+                    </div>
+                    <div class="pagination-box" id="pagination-box-voice">
+                      <div class="pagination pc-show" id="pagingPCVoice">                        
+                      </div>
+                      <div class="btn-wrap half mobile-show"  id="pagingMobileVoice">
+                      </div>
+                    </div>
+                    <!-- //pagination-box -->
+                    <!-- //article-content-box -->
+                    <!-- 콘텐츠가 0개 일 경우 노출 문구 -->
+                    <div class="empty-info-text-box" id="voiceNoData">
+                     
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //내가 쓴 글 -->
+                  <div id="twentyVoiceFavorite" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="voice-date-like" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>                        
+                      </div>
+                      <div class="control-btn-box"  id="voice-like-cancel">
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box" id="voice-grid-like">
+
+                    </div>
+                    <!-- //article-content-box -->
+                    <div class="pagination-box" id="pagination-box-voice-like">
+                      <div class="pagination pc-show" id="pagingPCVoiceLike">                        
+                      </div>
+                      <div class="btn-wrap half mobile-show"  id="pagingMobileVoiceLike">
+                      </div>
+                    </div>
+                    <div class="empty-info-text-box" id="voiceLikeNoData">
+                      
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //좋아요 누른 글 -->
+                  <div id="twentyVoiceBookmark" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="voice-date-save" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box" id="voice-save-cancel">
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="article-content-box" id="voice-grid-save"> 
+                      
+                    </div>
+                    <!-- //article-content-box -->
+                    <div class="pagination-box" id="pagination-box-voice-save">
+                      <div class="pagination pc-show" id="pagingPCVoiceSave">                        
+                      </div>
+                      <div class="btn-wrap half mobile-show"  id="pagingMobileVoiceSave">
+                      </div>
+                    </div>
+                    <div class="empty-info-text-box" id="voiceSaveNoData">
+
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //저장한 글 -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //글 쓰는 20대 -->
+              <div id="webZine" class="ui-tab-content">
+                <div class="webzine-view-content-box-wrap">
+                  <div class="control-content-box">
+                    <div class="select-box-container large solo">
+                      <select id="story-date" name="select" class="form-select">
+                        <option value="">전체기간</option>
+                        <option value="2024">2024</option>
+                      </select>
+                    </div>
+                    <div class="control-btn-box">
+                      <a href="../mypage/webzine-register.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-book"></i>매거진 만들기</a>
+                    </div>
+                  </div>
+                  <!-- //control-content-box -->
+                  <div class="webzine-content-box" id="story-grid">
+                    
+                  </div>
+                  <!-- //webzine-content-box -->
+                  <div class="pagination-box" id="pagination-box-story">
+                    <div class="pagination pc-show" id="pagingPCStory">
+                    
+                    </div>
+                    <div class="btn-wrap half mobile-show" id="pagingMobileStory">
+                    </div>
+                  </div>
+
+                  <!-- //pagination-box -->
+                  <div class="empty-info-text-box" id="storyNoData">
+                    
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //나만의 매거진 -->
+              <div id="Community" class="ui-tab-content">
+                <div class="content-tab-menu-box content-tab-menu-box-number">
+                  <ul class="content-tab-menu-box-list">
+                    <li class="content-tab-menu-box-item ui-tab-item active" id="community-tab1"></li>
+                    <li class="content-tab-menu-box-item ui-tab-item" id="community-tab2"></li>
+                    <li class="content-tab-menu-box-item ui-tab-item" id="community-tab3"></li>  
+                  </ul>
+                </div>
+                <!-- //content-tab-menu-box -->
+                <div class="article-view-content-box-wrap">
+                  <div id="communityWriting" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="community-date" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>
+                        <!-- 우리 학교 - 대학교 미인증 회원에게는 미노출 -->
+                        <select id="community-category" name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="2">일상</option>
+                          <option value="0">연애</option>
+                          <option value="1">진로</option>
+                          <option value="3">우리 학교</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <a href="../community/register.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-pen"></i>글쓰기</a>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="mypage-data-table-content-box data-table-content-box data-table-all" id="communityExists">
+                      <!-- pc -->
+                      <div class="data-table-box pc-show" id="community-grid">
+                      </div>
+                      <!-- //data-table-box -->
+                      <!-- mobile -->
+                      <div class="data-table-box mobile-show">
+                        <ul class="data-table-box-list" id="community-grid-mobile">                         
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <div class="pagination-box">
+                        <div class="pagination pc-show" id="pagingPCCommunity">
+                        </div>
+                        <div class="btn-wrap half mobile-show" id="pagingMobileCommunity">
+                        </div>
+                      </div>
+
+                      <!-- //pagination-box -->
+                    </div>
+                    <!-- //data-table-content-box -->
+                    <div class="empty-info-text-box" id="communityNoData">                      
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //내가 쓴 글 -->
+                  <div id="communityFavorite" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="community-date-like" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>
+                        <!-- 우리 학교 - 대학교 미인증 회원에게는 미노출 -->
+                        <select id="community-category-like" name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="2">일상</option>
+                          <option value="0">연애</option>
+                          <option value="1">진로</option>
+                          <option value="3">우리 학교</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700" id="community-like-cancel-button"><i class="icon-box icon-like-cancle"></i>좋아요 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="mypage-data-table-content-box data-table-content-box data-table-all" id="communityLikeExists">
+                      <!-- pc -->
+                      <div class="data-table-box pc-show" id="community-grid-like">
+                        
+                      </div>
+                      <!-- //data-table-box -->
+                      <!-- mobile -->
+                      <div class="data-table-box data-table-box-check mobile-show">
+                        <ul class="data-table-box-list" id="community-grid-like-mobile">
+                          
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <div class="pagination-box">
+                        <div class="pagination pc-show" id="pagingPCCommunity">
+                        </div>
+                        <div class="btn-wrap half mobile-show" id="pagingMobileCommunity">
+                        </div>
+                      </div>
+
+                      <!-- //pagination-box -->
+                    </div>
+                    <!-- //data-table-content-box -->
+                    <div class="empty-info-text-box" id="communityLikeNoData">
+                     
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //좋아요 누른 글 -->
+                  <div id="communityBookmark" class="article-content-box-wrap ui-tab-content">
+                    <div class="control-content-box">
+                      <div class="select-box-container large">
+                        <select id="community-date-save" name="select" class="form-select">
+                          <option value="">전체기간</option>
+                          <option value="2024">2024</option>
+                        </select>
+                        <!-- 우리 학교 - 대학교 미인증 회원에게는 미노출 -->
+                        <select id="community-category-save" name="select" class="form-select">
+                          <option value="">전체 카테고리</option>
+                          <option value="2">일상</option>
+                          <option value="0">연애</option>
+                          <option value="1">진로</option>
+                          <option value="3">우리 학교</option>
+                        </select>
+                      </div>
+                      <div class="control-btn-box">
+                        <button type="button" class="btn icon-btn small round bg-black fw700" id="community-save-cancel-button"><i class="icon-box icon-bookmark-cancle"></i>저장 취소</button>
+                      </div>
+                    </div>
+                    <!-- //control-content-box -->
+                    <div class="mypage-data-table-content-box data-table-content-box data-table-all" id="communitySaveExists">
+                      <!-- pc -->
+                      <div class="data-table-box pc-show" id="community-grid-save">
+                        
+                      </div>
+                      <!-- //data-table-box -->
+                      <!-- mobile -->
+                      <div class="data-table-box data-table-box-check mobile-show">
+                        <ul class="data-table-box-list" id="community-grid-save-mobile">
+                        </ul>
+                      </div>
+                      <!-- //data-table-box -->
+                      <div class="pagination-box">
+                        <div class="pagination pc-show" id="pagingPCCommunity">                        
+                        </div>
+                        <div class="btn-wrap half mobile-show" id="pagingMobileCommunity">
+                        </div>
+                      </div>
+
+                      <!-- //pagination-box -->
+                    </div>
+                    <!-- //data-table-content-box -->
+                    <div class="empty-info-text-box" id="communitySaveNoData">
+                    
+                    </div>
+                    <!-- //empty-info-text-box -->
+                  </div>
+                  <!-- //저장한 글 -->
+                </div>
+                <!-- //article-view-content-box-wrap -->
+              </div>
+              <!-- //커뮤니티 -->
+              <div id="Calender" class="ui-tab-content">
+                <div class="calender-box-content">
+                  <div class="monthly-box">
+                    <div id="calendar"></div>
+                  </div>
+                  <!-- //monthly-box -->
+                  <div class="control-btn-box">
+                    <a href="../schedule/register.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-calendar"></i>일정 등록</a>
+                  </div>
+                  <div class="daily-box show" id="htmlDaily">
+                    
+                    
+                  </div>
+                  <!-- //daily-box -->
+                  <div class="empty-info-text-box" id="scheduleNoData">
+                    
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //calender-box-content -->
+              </div>
+              <!-- //캘린더 -->
+              <div id="Report" class="ui-tab-content">
+                <div class="article-content-box-report-wrap">
+                  <div class="control-content-box">
+                    <div class="select-box-container large solo">
+                      <select id="report-date" name="select" class="form-select">
+                        <option value="">전체기간</option>
+                        <option value="2024">2024</option>
+                      </select>
+                    </div>
+                    <div class="control-btn-box">
+                      <a href="../report/report.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-sound"></i>알려주기</a>
+                    </div>
+                  </div>
+                  <!-- //control-content-box -->
+                  <div class="article-content-box-report" id="report-grid">
+                   
+                  </div>
+                  <!-- //article-content-box-report -->
+                  <div class="pagination-box" id="pagination-box-report">
+                    <div class="pagination pc-show" id="pagingPCReport">
+                     
+                    </div>
+                    <div class="btn-wrap half mobile-show" id="pagingMobileReport">
+                     </div>
+                  </div>
+
+                  <!-- //pagination-box -->
+                  <div class="empty-info-text-box" id="reportNoData">
+                    
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //article-content-box-report-wrap -->
+              </div>
+              <!-- //대학내일에 알려주기 -->
+              <div id="inquiryReport" class="ui-tab-content">
+                <div class="article-content-box-report-wrap">
+                  <div class="control-content-box">
+                    <div class="select-box-container large solo">
+                      <select id="qna-date" name="select" class="form-select">
+                        <option value="">전체기간</option>
+                        <option value="2024">2024</option>
+                      </select>
+                    </div>
+                    <div class="control-btn-box">
+                      <a href="../notice/register.html" class="btn icon-btn small round bg-black fw700"><i class="icon-box icon-headphones"></i>문의/신고하기</a>
+                    </div>
+                  </div>
+                  <!-- //control-content-box -->
+                  <div class="article-content-box-report" id="qna-grid">
+                    
+                  </div>
+                  <!-- //article-content-box-report -->
+                  <div class="pagination-box" id="pagination-box-qna">
+                    <div class="pagination pc-show" id="pagingPCQna">
+                     
+                    </div>
+                    <div class="btn-wrap half mobile-show" id="pagingMobileQna">
+                    </div>
+                  </div>
+
+                  <!-- //pagination-box -->
+                  <div class="empty-info-text-box" id="qnaNoData">
+                    
+                  </div>
+                  <!-- //empty-info-text-box -->
+                </div>
+                <!-- //article-content-box-report-wrap -->
+              </div>
+              <!-- //문의/신고하기 -->
+            </div>
+          </div>
+        </div>
+        <!-- //mypage-content-box -->
+      </section>
+      <!-- //sub-section-wrap -->
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../notice/list.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../notice/register.html" class="nav-box-btn" id="qna-base2">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+            <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+            <div class="logo-foundation-box">
+              <span> 본 서비스는 </span>
+              <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+              <span>의 지원을 받아 개발되었습니다.</span>
+            </div>
+          </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../privacy/privacy.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/terms.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+
+  <!-- 마이페이지 -->
+  <!-- 마이페이지 알림 메시지 팝업 -->
+  <div class="layer-popup full-scroll user-info-alert-popup" id="userInfoAlertPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title">
+          <strong>알림 메시지</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box" id="html-noti">
+          </div>
+          <!-- //info-content-box -->
+          <div class="pagination-box">
+            <div class="pagination pc-show" id="pagingPc">
+            </div>
+            <div class="btn-wrap half mobile-show" id="pagingMobile">
+            </div>
+          </div>
+          <!-- //pagination-box -->
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area">
+          <button type="button" class="btn btn-ok popup-close" onclick="get()">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 마이페이지 포인트 신청 안내 팝업 -->
+  <div class="layer-popup full-scroll info-content-popup" id="pointInfoAlertPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              포인트를 현금으로 바꾸시겠어요?<br />
+            1 포인트는 현금 1원으로 계산됩니다.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half">
+          <button type="button" class="btn btn-close popup-close">취소</button>
+          <button type="button" class="btn btn-ok  popup-close" onclick="postPoint()">완료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="pointInfoAlertPopup1">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              입금 신청이 접수되었어요.<br />
+            입금 절차는 별도로 안내해 드리겠습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half">
+          <button type="button" class="btn btn-close popup-close">취소</button>
+          <button type="button" class="btn btn-ok popup-close" onclick="layerPopup.closeAllPopup()">완료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="infoAlertPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              선택한 글을<br />
+            좋아요 누른 글 목록에서 삭제하시겠어요?
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half" id="infoAlertPopup-btn">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="infoPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>
+                삭제가 완료되었어요.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area"  id="infoPopup-btn">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="infoAlertPopup1">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              선택한 글을<br />
+            저장한 글 목록에서 삭제하시겠어요?
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half" id="infoAlertPopup-btn1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="acceptAdvicePopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>대학내일의 수정(첨삭) 제안을</br>수락하시겠어요?</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half" id="btn">          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="acceptAdvicePopup1">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>다음에 수정(첨삭)을 받으시겠어요?</br>수정(첨삭) 완료된 글은</br>'글 쓰는 20대' 기사로 발행되며</br>소정의 원고를 지급해 드립니다.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half">
+          <button type="button" class="btn btn-close" onclick="layerPopup.closeAllPopup();layerPopup.openPopup('acceptAdvicePopup')">취소</button>
+            <button type="button" class="btn btn-ok"  onclick="layerPopup.closeAllPopup();layerPopup.openPopup('acceptAdvicePopup2')">거절</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="acceptAdvicePopup2">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>
+                대학내일의 수정(첨삭) 제안을</br>거절했어요.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area" id="btn2">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="infoPopup1">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>
+                일정을 삭제하시겠어요?</br>삭제하면 되돌릴 수 없습니다.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area" id="popup-html">          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="infoPopup2">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box">
+              <strong>
+                일정이 삭제되었어요.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area">
+          <button type="button" class="btn btn-ok popup-close" onclick="get()">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="loginInfoPopup7">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box" id="loginInfoPopup7Message">
+              <strong>
+              올바르지 않은 댓글 내용입니다.</br>다시 입력해 주세요.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area"  id="loginInfoPopup7Button">
+          <button type="button" class="btn btn-ok popup-close">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer-popup full-scroll info-content-popup" id="infoTextPopup">
+    <div class="popup-container small">
+      <div class="popup-header">
+        <div class="popup-title txt-hidden">
+          <strong>알림</strong>
+        </div>
+      </div>
+      <div class="popup-content">
+        <div class="popup-inner">
+          <div class="info-content-box">
+            <div class="text-box" id="infoTextPopupTitle">
+              <strong>최대 30자까지 표시되는 팝업 제목 입니다.</strong>
+            </div>
+            <div class="sub-text-box" id="infoTextPopupMessage">
+              팝업 문구가 표시됩니다. 최대 글자 수 제한은 없어요.<br />
+            줄바꿈이 반영된 문구로 노출됩니다.<br /><br />
+            팝업 문구가 표시됩니다. 최대 글자 수 제한은 없어요.<br />
+            줄바꿈이 반영된 문구로 노출됩니다.<br />
+            팝업 문구가 표시됩니다. 최대 글자 수 제한은 없어요.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-area half" id="infoTextPopupButton">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      // document 로드 후 재실행
+      // 비동기 실행후 재실행 할 경우
+      // 슬라이드 업데이트
+      window.sliderUpdate();
+    });
+  </script>
+
+
+  <script>
+    // fullcalendar 라이브러리 참고 - https://fullcalendar.io/docs/getting-started
+    $(document).ready(function() {
+      let windowWidth = $(window).width();
+      let checkValue = false;
+      let mobileWidth = 960;
+
+      // FullCalendar
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        schedulerLicenseKey: '0282912382-fcs-1701247693',
+
+        headerToolbar: {
+          left: 'prev',
+          center: 'title',
+          right: 'next',
+        },
+
+        // 보여지는 고정 월, 날짜
+        // initialDate: '2024-01-01',
+        editable: false, // 기존에 입력 되어 있는 event를 드래그로 움직일 수 있도록 해주는 설정
+        selectable: false, // 달력 날짜를 드래그 해서 여러 날짜를 지정할 수 있다.
+        businessHours: false,
+        navLinks: false, // 달력 내부의 날짜 (숫자) 클릭 가능하게
+        dayMaxEvents: 3, //더보기 표기 갯수
+        // aspectRatio: 1.18, //비율 유지 가로 세로 비율
+        // weekNumbers: true, //달력 가장 왼쪽으로 오늘이 몇번째 주인지를 숫자로 보여준다.
+
+        initialView: 'dayGridMonth',
+        locale: 'ko', // 한글 여부
+        fixedWeekCount: false, //height fix 풀기
+        contentHeight: 'auto',
+        windowResizeDelay: 10,
+        // contentHeight: 680,
+
+        // 일정 El 커스텀
+        eventContent: function(obj) {
+          var item = document.createElement('div');
+          item.className = 'fc-schedule-content ' + obj.event.extendedProps.schedulePick;
+          item.innerHTML = "<div class='schedule-info'><div class='schedule-title'>" + obj.event.extendedProps.scheduleTitle + '</div></div>';
+          var arrayOfDomNodes = [item];
+          return {
+            domNodes: arrayOfDomNodes
+          };
+        },
+
+        // 일정 일 텍스트 제거
+        dayCellContent: function(info) {
+          var number = document.createElement('a');
+          number.classList.add('fc-daygrid-day-number');
+          number.innerHTML = info.dayNumberText.replace('일', '');
+          if (info.view.type === 'dayGridMonth') {
+            return {
+              html: number.outerHTML,
+            };
+          }
+          return {
+            domNodes: [],
+          };
+        },
+
+        // 더 보기 +
+        moreLinkContent: function(obj) {
+          var objNumber = obj.num + 1;
+          //더보기 표기
+          return '+' + objNumber;
+        },
+
+        // 더 보기 버튼 생성시
+        moreLinkDidMount: function(obj) {
+          moreLinkHideEvent();
+        },
+
+        // 더 보기 클릭시
+        moreLinkClick: function() {
+          calendar.setOption(moreLinkClickEvent());
+          return 'function';
+          // 모바일은 click 불가
+        },
+
+        // 일정 클릭시 발생하는 이벤트
+        eventClick: function(obj) {
+          const label = $('.calendar-info-box .label');
+          const title = $('.calendar-info-box .title');
+          const text = $('.calendar-info-box .text');
+          const date = $('.calendar-info-box .date');
+          let iconName;
+          let labelName;
+          let startDate, endDate;
+
+          if (windowWidth <= mobileWidth) {
+            // Mobile
+            alert('모바일에서 일정 바 클릭');
+          } else {
+            // PC
+            // 시간 불필요 요소 제거
+            var start = obj.event.startStr;
+            var end = obj.event.endStr;
+            startDate = start.replaceAll('-', '.').replace('T', ' ').replace('+09:00', '');
+            endDate = end.replaceAll('-', '.').replace('T', ' ').replace('+09:00', '');
+
+            if (startDate.split(':').length - 1 > 0) {
+              startDate = startDate.substring(startDate.lastIndexOf(':'), 2);
+              endDate = endDate.substring(endDate.lastIndexOf(':'), 2);
+            }
+
+            if (obj.event.extendedProps.schedulePick == 'univ') {
+              iconName = 'icon-univ';
+              labelName = '놀자';
+            } else if (obj.event.extendedProps.schedulePick == 'twenty') {
+              iconName = 'icon-smile';
+              labelName = '놀자';
+            } else if (obj.event.extendedProps.schedulePick == 'account') {
+              iconName = 'icon-check';
+              labelName = obj.event.extendedProps.accountName;
+            } else if (obj.event.extendedProps.schedulePick == 'promotion') {
+              iconName = 'icon-promotion';
+              labelName = 'Promotion';
+            }
+
+            // calendarInfoBoxView
+            calendarInfoBoxView();
+
+            label.attr('class', 'label');
+            label.addClass(obj.event.extendedProps.schedulePick);
+            label.html('<i class="icon-box ' + iconName + '"></i>' + labelName);
+            title.text(obj.event.extendedProps.scheduleTitle);
+            text.text(obj.event.extendedProps.scheduleInfoText);
+
+            if (startDate == '' || endDate == '') {
+              if (!startDate == '') {
+                date.text(startDate);
+              } else {
+                date.text(endDate);
+              }
+            } else {
+              date.text(startDate + ' ~ ' + endDate);
+            }
+          }
+        },
+
+        events: [{
+            // 놀자
+            schedulePick: 'univ',
+            scheduleTitle: '일정 제목 일정 제목 일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-01-01',
+          },
+          {
+            // 놀자
+            schedulePick: 'univ',
+            scheduleTitle: '일정 제목 일정 제목 일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-01-01',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-01',
+          },
+          {
+            // 신청하자
+            accountName: '삼성전자',
+            schedulePick: 'account',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#D2F0FF',
+            start: '2024-01-01',
+          },
+          {
+            // 놀자
+            schedulePick: 'univ',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#FFD9D9',
+            start: '2024-01-02',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-03',
+          },
+          {
+            // 신청하자
+            accountName: '삼성전자',
+            schedulePick: 'account',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#D2F0FF',
+            start: '2024-01-04',
+          },
+          {
+            // 공유하자
+            schedulePick: 'twenty',
+            scheduleTitle: '일정 제목',
+            scheduleInfoText: '일정 상세 내용 입니다.',
+            backgroundColor: '#E7F8F2',
+            start: '2024-01-08T19:00',
+            end: '2024-01-11T19:00',
+          },
+          {
+            // 광고
+            schedulePick: 'promotion',
+            scheduleTitle: '광고 일정 제목',
+            scheduleInfoText: '광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.광고 일정 상세 내용 입니다.',
+            backgroundColor: '#F3EEFE',
+            start: '2024-01-19T19:00',
+            end: '2024-01-21T19:00',
+          },
+        ],
+
+        // render 호출 후
+        eventDidMount: function() {
+          moreLinkRenderEvent();
+          moreLinkHideEvent();
+        },
+
+        // windowResize
+        windowResize: function() {
+          windowWidth = $(window).width();
+
+          if (windowWidth <= mobileWidth && checkValue == false) {
+            // Mobile
+            moreLinkRenderEvent();
+            moreLinkHideEvent();
+            checkValue = true;
+          } else {
+            // PC
+            moreLinkRenderEvent();
+            moreLinkHideEvent();
+            checkValue = false;
+          }
+        },
+
+        eventAdd: function(obj) {
+          // 이벤트가 추가되면 발생하는 이벤트
+          console.log(obj);
+        },
+        eventChange: function(obj) {
+          // 이벤트가 수정되면 발생하는 이벤트
+          console.log(obj);
+        },
+        eventRemove: function(obj) {
+          // 이벤트가 삭제되면 발생하는 이벤트
+          console.log(obj);
+        },
+
+        // date 영역 클릭 시
+        dateClick: function(info) {
+          // 모바일
+          if (windowWidth <= mobileWidth) {
+            // $('.fc-day').removeClass('fc-day-cover');
+            // $(info.dayEl).addClass('fc-day-cover');
+            alert('모바일에서 일정 클릭');
+          }
+        },
+      });
+      calendar.render();
+
+      // calendarInfoBoxView
+      function calendarInfoBoxView() {
+        $('.calendar-info-box .info-text').addClass('hide');
+        $('.calendar-info-box .view-box').addClass('show');
+      }
+
+      // moreLinkRenderEvent
+      function moreLinkRenderEvent() {
+        // more 표시 개수
+        if ($(window).width() <= mobileWidth) {
+          // Mobile
+          calendar.setOption('dayMaxEvents', 4);
+        } else {
+          // PC
+          calendar.setOption('dayMaxEvents', 3);
+        }        
+      }
+
+      // moreLinkHideEvent
+      function moreLinkHideEvent() {
+        $('.fc-daygrid-event-harness').removeClass('hide');
+
+        setTimeout(() => {
+          $('.fc-daygrid-more-link').each(function(i, el) {
+            $(el)
+              .closest('.fc-daygrid-day-events')
+              .find('.fc-daygrid-event-harness')
+              .not('.fc-daygrid-event-harness-abs')
+              .eq(calendar.currentData.calendarOptions.dayMaxEvents - 1)
+              .addClass('hide');
+            $(el)
+              .closest('.fc-daygrid-day-events')
+              .find('.fc-daygrid-event-harness.fc-daygrid-event-harness-abs')
+              .eq(calendar.currentData.calendarOptions.dayMaxEvents - 1)
+              .addClass('hide');
+          });
+        }, 100);
+      }
+
+      // moreLinkClickEvent 더보기 클릭시 이벤트
+      function moreLinkClickEvent() {
+        // PC
+        if ($(window).width() > mobileWidth) {
+          $('.tab-box-btn.daily').click();
+        }
+      }
+
+      // 탭 메뉴 먼슬리 캘린더 보이기
+      function monthlyViewEvent() {
+        $('.calender-box-title h2').text('먼슬리 캘린더');
+        $('.calender-box-content .monthly-box').addClass('show');
+        $('.calender-box-content .daily-box').removeClass('show');
+        calendar.render();
+      }
+
+      // 탭 메뉴 데일리 캘린더 보이기
+      function dailyViewEvent() {
+        $('.calender-box-title h2').text('데일리 캘린더');
+        $('.calender-box-content .daily-box').addClass('show');
+        $('.calender-box-content .monthly-box').removeClass('show');
+        calendar.render();
+      }
+      
+      $('.fc-next-button').on('click', function() {
+        var dateString = document.getElementById("fc-dom-1").innerHTML;
+        var date = new Date();
+        date.setFullYear(dateString.substring(0, 4));
+        date.setMonth(dateString.substring(6, dateString.length-1) - 1);
+        get(0, 0, 0, -1, 0, 0, -1, 0, 0, 0, date);
+      });
+      
+      $('.fc-prev-button').on('click', function() {
+        var dateString = document.getElementById("fc-dom-1").innerHTML;
+        var date = new Date();
+        date.setFullYear(dateString.substring(0, 4));
+        date.setMonth(dateString.substring(6, dateString.length-1) - 1);     
+        get(0, 0, 0, -1, 0, 0, -1, 0, 0, 0, date);
+      });
+
+      // 탭 메뉴
+      $('.celender-info-box-tab .tab-box-btn').on('click', function() {
+        $('.tab-box-btn').parent('.tab-box').removeClass('active');
+        $(this).parent('.tab-box').addClass('active');
+
+        // monthly, daily show
+        if ($(this).hasClass('monthly')) {
+          monthlyViewEvent();
+        } else {
+          dailyViewEvent();
+        }
+      });
+    });
+  </script>
+
+
+  <!-- calenderScript -->
+</body>
+
+</html>

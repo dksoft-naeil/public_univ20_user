@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../매거진/매거진.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../20svoice/20svoice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../커뮤니티/커뮤니티.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../캘린더/캘린더.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box">
+            <div class="menu-box-item">
+              <a href="../마이페이지/마이페이지.html">마이페이지</a>
+            </div>
+            <!-- 로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button">로그아웃</button>
+            </div>
+            <!-- //로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button" class="dark-mode-btn">
+                <i class="icon-box icon-moon"></i>
+                <i class="icon-box icon-sun"></i>
+                다크/라이트 모드
+              </button>
+            </div>
+            <div class="menu-box-item">
+              <button type="button" class="search-control-btn">
+                <i class="icon-box icon-search-black"></i>
+                <i class="icon-box icon-search-white"></i>
+                검색
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box">
+            <div class="login-box-item">
+              <button type="button" class="mobile-menu-btn">
+                <span class="profile-box">
+                <!-- 프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <!-- <div class="image image-thumb"> -->
+                <span class="image">
+                <!-- <img src="../../../resources/images/" alt="프로필 이미지" /> -->
+                </span>
+                <!-- //프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                </span>
+              </button>
+            </div>
+            <div class="menu-box">
+              <div class="menu-box-item">
+                <a href="../20svoice/글쓰기.html" class="menu-box-btn"><i class="icon-box header-icon-pencil"></i>글쓰기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../제보하기/제보하기.html" class="menu-box-btn"><i class="icon-box header-icon-volume"></i>대학내일에<br />
+                알려주기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../표지모델신청/표지모델신청.html" class="menu-box-btn"><i class="icon-box header-icon-camera"></i>표지모델 신청</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../마이페이지/마이페이지.html" class="menu-box-btn"><i class="icon-box header-icon-user"></i>마이페이지</a>
+              </div>
+              <div class="menu-box-item menu-logout">
+                <button type="button" class="menu-box-btn"><i class="icon-box header-icon-logout"></i>로그아웃</button>
+              </div>
+            </div>
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box">
+              <div class="user-info">
+                <span class="nickname">닉네임은최대열두자임다요</span>님을 위한<br />
+              라이프 매거진 UNIV20
+              </div>
+              <div class="user-menu">
+                <div class="user-menu-left">
+                  <button type="button" class="btn logout-btn">로그아웃</button>
+                  <a href="../마이페이지/마이페이지.html" class="btn">마이페이지</a>
+                </div>
+                <div class="user-menu-right">
+                  <button type="button" class="dark-mode-btn">
+                    <i class="icon-box icon-moon"></i>
+                    <i class="icon-box icon-sun"></i>
+                    다크/라이트 모드
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list">
+            <li class="all-menu-item">
+              <a href="../20svoice/글쓰기.html" class="all-menu-btn">글쓰기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../제보하기/제보하기.html" class="all-menu-btn">대학내일에 알려주기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../표지모델신청/표지모델신청.html" class="all-menu-btn">표지모델 신청</a>
+            </li>
+            <li class="all-menu-item">
+              <button type="button" class="all-menu-btn sub-menu-box-btn">매거진</button>
+              <div class="sub-menu-box">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 전체</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 캠퍼스</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 라이프스타일</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 커리어</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="all-menu-item">
+              <a href="../20svoice/20svoice.html" class="all-menu-btn">글 쓰는 20대</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../커뮤니티/커뮤니티.html" class="all-menu-btn">커뮤니티</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../캘린더/캘린더.html" class="all-menu-btn">캘린더</a>
+            </li>
+          </ul>
+          <div class="add-btn-box">
+            <a href="../공지사항/faq.html" class="add-btn">자주 묻는 질문</a>
+            <a href="../공지사항/문의신고하기.html" class="add-btn">문의/신고하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <!-- <section class="sub-section-wrap article-content-area sub-content-space"> -->
+      <section class="sub-section-wrap article-content-area">
+        <div class="section-inner article-aside-inner">
+          <aside class="aside-content-box article-aside-content-box">
+            <div class="article-detail-info-box">
+              <div class="profile-box">
+                <!-- 프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <!-- <div class="image image-thumb"> -->
+                <div class="image">
+                  <!-- <img src="../../../resources/images/" alt="프로필 이미지" /> -->
+                </div>
+                <!-- //프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <div class="info">
+                  <div class="nickname"><span class="name">김내일</span> 에디터</div>
+                  <div class="address">kimnaeil@univ.me</div>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="flow">
+                  <span>20’s voice</span>
+                </div>
+                <div class="keyword">
+                  <span class="label">키워드</span>
+                  <span class="text">키워드최대열자임다요</span>
+                </div>
+                <div class="subject">
+                  <span class="label">주제</span>
+                  <span class="text">관리자에서 등록한 글쓰기 주제가 노출되는 영역 입니다. 최대 오십자까지 이곳에 노출됩니다.</span>
+                </div>
+                <div class="date">
+                  <span class="label">작성일</span>
+                  <span class="text">2024.10.31</span>
+                </div>
+                <div class="views">
+                  <span class="label">조회수</span>
+                  <span class="text">99,999</span>
+                </div>
+                <div class="likes">
+                  <span class="label">좋아요</span>
+                  <span class="text">123,456</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <!-- //aside-content-box -->
+          <article class="article-report-content-box">
+            <div class="article-detail-info-box">
+              <div class="article-label-info-box">
+                <div class="flow">
+                  <span>20’s voice</span>
+                </div>
+                <div class="article-label-box-item">
+                  <div class="state-box"><i class="icon-box icon-save"></i>임시 저장</div>
+                  <!-- <div class="state-box"><i class="icon-box icon-circle-check"></i>작성 완료</div> -->
+                  <!-- <div class="state-box"><i class="icon-box icon-twinkle"></i>수정(첨삭) 중</div> -->
+                  <!-- <div class="state-box"><i class="icon-box icon-document"></i>발행 완료</div> -->
+                </div>
+              </div>
+              <div class="article-report-title">회원이 사용자에서 직접 등록한 기사 타이틀입니다. 최대 50자 까지 등록 가능합니다.</div>
+              <div class="article-report-summary">회원이 사용자에서 직접 등록할 수 있는 기사 요약 내용 입니다.</div>
+              <div class="profile-box">
+                <!-- 프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <!-- <div class="image image-thumb"> -->
+                <div class="image">
+                  <!-- <img src="../../../resources/images/" alt="프로필 이미지" /> -->
+                </div>
+                <!-- //프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <div class="info">
+                  <div class="nickname"><span class="name">김내일</span> 에디터</div>
+                  <div class="address">kimnaeil@univ.me</div>
+                </div>
+              </div>
+              <div class="info-box info-box-full">
+                <div class="keyword">
+                  <span class="label">키워드</span>
+                  <span class="text">키워드최대열자임다요</span>
+                </div>
+                <div class="subject">
+                  <span class="label">주제</span>
+                  <span class="text">관리자에서 등록한 글쓰기 주제가 노출되는 영역 입니다. 최대 오십자까지 이곳에 노출됩니다.</span>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="date">
+                  <span class="label">작성일</span>
+                  <span class="text">2024.10.31</span>
+                </div>
+                <div class="views">
+                  <span class="label">조회수</span>
+                  <span class="text">99,999</span>
+                </div>
+                <div class="likes">
+                  <span class="label">좋아요</span>
+                  <span class="text">123,456</span>
+                </div>
+              </div>
+            </div>
+            <!-- //article-detail-info-box -->
+            <div class="article-report-content editor-content-box">
+              <!-- 링크 포함 텍스트 -->
+              <div>
+                3일 후면 드디어 개강이다. 여행도 떠나기 전이 가장 설레듯이 개강도 상상만 하는 지금이 가장 설레는 법이다. 막상 시작하면 지칠 통학길도 아직은 새롭다. 혹시나 새 인연을 만나지는 않을지 기대하며 옷과 신발을 사기도 한다. 이번 3월호 표지에는 눈 밑 점이 매력적인 박세현과 개강의 설렘을 담았다. 박세현과 통학을 함께한
+                <a href="javascript:void(0);" target="_blank" class="link-text">Tmoney x 라인프렌즈 협업 카드</a>도 확인해 보자.
+              </div>
+              <!-- //링크 포함 텍스트 -->
+
+              <!-- 공백 -->
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <!-- //공백 -->
+
+              <!-- 이미지 캡션글 -->
+              <div class="image-caption-box">
+                <div class="image-box">
+                  <img src="../../../resources/images/_temp/temp-caption-thumbnail-image01.png" alt="" />
+                  <span class="desc">[이미지 캡션글] 이미지 캡션글입니다. 최대 글자수 제한은 없습니다.</span>
+                </div>
+              </div>
+              <!-- //이미지 캡션글 -->
+
+              <!-- 공백 -->
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <!-- //공백 -->
+
+              <!-- 질문 답변 텍스트 -->
+              <div>
+                <h3>Q. 간단한 자기소개 부탁한다.</h3>
+                수원대학교 문화예술학부 연극전공 박세현이다. 교수님들이 “이제 학교 그만 다닐 때 되지 않았냐, 좀 나가라”라고 하는 20학번이다(웃음). 그런 말을 들으면 ‘저도 그만 다니고 싶어요.’라고 속으로만 생각하는 INFJ다.
+              </div>
+              <!-- //질문 답변 텍스트 -->
+
+              <!-- 공백 -->
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <!-- //공백 -->
+
+              <!-- 유튜브 영상 캡션글 -->
+              <div class="iframe-video-box">
+                <div class="video">
+                  <iframe id="youtube" src="https://www.youtube.com/embed//WHE29DJ1Ui0?rel=0&loop=0&modestbranding=1&showinfo=0&controls=1" frameborder="0" allowfullscreen="" allow="accelerometer" scrolling="no"></iframe>
+                </div>
+                <span class="desc">[유튜브 캡션글] 유튜브 영상 캡션글입니다.</span>
+              </div>
+              <!-- //유튜브 영상 캡션글 -->
+
+              <!-- 공백 -->
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <!-- //공백 -->
+
+              <!-- 질문 답변 텍스트 -->
+              <div>
+                <h3>Q. 마지막으로, 표지모델 지원자들에게 합격 꿀팁을 전하자면?</h3>
+                다양한 표정과 스타일이 담긴 사진을 보내서 합격한 것 같다. 나와 다른, 혹은 나보다 매력 있는 분들이 많을테니 지원만 잘 한다면 충분히 할 수 있지 않을까? 만약 표지모델 지원을 망설이고 있다면 무조건 지원해라. 대학 시절 잊지 못할 최고의 경험이 될 것이다.
+              </div>
+              <!-- //질문 답변 텍스트 -->
+            </div>
+            <!-- //article-report-content -->
+
+            <!-- 태그 박스 -->
+            <div class="tag-box">
+              <span>#태그명최대열자입니다</span>
+              <span>#태그명최대열자</span>
+              <span class="fc-red">#애드벌토리얼</span>
+            </div>
+            <!-- //태그 박스 -->
+
+            <!-- 광고 배너 영역 -->
+
+            <div class="banner-content-box">
+              <div class="banner-box">
+                <a href="javascript:void(0);" target="_blank" class="banner-link"></a>
+                <div class="banner">
+                  <img src="../../../resources/images/banner/banner-image01.png" class="pc-show" alt="광고 배너" />
+                  <img src="../../../resources/images/banner/banner-image01-mo.png" class="mobile-show" alt="광고 배너" />
+                </div>
+              </div>
+            </div>
+
+
+            <!-- //banner-content-box -->
+            <!-- //광고 배너 영역 -->
+          </article>
+          <!-- //article-report-content-box -->
+        </div>
+      </section>
+      <!-- //sub-section-wrap -->
+      <div class="add-content-box-wrap">
+        <div class="section-inner">
+
+          <div class="comment-content-box-wrap">
+            <div class="comment-content-box-header">댓글 3개</div>
+            <div class="comment-content-box-body">
+              <div class="comment-list-box">
+                <div class="comment-list-box-item">
+                  <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                  <div class="profile-image">
+                    강
+                    <img src="../../../resources/images/_temp/file-cover.png" alt="" />
+                  </div>
+                  <div class="comment-box">
+                    <div class="info-box">
+                      <div class="name">강동동</div>
+                      <div class="date">2024.10.31 23:59</div>
+                      <div class="like-box">
+                        <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                        <button type="button" class="active-btn like-btn">
+                          <i class="icon-box icon-like">좋아요</i>
+                        </button>
+                        <span class="number">123</span>
+                      </div>
+                    </div>
+                    <div class="comment">회원들이 작성한 일정에 대한 의견입니다. 회원들이 작성한 일정에 대한 의견입니다.</div>
+                  </div>
+                </div>
+                <div class="comment-list-box-item">
+                  <div class="profile-image">이</div>
+                  <div class="comment-box">
+                    <div class="info-box">
+                      <div class="name">이동동</div>
+                      <div class="date">2024.10.31 23:59</div>
+                      <div class="like-box">
+                        <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                        <button type="button" class="active-btn like-btn check">
+                          <i class="icon-box icon-like">좋아요</i>
+                        </button>
+                        <span class="number">123</span>
+                      </div>
+                    </div>
+                    <div class="comment">회원들이 작성한 일정에 대한 의견입니다.</div>
+                  </div>
+                </div>
+                <!-- 유저 작성 시 comment-list-box-item-user 클래스 추가 -->
+                <div class="comment-list-box-item comment-list-box-item-user">
+                  <!-- 프로필 이미지가 있을경우 img 추가 없다면 이름 첫 글자 -->
+                  <div class="profile-image">대</div>
+                  <div class="comment-box">
+                    <div class="info-box">
+                      <div class="name">대학내일</div>
+                      <div class="date">2024.10.31 23:59</div>
+                      <div class="like-box">
+                        <!-- active-btn 클래스 추가 상태에서 like-btn 클릭 시 효과 적용 -->
+                        <button type="button" class="active-btn like-btn">
+                          <i class="icon-box icon-like">좋아요</i>
+                        </button>
+                        <span class="number">123</span>
+                      </div>
+                    </div>
+                    <div class="comment">내가 작성한 일정에 대한 의견입니다. 내가 작성한 일정에 대한 의견입니다.</div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button type="button" class="add-btn"><i class="icon-box icon-arrow-black-down">화살표</i><span class="underline">더보기</span></button>
+                </div>
+              </div>
+              <!-- comment-input-box-active 클래스 추가 시 클릭 시 안내 텍스트 -->
+              <div class="comment-input-box comment-input-box-active">
+                <div class="textarea-box">
+                  <textarea class="form-textarea full sm" placeholder="댓글을 입력해 주세요."></textarea>
+                  <label for="" class="info-text">다른 사람에게 불쾌감을 주는 욕설, 혐오, 비하의 표현이나 다른 사람의 권리를 침해하는 내용은 강제 삭제될 수 있습니다.</label>
+                </div>
+                <button type="button" class="btn">댓글 쓰기</button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- //comment-content-box-wrap -->
+          <div class="article-write-box-wrap">
+            <div class="btn-wrap write-btn-box">
+              <a href="../마이페이지/마이페이지.html" class="btn bg-wh prev-btn">이전</a>
+              <div class="half-box">
+                <button type="button" class="btn bg-wh delete-btn">삭제</button>
+                <a href="../마이페이지/일반글수정.html" class="btn bg-wh edit-btn">수정</a>
+                <button type="button" class="btn bg-black write-btn pc-show">작성하기</button>
+                <!-- 발행 대기 중 -->
+                <!-- <button type="button" class="btn bg-black write-btn pc-show" disabled>발행 대기 중</button> -->
+              </div>
+            </div>
+            <div class="btn-wrap btn-wrap-column mobile-show">
+              <button type="button" class="btn bg-black write-btn">작성하기</button>
+              <!-- <button type="button" class="btn bg-black write-btn" disabled>발행 대기 중</button> -->
+            </div>
+          </div>
+          <!-- //article-write-box-wrap -->
+        </div>
+      </div>
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../공지사항/목록.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/문의신고하기.html" class="nav-box-btn">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+                <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+                <div class="logo-foundation-box">
+                  <span> 본 서비스는 </span>
+                  <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+                  <span>의 지원을 받아 개발되었습니다.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/개인정보처리방침.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/이용약관.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // document 로드 후 재실행
+      window.commentInfoText();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
+  <meta name="title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="대학내일, 20대를 위한 라이프 매거진" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link rel="icon" href="../../../resources/images/favicon.png" />
+  <link rel="stylesheet" href="../../../resources/plugins/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/selectric/selectric.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-time-picker.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/datepicker/tui-date-picker.css" />
+  <link href="../../../resources/plugins/dropzone/dropzone.min.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/cropper/cropper.css" rel="stylesheet" />
+  <link href="../../../resources/plugins/froala/froala_editor.pkgd.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../resources/plugins/jqueryui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../../../resources/plugins/fullcalendar/fullcalendar.css" />
+  <link rel="stylesheet" href="../../../resources/css/style.css" />
+  <script src="../../../resources/plugins/jquery-3.7.1.min.js"></script>
+  <script src="../../../resources/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../resources/plugins/selectric/jquery.selectric.js"></script>
+  <script src="../../../resources/plugins/gsap/gsap.min.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-time-picker.js"></script>
+  <script src="../../../resources/plugins/datepicker/tui-date-picker.js"></script>
+  <script src="../../../resources/js/common-ui.js"></script>
+  <script src="../../../resources/plugins/dropzone/dropzone.min.js"></script>
+  <script src="../../../resources/plugins/cropper/cropper.js"></script>
+  <script src="../../../resources/plugins/froala/froala_editor.pkgd.min.js"></script>
+  <script src="../../../resources/plugins/jqueryui/jquery-ui.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/fullcalendar.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/popper.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/tooltip.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/index.global.min.js"></script>
+  <script src="../../../resources/plugins/fullcalendar/ko.global.js"></script>
+  <title>대학내일, 20대를 위한 라이프 매거진</title>
+
+
+  <script>
+    darkModeHandler.init();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- 헤더 -->
+
+    <header id="header">
+      <div class="section-inner">
+        <div class="left-box">
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <nav class="nav">
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="../매거진/매거진.html" class="nav-btn">매거진</a>
+              </div>
+              <div class="nav-item">
+                <a href="../20svoice/20svoice.html" class="nav-btn">글 쓰는 20대</a>
+              </div>
+              <div class="nav-item">
+                <a href="../커뮤니티/커뮤니티.html" class="nav-btn fc-g2">커뮤니티</a>
+              </div>
+              <div class="nav-item">
+                <a href="../캘린더/캘린더.html" class="nav-btn fc-g2">캘린더</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="right-box">
+          <div class="menu-box">
+            <div class="menu-box-item">
+              <a href="../마이페이지/마이페이지.html">마이페이지</a>
+            </div>
+            <!-- 로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button">로그아웃</button>
+            </div>
+            <!-- //로그인 후 -->
+            <div class="menu-box-item">
+              <button type="button" class="dark-mode-btn">
+                <i class="icon-box icon-moon"></i>
+                <i class="icon-box icon-sun"></i>
+                다크/라이트 모드
+              </button>
+            </div>
+            <div class="menu-box-item">
+              <button type="button" class="search-control-btn">
+                <i class="icon-box icon-search-black"></i>
+                <i class="icon-box icon-search-white"></i>
+                검색
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-bar-view-box">
+          <div class="search-bar-box">
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력하세요." />
+            </div>
+            <button type="button" class="close-btn">닫기</button>
+          </div>
+        </div>
+        <!-- //검색창 -->
+
+        <div class="mobile-box">
+          <button type="button" class="mobile-navigation-menu" id="btnAllmenuOpen" onclick="mobileMenuController.open('','#allMenuContainer', false)">
+            <span class="icon"></span>
+          </button>
+          <div class="logo">
+            <a href="../메인/메인.html">
+              <h1><img src="../../../resources/images/logo.png" alt="20 대학내일" /></h1>
+            </a>
+          </div>
+          <!-- 로그인 후 -->
+          <div class="login-box">
+            <div class="login-box-item">
+              <button type="button" class="mobile-menu-btn">
+                <span class="profile-box">
+                <!-- 프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                <!-- <div class="image image-thumb"> -->
+                <span class="image">
+                <!-- <img src="../../../resources/images/" alt="프로필 이미지" /> -->
+                </span>
+                <!-- //프로필 사진 등록시 image-thumb 클래스 추가, img 추가  -->
+                </span>
+              </button>
+            </div>
+            <div class="menu-box">
+              <div class="menu-box-item">
+                <a href="../20svoice/글쓰기.html" class="menu-box-btn"><i class="icon-box header-icon-pencil"></i>글쓰기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../제보하기/제보하기.html" class="menu-box-btn"><i class="icon-box header-icon-volume"></i>대학내일에<br />
+                알려주기</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../표지모델신청/표지모델신청.html" class="menu-box-btn"><i class="icon-box header-icon-camera"></i>표지모델 신청</a>
+              </div>
+              <div class="menu-box-item">
+                <a href="../마이페이지/마이페이지.html" class="menu-box-btn"><i class="icon-box header-icon-user"></i>마이페이지</a>
+              </div>
+              <div class="menu-box-item menu-logout">
+                <button type="button" class="menu-box-btn"><i class="icon-box header-icon-logout"></i>로그아웃</button>
+              </div>
+            </div>
+          </div>
+          <!-- //로그인 후 -->
+        </div>
+      </div>
+    </header>
+    <div class="all-menu-container" id="allMenuContainer">
+      <div class="menu-inner">
+        <div class="menu-wrapper">
+          <div class="menu-header">
+            <button type="button" class="btn-menu-close" onclick="mobileMenuController.close('#btnAllmenuOpen', '#allMenuContainer')"><span>닫기</span></button>
+            <div class="user-info-box">
+              <div class="user-info">
+                <span class="nickname">닉네임은최대열두자임다요</span>님을 위한<br />
+              라이프 매거진 UNIV20
+              </div>
+              <div class="user-menu">
+                <div class="user-menu-left">
+                  <button type="button" class="btn logout-btn">로그아웃</button>
+                  <a href="../마이페이지/마이페이지.html" class="btn">마이페이지</a>
+                </div>
+                <div class="user-menu-right">
+                  <button type="button" class="dark-mode-btn">
+                    <i class="icon-box icon-moon"></i>
+                    <i class="icon-box icon-sun"></i>
+                    다크/라이트 모드
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창 -->
+          <div class="search-bar-box">
+            <div class="input-cover">
+              <label for="search" class="form-label txt-hidden">검색</label>
+              <input type="text" id="search" name="search" title="검색" class="form-input" autocomplete="off" placeholder="검색하실 내용을 입력해 보세요." />
+            </div>
+            <button type="button" class="search-button">
+              <i class="icon-box icon-search"></i>
+              <span>검색하기</span>
+            </button>
+          </div>
+          <!-- //검색창 -->
+          <ul class="menu-list">
+            <li class="all-menu-item">
+              <a href="../20svoice/글쓰기.html" class="all-menu-btn">글쓰기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../제보하기/제보하기.html" class="all-menu-btn">대학내일에 알려주기</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../표지모델신청/표지모델신청.html" class="all-menu-btn">표지모델 신청</a>
+            </li>
+            <li class="all-menu-item">
+              <button type="button" class="all-menu-btn sub-menu-box-btn">매거진</button>
+              <div class="sub-menu-box">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 전체</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 캠퍼스</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 라이프스타일</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="../매거진/매거진.html" class="sub-menu-btn">- 커리어</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="all-menu-item">
+              <a href="../20svoice/20svoice.html" class="all-menu-btn">글 쓰는 20대</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../커뮤니티/커뮤니티.html" class="all-menu-btn">커뮤니티</a>
+            </li>
+            <li class="all-menu-item">
+              <a href="../캘린더/캘린더.html" class="all-menu-btn">캘린더</a>
+            </li>
+          </ul>
+          <div class="add-btn-box">
+            <a href="../공지사항/faq.html" class="add-btn">자주 묻는 질문</a>
+            <a href="../공지사항/문의신고하기.html" class="add-btn">문의/신고하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // 헤더 -->
+
+    <!-- 컨텐츠 -->
+    <main id="content">
+      <section class="sub-section-wrap write-box-area">
+        <div class="article-write-content-title-box">
+          <div class="section-inner">
+            <div class="title">
+              <h2>첨삭 멘토링 글 수정하기</h2>
+            </div>
+            <div class="write-tip-box write-tip-box-accordion accordion-container accordion-list" data-speed="200">
+              <div class="tip-title accordion-header">
+                <strong>안내사항</strong>
+              </div>
+              <div class="text-box accordion-body">
+                <div class="text">
+                  대학내일 에디터가 수정한 항목에는<br />
+                    별도의 아이콘 <i class="icon-box icon-editing-small"></i> 이 표시 됩니다.
+                </div>
+                <div class="info-text">
+                  직접 수정하고 싶은 항목은<br />
+                    대학내일 에디터가 남긴 첨삭 내용을<br />
+                    반영해 수정해 주세요.
+                </div>
+              </div>
+            </div>
+            <div class="editing-comment-box-slide mobile-show">
+              <div class="swiper-container editing-comment-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="editing-comment-box-item">
+                      <div class="writer">김내일 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                      <div class="comment-box">
+                        <div class="info-text">첨삭 완료</div>
+                        <div class="text-box">
+                          현재 글 첨삭이 완료 되었어요!<br />
+                            빠른 시일 내에 글 쓰는 20대 기사로 발행될 예정이며, 발행 여부는 마이페이지 알림 메시지에서 확인 할 수 있어요.<br />
+                            발행 전까지 해당 글 수정은 불가능하다는 점 참고해 주세요!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="editing-comment-box-item">
+                      <div class="writer">김내일 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                      <div class="comment-box">
+                        <div class="info-text">[에디터 수정] 제목 및 전문, 본문</div>
+                        <div class="text-box">글감 주제에 맞춰 제목과 전문은 이런 방향으로 수정했습니다. 본문은 오탈자가 있어 수정했는데요. 수정한 본문 오탈자는 '노란색 하이라이트' 로 표기했으니 확인해 주세요.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="editing-comment-box-item">
+                      <div class="writer">닉네임은열두글자까지임다 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                      <div class="comment-box">
+                        <div class="info-text">본문</div>
+                        <div class="text-box">본문 내용은 이전에 작성해주신 내용보다 문맥적으로 더 매끄러워졌네요! 다만, 일부 문단 내용이 주제에 벗어나 보이는데요 이러한 방향으로 작성하시는 게 더 좋을 것 같아요. 수정이 필요한 문단에는 '노란색 하이라이트'르 표기했으니 확인해 주세요.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="editing-comment-box-item">
+                      <div class="writer">닉네임은열두글자까지임다 에디터</div>
+                      <div class="date">2024. 10. 31.</div>
+                      <div class="comment-box">
+                        <div class="info-text">태그</div>
+                        <div class="text-box">검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요. 검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요. 검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요. 검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //editing-comment-box -->
+          </div>
+        </div>
+        <!-- //article-write-content-title-box -->
+        <div class="article-write-content-box">
+          <div class="section-inner article-aside-inner">
+            <div class="article-write-box-wrap">
+              <form action="">
+                <div class="article-write-box article-subject-show">
+                  <div class="subject-box">
+                    <div class="subject">
+                      <strong>대표 이미지</strong>
+                    </div>
+                  </div>
+
+                  <div class="thumbnail-upload-box write-thumbnail">
+                    <div class="thumbnail-dropzone-box">
+                      <div class="dropzone" id="cropDropzone">
+                        <div class="dz-message" data-dz-message>
+                          <span class="icon-box icon-picture">그림 아이콘</span>
+                          <span class="text"> 대표 이미지를 이곳에 드래그하거나 클릭해서 등록해 주세요. </span>
+                        </div>
+                      </div>
+                      <div class="cropzone-crop-box">
+                        <!-- 등록된 이미지 업로드 -->
+                        <img id="uploadImage" class="cropper-hidden" src="../../../resources/images/_temp/test-crop.png" alt="" />
+                      </div>
+                    </div>
+                    <!-- //thumbnail-dropzone-box -->
+                    <div class="cropzone-image-box"></div>
+                    <!-- //cropzone-image-box -->
+                    <div class="cropzone-control-box">
+                      <button type="button" class="btn full bg-black crop-save-btn">등록하기</button>
+                      <div class="half-box">
+                        <button type="button" class="btn full bg-g1 crop-delete-btn">삭제하기</button>
+                        <button type="button" class="btn full bg-black crop-edit-btn">수정하기</button>
+                      </div>
+                    </div>
+                    <!-- //cropzone-control-box -->
+                  </div>
+                  <div class="info-text">
+                    <p class="text">※ 대표 이미지는 1장만 등록할 수 있습니다.</p>
+                    <p class="text">※ 5MB 이하의 JPG, PNG, GIF 이미지만 업로드 가능합니다.</p>
+                    <p class="text">※ 권장 이미지 사이즈는 1056px * 584px, 최소 이미지 사이즈는 528px * 292px 입니다.</p>
+                  </div>
+
+                  <!-- //thumbnail-upload-box -->
+                </div>
+                <!-- 대표 이미지 -->
+                <div class="article-write-box article-subject-show">
+                  <div class="subject"><strong>키워드 및 주제</strong></div>
+                  <div class="input-cover-wrap">
+                    <div class="input-cover">
+                      <div class="form-label">키워드</div>
+                      <div class="form-text">키워드최대열자임다요</div>
+                    </div>
+                    <div class="input-cover">
+                      <div class="form-label">주제</div>
+                      <div class="form-text">관리자에서 등록한 글쓰기 주제가 노출되는 영역 입니다. 최대 오십자까지 이곳에 노출됩니다.</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 키워드 및 주제 -->
+                <div class="article-write-box article-subject-show">
+                  <div class="subject-box">
+                    <div class="subject">
+                      <strong>제목 및 한 줄 소개</strong>
+                    </div>
+                    <!-- 관리자에서 대학내일 에디터가 내용을 수정한 항목에 노출되는 아이콘 -->
+                    <i class="icon-box icon-editing"></i>
+                  </div>
+                  <div class="input-cover-wrap">
+                    <div class="input-cover">
+                      <label for="title" class="form-label">제목</label>
+                      <input type="text" id="title" name="title" title="제목" class="form-input" autocomplete="off" placeholder="50자 이내로 입력" value="이전에 등록했던 제목이 기본 노출 됩니다. 수정 가능해요." />
+                    </div>
+                    <div class="input-cover">
+                      <label for="desctext" class="form-label">한 줄 소개</label>
+                      <input type="text" id="desctext" name="desctext" title="한 줄 소개" class="form-input" autocomplete="off" placeholder="30자 이내로 입력" value="이전에 등록했던 한 줄 소개이 기본 노출 됩니다. 수정 가능해요." />
+                    </div>
+                  </div>
+                </div>
+                <!-- 제목 및 한 줄 소개 -->
+                <div class="article-write-box article-subject-show">
+                  <div class="subject-box">
+                    <div class="subject">
+                      <strong>본문</strong>
+                    </div>
+                    <!-- 관리자에서 대학내일 에디터가 내용을 수정한 항목에 노출되는 아이콘 -->
+                    <i class="icon-box icon-editing"></i>
+                  </div>
+
+                  <div class="editor-content-box">
+                    <textarea id="editor">
+          <div>
+            <h3>본문 제목을 입력해 주세요.</h3>
+          </div>
+          <div>
+            본문 내용을 입력해 주세요.
+          </div>
+          <br/>
+          <img src="../../../resources/images/_temp/editor-image.png" alt="" />
+          <br/>
+          <br/>
+          <div>
+            본문 내용을 입력해 주세요.
+          </div>
+        </textarea>
+                  </div>
+
+                  <!-- //editor-content-box -->
+                </div>
+                <!-- 본문 -->
+                <div class="article-write-box article-subject-show">
+                  <div class="subject-box">
+                    <div class="subject">
+                      <strong>태그</strong>
+                    </div>
+                  </div>
+                  <div class="tag-content-box">
+                    <div class="input-cover">
+                      <label for="tagname" class="form-label txt-hidden">태그명 입력</label>
+                      <input type="text" id="tagname" name="tagname" title="태그명" class="form-input" autocomplete="off" placeholder="내 글이 쉽게 검색될 수 있도록 연관 태그를 입력해 주세요." value="마케팅, 라이프, 대학생" />
+                    </div>
+                    <div class="info-text">
+                      <p class="text">※ 태그는 최대 3개까지 입력할 수 있습니다. (예시: 에세이, 대학생, 꿀팁)</p>
+                      <p class="text">※ 각 태그는 최대 10자까지 입력 가능합니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 태그 -->
+                <div class="article-write-box article-subject-show">
+                  <div class="subject-box">
+                    <div class="subject">
+                      <strong>수정 관련 문의사항 (선택)</strong>
+                    </div>
+                  </div>
+                  <div class="input-cover">
+                    <label for="" class="form-label txt-hidden">수정 관련 문의사항</label>
+                    <textarea class="form-textarea full" placeholder="문의하고 싶은 내용을 자유롭게 입력해 주세요."></textarea>
+                  </div>
+                </div>
+                <!-- 수정 관련 문의사항 (선택) -->
+                <div class="toolbar-box">
+                  <a href="../캘린더/캘린더.html" class="btn bg-g4 cancel-btn">취소</a>
+                  <button type="button" class="btn bg-wh save-btn">임시 저장</button>
+                  <button type="button" class="btn bg-black write-btn">수정(첨삭) 요청하기</button>
+                  <!-- <button type="button" class="btn bg-black write-btn" disabled>수정(첨삭) 요청 중</button> -->
+                  <!-- <button type="button" class="btn bg-black write-btn" disabled>발행 대기 중</button> -->
+                </div>
+                <div class="btn-wrap write-btn-box">
+                  <a href="../마이페이지/내글상세.html" class="btn bg-g4 cancel-btn">취소</a>
+                  <div class="half-box">
+                    <button type="button" class="btn bg-wh save-btn">임시 저장</button>
+                    <button type="button" class="btn bg-black write-btn">수정(첨삭) 요청하기</button>
+                    <!-- <button type="button" class="btn bg-black write-btn" disabled>수정(첨삭) 요청 중</button> -->
+                    <!-- <button type="button" class="btn bg-black write-btn" disabled>발행 대기 중</button> -->
+                  </div>
+                </div>
+              </form>
+            </div>
+            <aside class="aside-content-box">
+              <div class="write-tip-box">
+                <div class="text-box">
+                  <div class="text">
+                    대학내일 에디터가 수정한 항목에는<br />
+                      별도의 아이콘 <i class="icon-box icon-editing-small"></i> 이 표시 됩니다.
+                  </div>
+                  <div class="info-text">
+                    직접 수정하고 싶은 항목은<br />
+                      대학내일 에디터가 남긴 첨삭 내용을<br />
+                      반영해 수정해 주세요.
+                  </div>
+                </div>
+                <div class="image-box">
+                  <img src="../../../resources/images/write/guide-char-painting.png" />
+                </div>
+              </div>
+              <!-- //write-tip-box -->
+              <div class="editing-comment-box">
+                <div class="editing-comment-box-item">
+                  <div class="writer">김내일 에디터</div>
+                  <div class="date">2024. 10. 31.</div>
+                  <div class="comment-box">
+                    <div class="info-text">첨삭 완료</div>
+                    <div class="text-box">
+                      현재 글 첨삭이 완료 되었어요!<br />
+                        빠른 시일 내에 글 쓰는 20대 기사로 발행될 예정이며, 발행 여부는 마이페이지 알림 메시지에서 확인 할 수 있어요.<br />
+                        발행 전까지 해당 글 수정은 불가능하다는 점 참고해 주세요!
+                    </div>
+                  </div>
+                </div>
+                <div class="editing-comment-box-item">
+                  <div class="writer">김내일 에디터</div>
+                  <div class="date">2024. 10. 31.</div>
+                  <div class="comment-box">
+                    <div class="info-text">[에디터 수정] 제목 및 전문, 본문</div>
+                    <div class="text-box">글감 주제에 맞춰 제목과 전문은 이런 방향으로 수정했습니다. 본문은 오탈자가 있어 수정했는데요. 수정한 본문 오탈자는 '노란색 하이라이트' 로 표기했으니 확인해 주세요.</div>
+                  </div>
+                </div>
+                <div class="editing-comment-box-item">
+                  <div class="writer">닉네임은열두글자까지임다 에디터</div>
+                  <div class="date">2024. 10. 31.</div>
+                  <div class="comment-box">
+                    <div class="info-text">본문</div>
+                    <div class="text-box">본문 내용은 이전에 작성해주신 내용보다 문맥적으로 더 매끄러워졌네요! 다만, 일부 문단 내용이 주제에 벗어나 보이는데요 이러한 방향으로 작성하시는 게 더 좋을 것 같아요. 수정이 필요한 문단에는 '노란색 하이라이트'르 표기했으니 확인해 주세요.</div>
+                  </div>
+                </div>
+                <div class="editing-comment-box-item">
+                  <div class="writer">닉네임은열두글자까지임다 에디터</div>
+                  <div class="date">2024. 10. 31.</div>
+                  <div class="comment-box">
+                    <div class="info-text">태그</div>
+                    <div class="text-box">검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요. 검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요. 검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요. 검색 최적화를 위해 "에이전시" 태그명를 "마케팅" 태그로 수정해 주세요.</div>
+                  </div>
+                </div>
+              </div>
+              <!-- //editing-comment-box -->
+            </aside>
+          </div>
+        </div>
+        <!-- //article-write-content-box -->
+      </section>
+      <!-- //write-box-area -->
+    </main>
+    <!-- //컨텐츠 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="section-inner">
+        <div class="top-box">
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../공지사항/목록.html" class="nav-box-btn">공지사항</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/faq.html" class="nav-box-btn">자주 묻는 질문</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../공지사항/문의신고하기.html" class="nav-box-btn">문의/신고하기</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-box">
+          <div class="info-box">
+            <strong>(주)대학내일</strong>
+            <div class="info-box-list">
+              <div class="info-box-item">
+                <span>주소 : 서울 마포구 독막로 331</span>
+                <span>전화번호 : 02-735-3800</span>
+              </div>
+              <div class="info-box-item">
+                <span>등록번호 : 서울 아 03647</span>
+                <span>등록일자 : 2015년 3월 24일</span>
+                <span class="mo-block">발행일자 : 2015년 3월 24일</span>
+              </div>
+              <div class="info-box-item">
+                <span>제호 : 대학내일</span>
+                <span>발행·편집인 : 김영훈</span>
+                <span class="mo-block">청소년 보호 책임자 : 홍승우</span>
+              </div>
+              <div class="copyright">
+                <span> ©UNIVTOMORROW. ALL RIGHTS RESERVED. </span>
+                <div class="logo-foundation-box">
+                  <span> 본 서비스는 </span>
+                  <img src="../../../resources/images/logo-korea-press-foundation.png" class="logo-foundation" alt="한국언론진흥재단" />
+                  <span>의 지원을 받아 개발되었습니다.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/개인정보처리방침.html" class="nav-box-btn"><span>개인정보처리방침</span></a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../개인정보처리방침/이용약관.html" class="nav-box-btn">이용약관</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/copyright.html" class="nav-box-btn">저작권 정책</a>
+            </div>
+            <div class="nav-box-item">
+              <a href="../privacy/youth.html" class="nav-box-btn">청소년 보호 정책</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // 푸터 -->
+  </div>
+
+
+  <script>
+    // dropzone 라이브러리 참고 - https://docs.dropzone.dev/
+    // cropper.js 참고 https://fengyuanchen.github.io/cropperjs/
+    // 드래그존
+    function dropzoneCropperEditScript(option) {
+      var id = option.id;
+      var minCroppedWidth = option.width;
+      var minCroppedHeight = option.height;
+      var maxCroppedWidth = option.width * 2;
+      var maxCroppedHeight = option.height * 2;
+      Dropzone.options[id] = {
+        url: 'fileUpload', // url 경로
+        uploadMultiple: false, // 다중업로드 기능
+        addRemoveLinks: true, //삭제버튼 표시 여부
+        dictRemoveFile: '파일삭제', //삭제버튼 표시 텍스트
+        paramName: 'file', //서버에서 사용할 formdata 이름 설정 (default는 file)
+        // autoProcessQueue: false, // 자동으로 보내기. true : 파일 업로드 되자마자 서버로 요청, false : 서버에는 올라가지 않은 상태. 따로 this.processQueue() 호출시 전송
+        maxFiles: 1, // 업로드 파일수
+        maxFilesize: 5, // MB 최대업로드용량 : 10 -> 100MB
+        // 하나씩 넘겨야 에러 없음
+        parallelUploads: 1, // 동시파일업로드 수(이걸 지정한 수 만큼 여러파일을 한번에 컨트롤러에 넘긴다.)
+        acceptedFiles: '.jpeg,.jpg,.png,.gif,.JPEG,.JPG,.PNG,.GIF', // 이미지 파일 포맷만 허용
+        clickable: true, // 클릭가능여부
+        thumbnailWidth: null,
+        thumbnailHeight: null,
+
+        init: function() {
+          // 등록된 이미지 업로드
+          this.options.transformFile('', '', document.querySelector('#uploadImage'));
+
+          // // 크기가 최소보다 작음
+          // this.on('thumbnail', function (file) {
+          //   let checkSize = file.width >= 528 && file.height >= 292;
+          //   if (!checkSize) {
+          //     alert('이미지 크기를 다시 확인해주세요.');
+          //   }
+
+          //   return;
+          // });
+
+          // this.on('thumbnail', function (file) {
+          //   if (file.width >= minCroppedWidth || file.height >= minCroppedHeight) {
+          //     file.acceptDimensions();
+          //   } else {
+          //     file.rejectDimensions();
+          //   }
+          // });
+
+          // 2개이상이면 기존 이미지 제거
+          this.on('maxfilesexceeded', function(file) {
+            this.removeAllFiles();
+            this.addFile(file);
+          });
+        },
+
+        // 실행불가?
+        // accept: function (file, done) {
+        //   file.acceptDimensions = done;
+        //   file.rejectDimensions = function () {
+        //     // done('Image width or height too big.');
+        //     $('.dropzone').removeClass('dz-started');
+        //     return;
+        //   };
+        // },
+
+        error: function(file, errorMessage) {
+          if (errorMessage.indexOf('File is too big') !== -1) {
+            alert('업로드 가능한 파일 크기를 초과했습니다.');
+            // 업로드 실패한 파일 제거
+            this.removeFile(file);
+          } else if (errorMessage.indexOf("You can't upload files of this type") !== -1) {
+            alert('지원하지 않는 파일 형식입니다.');
+            // 업로드 실패한 파일 제거
+            this.removeFile(file);
+          } else {
+            // alert('파일 업로드 중 오류가 발생했습니다.');
+          }
+        },
+
+        // 파일 업로드 시
+        transformFile: function(file, done, setImage) {
+          let _this = this;
+
+          if (file !== '') {
+            // 이미지 가저온 후 드롭존 이미지 제거
+            this.removeFile(file);
+
+            // Create an image node for Cropper.js
+            var image = new Image();
+            image.src = URL.createObjectURL(file);
+          } else {
+            // 등록된 이미지
+            var image = setImage;
+          }
+
+          // 크롭이미지 수정일경우 this를 찾을수 없으므로 셋팅된 이미지 기준으로 this 설정
+          var $uploadBox = null;
+          if (setImage) {
+            $uploadBox = $(setImage).closest('.thumbnail-upload-box');
+          } else {
+            $uploadBox = $(this.element).closest('.thumbnail-upload-box');
+          }
+
+          $uploadBox.find('.cropzone-crop-box').append(image);
+          $uploadBox.find('.cropzone-crop-box').addClass('show');
+          // 버튼 활성화
+          $uploadBox.find('.cropzone-control-box').removeClass('active-edit');
+          $uploadBox.find('.cropzone-control-box').addClass('active');
+
+          // 등록하기
+          $uploadBox.find('.crop-save-btn').off('click');
+          $uploadBox.find('.crop-save-btn').on('click', function() {
+            let imgSrc = cropper.getCroppedCanvas({}).toDataURL();
+            $uploadBox.find('.cropzone-image-box').empty();
+            $uploadBox.find('.cropzone-image-box').append('<img src="' + imgSrc + '" alt="" />');
+            $uploadBox.find('.cropzone-crop-box').removeClass('show');
+            $uploadBox.find('.cropzone-image-box').addClass('show');
+            // 버튼 활성화
+            $uploadBox.find('.cropzone-control-box').removeClass('active');
+            $uploadBox.find('.cropzone-control-box').addClass('active-edit');
+            // 드롭존 숨기기
+            $uploadBox.find('.thumbnail-dropzone-box').addClass('hide');
+            // 박스 크기 조절
+            $uploadBox.addClass('crop');
+          });
+
+          // 수정하기
+          $uploadBox.find('.crop-edit-btn').off('click');
+          $uploadBox.find('.crop-edit-btn').on('click', function() {
+            $uploadBox.find('.cropzone-crop-box').addClass('show');
+            $uploadBox.find('.cropzone-image-box').empty();
+            $uploadBox.find('.cropzone-image-box').removeClass('show');
+            // 버튼 활성화
+            $uploadBox.find('.cropzone-control-box').removeClass('active-edit');
+            $uploadBox.find('.cropzone-control-box').addClass('active');
+            // 드롭존 보이기
+            $uploadBox.find('.thumbnail-dropzone-box').removeClass('hide');
+            // 박스 크기 조절
+            $uploadBox.removeClass('crop');
+            cropper.onResize();
+          });
+
+          // 삭제하기
+          $uploadBox.find('.crop-delete-btn').off('click');
+          $uploadBox.find('.crop-delete-btn').on('click', function() {
+            if (file !== '') {
+              _this.removeAllFiles(file);
+            }
+            $uploadBox.find('.cropzone-crop-box, .cropzone-image-box').empty();
+            $uploadBox.find('.cropzone-crop-box, .cropzone-image-box').removeClass('show');
+            // 버튼 활성화
+            $uploadBox.find('.cropzone-control-box').removeClass('active-edit');
+            $uploadBox.find('.cropzone-control-box').removeClass('active');
+            // 드롭존 보이기
+            $uploadBox.find('.thumbnail-dropzone-box').removeClass('hide');
+            // 박스 크기 조절
+            $uploadBox.removeClass('crop');
+          });
+
+          // Create Cropper.js
+          var cropper = new Cropper(image, {
+            // https://calculator-online.net/ko/ratio-calculator/
+            // 1056 : 584 = 9 : 4.977
+            // 옵션
+            autoCropArea: 1,
+            aspectRatio: aspectRatio(option.width, option.height), // 비율
+            data: {
+              width: minCroppedWidth,
+              height: minCroppedHeight,
+            }, // 잘라낼 범위의 기본 값을 가로, 세로
+
+            ready() {
+              if (file == '') {
+                // 수정일경우 등록버튼 click trigger
+                $('.thumbnail-upload-box').each(function() {
+                  if ($(this).find('.cropzone-crop-box').find('.cropper-hidden').length) {
+                    $(this).find('.crop-save-btn').click();
+                  }
+                });
+              }
+
+              var cropper = this.cropper;
+              var containerData = cropper.getContainerData();
+              var cropBoxData = cropper.getCropBoxData();
+
+              // 정중앙 배치
+              cropper.setCropBoxData({
+                top: containerData.height / 2 - cropBoxData.height / 2,
+                left: containerData.width / 2 - cropBoxData.width / 2,
+              });
+            },
+
+            crop: function(event) {
+              var width = Math.round(event.detail.width);
+              var height = Math.round(event.detail.height);
+              if (width < minCroppedWidth || height < minCroppedHeight || width > maxCroppedWidth || height > maxCroppedHeight) {
+                cropper.setData({
+                  width: Math.max(minCroppedWidth, Math.min(maxCroppedWidth, width)),
+                  height: Math.max(minCroppedHeight, Math.min(maxCroppedHeight, height)),
+                });
+              }
+            },
+          });
+
+          // 이미지 비율 계산
+          function aspectRatio(width, height) {
+            const gcd = (...arr) => {
+              const _gcd = (x, y) => (!y ? x : gcd(y, x % y));
+              return [...arr].reduce((a, b) => _gcd(a, b));
+            };
+
+            const gcdResult = gcd(width, height);
+
+            return width / gcdResult / (height / gcdResult);
+          }
+        },
+      };
+    }
+  </script>
+
+
+  <!-- 썸네일 스크립트 -->
+  <script>
+    // 이미지 첨부 및 크롭 스크립트
+    dropzoneCropperEditScript({
+      id: 'cropDropzone',
+      width: 528, // 최소 width
+      height: 292, // 최소 height
+    });
+  </script>
+
+
+  <script src="../../../resources/plugins/froala/nitro-min-ko.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Froala 라이브러리 참고 - https://froala.com/wysiwyg-editor/docs/options/
+      const editorInstance = new FroalaEditor('#editor', {
+        enter: FroalaEditor.ENTER_P,
+        // 라이센스 키
+        key: 'lSA3D-17D1C1A1D1B1B1rXYb1VPUGRHYZNRJd1JVOOb1HAc1zG2B1A2C2D6B1E1C4E1D3==',
+        placeholderText: null,
+        toolbarSticky: false,
+        quickInsertEnabled: false, // 퀵 없애기
+        attribution: false, //하단 Powered by ~ 제거
+        charCounterCount: false, // 하단 문자 수 제거
+        heightMin: 1200, // height
+        language: 'ko',
+
+        // enter div
+        enter: FroalaEditor.ENTER_DIV,
+        // enter: FroalaEditor.ENTER_BR
+
+        // 이미지 용량 제한
+        imageMaxSize: 1024 * 1024 * 5, // 5MB
+        // imageMinWidth: 32,
+        // imageManagerPageSize: 1,
+
+        // 텍스트 컬러 제한
+        colorsText: ['#111', '#f82514', '#949494', 'REMOVE'],
+
+        // 폰트 사이즈
+        fontSize: ['14', '16', '20'],
+
+        // paragraphFormat: {
+        //   H3: '제목',
+        // },
+
+        // codeBeautifierOptions: {
+        //   end_with_newline: true,
+        //   indent_inner_html: true,
+        //   extra_liners: "['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'pre', 'ul', 'ol', 'table', 'dl']",
+        //   brace_style: 'expand',
+        //   indent_char: ' ',
+        //   indent_size: 4,
+        //   wrap_line_length: 0,
+        // },
+        // codeViewKeepActiveButtons: [],
+        // codeMirror: true,
+
+        toolbarButtons: [
+          [
+            'bold',
+            'italic',
+            'underline',
+            // 'strikeThrough',
+            // 'subscript',
+            // 'superscript',
+            // 'fontFamily',
+            'fontSize',
+            'textColor',
+            // 'backgroundColor',
+            // 'inlineClass',
+            // 'inlineStyle',
+            // 'clearFormatting',
+            'alignLeft',
+            'alignCenter',
+            'alignRight',
+            // 'formatOLSimple',
+            // 'alignJustify',
+            // 'formatOL',
+            // 'formatUL',
+            // 'paragraphFormat',
+            // 'paragraphStyle',
+            // 'lineHeight',
+            // 'outdent',
+            // 'indent',
+            // 'quote',
+            'insertLink',
+            'insertImage',
+            // 'insertVideo',
+            // 'insertTable',
+            // 'emoticons',
+            // 'fontAwesome',
+            // 'specialCharacters',
+            // 'embedly',
+            // 'insertFile',
+            // 'insertHR',
+            // 'undo',
+            // 'redo',
+            // 'fullscreen',
+            // 'print',
+            // 'getPDF',
+            // 'spellChecker',
+            // 'selectAll',
+            // 'html',
+            // 'help',
+            // 제목등적용시
+            // 'paragraphFormat',
+          ],
+        ],
+
+        events: {
+          initialized: function() {
+            const editor = this;
+            // this.el.closest('form').addEventListener('submit', function (e) {
+            //   console.log(editor.$oel.val());
+            //   e.preventDefault();
+            // });
+          },
+        },
+      });
+    });
+  </script>
+
+  <!-- 에디터 스크립트 -->
+</body>
+
+</html>
